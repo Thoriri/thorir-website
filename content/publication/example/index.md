@@ -47,7 +47,7 @@ tags: []
 projects: []
 image:
   caption: ""
-  focal_point: ""
+  focal_point: Smart
   preview_only: false
   filename: featured.png
 date: 2013-07-01T00:00:00.000Z
