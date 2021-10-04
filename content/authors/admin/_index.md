@@ -1,13 +1,13 @@
 ---
 title: Thorir Mar Ingolfsson
 role: "PhD Student in Robust and Practical Machine Learning "
-avatar_filename: 16797511_10211917259905005_5197078804592533351_o.jpg
+avatar_filename: avatar.jpg
 bio: My research interests include TinyML, Hardware Aware NAS and application of
   ML for bio-signals.
 interests:
   - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Neural Architecture Search
+  - Bio-signal Classification
 social:
   - icon: envelope
     icon_pack: fas
@@ -39,4 +39,4 @@ email: thoriri@iis.ee.ethz.ch
 superuser: true
 highlight_name: true
 ---
-Hi! I am Thorir, I am currently a PhD student at ETH Zurich under the supervision of Prof. Luca Benini.
+Hi! I am Thorir, and I am currently a Ph.D. student at ETH Zurich under the supervision of [Prof. Dr. Luca Benini](https://ee.ethz.ch/the-department/people-a-z/person-detail.luca-benini.html). My research interest is applying Robust and Practical Machine Learning approaches, focusing on a bio-signal analysis taking into account the characteristics and constraints of wearable edge devices and IoT units. A use case that I am currently researching is the usage of bio-signals to detect and forecast seizures, where the bio-signals come from wearable devices and are classified with ML and DL algorithms on the same wearable edge devices.
