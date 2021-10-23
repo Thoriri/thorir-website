@@ -50,9 +50,9 @@ image:
   focal_point: Smart
   preview_only: false
   filename: featured.png
-date: 2013-07-01T00:00:00.000Z
+date: 2020-10-11T00:00:00.000Z
 url_slides: ""
-publishDate: 2017-01-01T00:00:00.000Z
+publishDate: 2020-10-11T00:00:00.000Z
 url_poster: ""
 url_code: ""
 ---
