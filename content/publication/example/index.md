@@ -19,7 +19,7 @@ abstract: In recent years, deep learning (DL) has contributed significantly to
   generalizes beyond one single dataset, outperforming the current
   state-of-the-art (SoA) on MOABB by a meta-effect of 0.25.
 slides: ""
-url_pdf: ""
+url_pdf: "https://arxiv.org/pdf/2006.00622.pdf"
 publication_types:
   - "1"
 authors:
