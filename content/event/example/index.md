@@ -5,6 +5,7 @@ event: AI+X Summit
 event_url: https://plusx.ai/
 tags:
 - Deep Learning
+- Neural Architecture Search
 location: StageOne Event & Convention Hall Zurich
 address:
   street: Elias-Canetti-Strasse 146
