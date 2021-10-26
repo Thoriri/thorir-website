@@ -13,7 +13,7 @@ authors:
   - Luca Benini
 author_notes: []
 publication: IEEE International Conference on Artificial Intelligence Circuits and Systems
-summary: In this paper, we propose EEG-TCNet, a novel temporal convolutional
+summary: In this paper, we propose ECG-TCN, a novel temporal convolutional
   network (TCN) that achieves outstanding accuracy while requiring few trainable
   parameters.
 url_dataset: ""
