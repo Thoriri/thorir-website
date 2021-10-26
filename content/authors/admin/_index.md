@@ -29,6 +29,8 @@ organizations:
     url: https://ethz.ch/en.html
 education:
   courses:
+    - course: Ph.D. in Electrical Engineering and Information Technology
+      institution: ETH Zurich
     - course: M.Sc. in Electrical Engineering and Information Technology
       institution: ETH Zurich
       year: 2020
