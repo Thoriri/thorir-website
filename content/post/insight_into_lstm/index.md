@@ -41,9 +41,9 @@ While working on my master thesis, I had to look at various LSTM networks and qu
 
 * Number of parameters in the network.
 * Feature map size.
-* Number of multiply and accumulate operations (MACC).
+* Number of multiply and accumulate operations (MAC).
 
-I'll now go more deeply into how to calculate two of these considerations, in particular the number of parameters and number of MACCs. The feature map size depends very highly on how the feature maps are stored on the RAM. Still, a very rough approach is to take the two largest consecutive feature maps and calculate the size of those together. First, let us look a bit into LSTMs.
+I'll now go more deeply into how to calculate two of these considerations, in particular the number of parameters and number of MACs. The feature map size depends very highly on how the feature maps are stored on the RAM. Still, a very rough approach is to take the two largest consecutive feature maps and calculate the size of those together. First, let us look a bit into LSTMs.
 
 # Long Short-Term Memory
 Recurrent neural networks are a class of neural networks, where node connections form a directed graph along a temporal sequence. In more simple terms, they are networks with loops that allow information to endure within the network.
@@ -109,15 +109,15 @@ Note this is only for one layer.
 
 The LSTM inference can be reduced to two matrix-matrix multiplications. The first one can be simplified as:
 
-![Matrix multiplciatons of LSTMs](uploads/MACC_lstm.svg)
+![Matrix multiplciatons of LSTMs](uploads/MAC_lstm.svg)
 
 <em>W</em> is the weight matrix used by the LSTM cell which is composed of <em>W<sub>f</sub></em>, <em>W<sub>i</sub></em>, <em>W<sub>o</sub></em> and <em>W<sub>C</sub></em> that are used in equations for the gates and cell state. 
 
 Note the dimension of <em>W</em> is (Feature dimension + <em>C<sub>LSTM</sub></em>,  4 * <em>C<sub>LSTM</sub></em>). Then <em>b</em> is the bias matrix, which is composed of <em>b<sub>f</sub></em>, <em>b<sub>i</sub></em>, <em>b<sub>o</sub></em> and <em>b<sub>C</sub></em>. 
 
-The final matrix multiplication is then the one needed to compute <em>C<sub>t</sub></em> and <em>h<sub>t</sub></em>. Also note that these next multiplications are pointwise. They can be reduced to <em>C<sub>LSTM</sub></em> * <em>T</em> MACCs, where <em>T</em> is the time series length.
+The final matrix multiplication is then the one needed to compute <em>C<sub>t</sub></em> and <em>h<sub>t</sub></em>. Also note that these next multiplications are pointwise. They can be reduced to <em>C<sub>LSTM</sub></em> * <em>T</em> MACs, where <em>T</em> is the time series length.
 
 
-Putting this all together, the total number of MACCs in an LSTM layer is:
+Putting this all together, the total number of MACs in an LSTM layer is:
 
-![MACCs of LSTMs](uploads/MACC_lstm_final.svg)
+![MACs of LSTMs](uploads/MAC_lstm_final.svg)
