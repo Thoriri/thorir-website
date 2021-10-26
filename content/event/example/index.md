@@ -23,9 +23,9 @@ abstract: "Neural Architecture Search (NAS) aims at discovering Deep Neural Netw
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2021-10-15T17:00:00Z"
-date_end: "2021-10-15T20:00:00Z"
-all_day: false
+date: "2021-10-15Z"
+date_end: "2021-10-15Z"
+all_day: true
 
 # Schedule page publish date (NOT talk date).
 publishDate: "2017-01-01T00:00:00Z"
