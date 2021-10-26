@@ -109,7 +109,7 @@ Note this is only for one layer.
 
 The LSTM inference can be reduced to two matrix-matrix multiplications. The first one can be simplified as:
 
-![Matrix multiplciatons of LSTMs](uploads/MAC_lstm.svg)
+![Matrix multiplciatons of LSTMs](uploads/MACC_lstm.svg)
 
 <em>W</em> is the weight matrix used by the LSTM cell which is composed of <em>W<sub>f</sub></em>, <em>W<sub>i</sub></em>, <em>W<sub>o</sub></em> and <em>W<sub>C</sub></em> that are used in equations for the gates and cell state. 
 
@@ -120,4 +120,4 @@ The final matrix multiplication is then the one needed to compute <em>C<sub>t</s
 
 Putting this all together, the total number of MACs in an LSTM layer is:
 
-![MACs of LSTMs](uploads/MAC_lstm_final.svg)
+![MACs of LSTMs](uploads/MACC_lstm_final.svg)
