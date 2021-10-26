@@ -48,7 +48,7 @@ I'll now go more deeply into how to calculate two of these considerations, in pa
 # Long Short-Term Memory
 Recurrent neural networks are a class of neural networks, where node connections form a directed graph along a temporal sequence. In more simple terms, they are networks with loops that allow information to endure within the network.
 
-| ![Typical RNN network structure with RNN cells](uploads/RNN.png){: .center-block :} | 
+| ![Typical RNN network structure with RNN cells](static/uploads/RNN.png){: .center-block :} | 
 |:--:| 
 | *Typical RNN network structure with RNN cells, here <em>X<sub>t</sub></em>: input time sequence,<em>h<sub>t</sub></em>: output time sequence.* |
 
