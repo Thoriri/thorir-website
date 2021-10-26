@@ -22,8 +22,6 @@ slides: ""
 url_pdf: "https://arxiv.org/pdf/2006.00622.pdf"
 publication_types:
   - "1"
-tags:
-- Deep Learning
 authors:
   - admin
   - Michael Hersche
