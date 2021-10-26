@@ -3,7 +3,8 @@ title: Hardware-Aware Neural Network Analysis
 
 event: AI+X Summit
 event_url: https://plusx.ai/
-
+tags:
+- Deep Learning
 location: StageOne Event & Convention Hall Zurich
 address:
   street: Elias-Canetti-Strasse 146
