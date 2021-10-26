@@ -45,7 +45,7 @@ links:
   url: https://twitter.com/Thorirmar
 url_code: ""
 url_pdf: "uploads/AIX_summit_poster_compressed.pdf"
-url_slides: "uploads/HANNA_intro.pptx"
+url_slides: "uploads/HANNA.pdf"
 url_video: ""
 
 # Markdown Slides (optional).
