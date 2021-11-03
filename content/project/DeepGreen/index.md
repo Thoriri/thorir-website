@@ -47,8 +47,6 @@ Similarly for $\phi$ we get:
 \phi = \frac{|y-360|}{360}\times\frac{49.5^\circ}{2}
 \end{equation}
 
-\begin{figure}[h!]
-\centering
 \begin{tikzpicture}
 \draw (0,0) rectangle (8,4);
 \fill[red] (1,2) circle (0.5cm);
@@ -62,7 +60,5 @@ Similarly for $\phi$ we get:
 \node at (7,3) {Ball 3};
 \node at (4,4.5) {Cue-Camera frame};
 \end{tikzpicture}
-\caption{$(x,y)$ coordinates of three different balls.} \label{fig:balls}
-\end{figure}
 yo
 
