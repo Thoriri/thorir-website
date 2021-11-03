@@ -137,9 +137,7 @@ We can then rewrite \eqref{eqn:minimization} to be:
 \label{eqn:minimization_rewritten}
 \begin{aligned}
 & \underset{R}{\text{min}}
-& &  ||A - RB||_F^2\\\
-& \text{subject to}
-& & R^TR = I_3 \ \ \text{and}  \ \det{(R)} = 1
+& &  ||A - RB||_F^2\\\ & \text{subject to} & & R^TR = I_3 \ \ \text{and}  \ \det{(R)} = 1
 \end{aligned}
 \end{equation}
 where $A = \tilde{A}\boldsymbol{\Sigma_e^{-1/2}}$, $B = \tilde{B}\boldsymbol{\Sigma_e^{-1/2}}$, $\tilde{A} = (A_1 - \mu_A,A_2 - \mu_A,\ldots,A_N - \mu_A)$ and\\ $\tilde{B} = (B_1 - \mu_{B},B_2 - \mu_{B},\ldots,B_N - \mu_{B})$.
