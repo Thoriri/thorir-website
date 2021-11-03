@@ -32,14 +32,19 @@ In 2018 Joe Warrington started the Automatic Control Lab’s project to build a 
 
 The project had the title of "High-Precision Control and Localisation for Robotic Billiard Shots" the project aimed at optimally combining the outputs from two cameras to take accurate billiard shots.
 
-The cue mounted camera, using image processing techniques extracts the (x; y) position in pixel coordinates of each ball as seen in the figure below, the distance to each ball, d, is then measured using the built in depth sensor. For being able to accurately estimate the pose of the cue camera we need to have each ball coordinate in a cue camera coordinate system.
+The cue mounted camera, using image processing techniques extracts the $(x,y)$ position in pixel coordinates of each ball as seen in the figure below, the distance to each ball, $d$, is then measured using the built in depth sensor. For being able to accurately estimate the pose of the cue camera we need to have each ball coordinate in a cue camera coordinate system.
 
 ![(x, y) coordinates of three different balls.](uploads/balls.png) 
 
 ### Cue camera coordinate system
-The field of view of the camera is 69.4&deg in the horizontal direction and 49:5&deg in the vertical direction. We make the assumption that the camera coordinate system is as seen in the figure below. We can then calculate the two angles $\theta$ (horizontal FOV) and $\phi$ (vertical FOV). For $\theta$ we divide the picture into two parts as seen in Figure 3.3, and we then calculate:
+The field of view of the camera is $69.4^{\circ}$ in the horizontal direction and $49.5^{\circ}$ in the vertical direction. We make the assumption that the camera coordinate system is as seen in Figure \ref{fig:cameracord}. We can then calculate the two angles $\theta$ (horizontal FOV) and $\phi$ (vertical FOV).\\
+For $\theta$ we divide the picture into two parts as seen in the figure beow, and we then calculate:
+\begin{equation}
+\theta = \frac{|x-640|}{640}\times\frac{69.4^\circ}{2}
+\end{equation}
+Similarly for $\phi$ we get:
+\begin{equation}
+\phi = \frac{|y-360|}{360}\times\frac{49.5^\circ}{2}
+\end{equation}
 
-$$
-x = y_1
-$$
 
