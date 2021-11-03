@@ -76,7 +76,8 @@ x = -\sin{(\theta)}d'
 $$
 If we have at least two balls in the camera frame we can estimate the pose of the cue mounted camera.
 ### Orthogonal Procrustes Problem
-Now let $$
+Now let 
+$$
 A_i = (x_i,y_i,0)^T, \ \ i = 1,2,\ldots,N
 $$
 represent the ball position in the world coordinate system. And the corresponding points as seen in the camera coordinate system let them be represented with: 
