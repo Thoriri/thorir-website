@@ -47,9 +47,9 @@ Similarly for $\phi$ we get:
 \phi = \frac{|y-360|}{360}\times\frac{49.5^\circ}{2}
 \end{equation}
 
-![(x, y) coordinates of three different balls.\label{mylabelsss}](uploads/cue_camera_frame.png) 
-![(x, y) coordinates of three different balls.\label{mylabelss}](uploads/div.png) 
-![(x, y) coordinates of three different balls.\label{mylabels}](uploads/divv.png) 
+![Coordinate system of the cue mounted camera.](uploads/cue_camera_frame.png) 
+![Dividing camera frame into two parts vertically.](uploads/div.png) 
+![Dividing camera frame into two parts horizontally.](uploads/divv.png) 
 Having extracted these two angles we can find the $(x,y,z)$ coordinates of the balls in the camera coordinate system.
 The $z$-coordinate of the balls is calculated as:
 \begin{equation}
@@ -57,3 +57,21 @@ The $z$-coordinate of the balls is calculated as:
 z = -\sin{(\phi)}d
 \end{equation}
 As can be seen in Figure \ref{fig:zcoardinate}.
+![Trigonometry for finding z-coordinate.](uploads/1.png) 
+The negative sign is because we assume that the camera is always above the balls.
+For the $(x,y)$ coordinates we calculate the projection of $d$ onto the $x-y$ plane which is given as: 
+\begin{equation}
+\label{eqn:d_prime}
+d' = \cos{(\phi)}d
+\end{equation}
+The $(x,y)$ coordinate is then calculated as can be seen from Figure \ref{fig:xycoardinate}.
+![Trigonometry for finding (x; y)-coordinate.](uploads/2.png)
+\begin{equation}
+\label{eqn:x_y_camera}
+x = \sin{(\theta)}d', \ \ y = \cos{(\theta)}d'
+\end{equation}
+Note if the pixel coordinate of the center of the ball is in the left half plane of the frame then: 
+$$
+x = -\sin{(\theta)}d'
+$$
+If we have at least two balls in the camera frame we can estimate the pose of the cue mounted camera.
