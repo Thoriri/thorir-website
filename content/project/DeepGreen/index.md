@@ -115,7 +115,10 @@ $$
 denote the uncertanty matrices of points detected by the overhead camera and cue camera respectively.
 By taking the derivative with regard to $T$ and setting equal to zero we get:
 $$
-\sum_{i=1}^N\sigma_{i}^{-2}(A_i - RB_i - T) \overset{!}{=} 0 \ \rightarrow T = \frac{1}{N_{\sigma}}\sum_{i=0}^{N} \sigma_i^{-2}A_i - \frac{R}{N_{\sigma}}\sum_{i=0}^{N} \sigma_i^{-2}B_i
+\sum_{i=1}^N\sigma_{i}^{-2}(A_i - RB_i - T) \overset{!}{=} 0 \
+$$
+$$
+\rightarrow T = \frac{1}{N_{\sigma}}\sum_{i=0}^{N} \sigma_i^{-2}A_i - \frac{R}{N_{\sigma}}\sum_{i=0}^{N} \sigma_i^{-2}B_i
 $$
 or 
 $$
@@ -125,7 +128,7 @@ or
 $$
 T = \mu_{A} - R \mu_{B}
 $$\\
-where: $\bar{A} = [A_1,\ldots,A_N]$, $\bar{B} = [B_1,\ldots,B_N]$, $N_\sigma = \sum_{i=1}^{N}\sigma_i^{-2}$, $\mathbbm{1} = [1,1,\ldots,1]^T \in \mathbb{R}^{N} $,\\\\ $\mu_{A} = \frac{1}{N_\sigma}\bar{A}\boldsymbol{\Sigma_e^{-1}}\mathbbm{1} $ and $\mu_{B} = \frac{1}{N_\sigma}\bar{B}\boldsymbol{\Sigma_e^{-1}}\mathbbm{1}$
+where: $\bar{A} = [A_1,\ldots,A_N]$, $\bar{B} = [B_1,\ldots,B_N]$, $N_\sigma = \sum_{i=1}^{N}\sigma_i^{-2}$, $\unicode{x1D7D9} = [1,1,\ldots,1]^T \in \mathbb{R}^{N} $,\\\\ $\mu_{A} = \frac{1}{N_\sigma}\bar{A}\boldsymbol{\Sigma_e^{-1}}\unicode{x1D7D9} $ and $\mu_{B} = \frac{1}{N_\sigma}\bar{B}\boldsymbol{\Sigma_e^{-1}}\unicode{x1D7D9}$
 We can then rewrite \eqref{eqn:minimization} to be:
 \begin{equation}
 \label{eqn:minimization_rewritten}
