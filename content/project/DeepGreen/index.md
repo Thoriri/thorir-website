@@ -208,3 +208,9 @@ Based on work presented in \cite{slabaugh_computing_nodate} we can then calculat
  \caption{Euler angle calculations from rotation matrix.}
 \end{algorithm}
 The most important angle is $\theta$ as that is the one can be thought of as the cue angle on the table.
+
+<script type="text/tikz">
+  \begin{tikzpicture}
+    \draw (0,0) circle (1in);
+  \end{tikzpicture}
+</script>
