@@ -210,7 +210,17 @@ Based on work presented in \cite{slabaugh_computing_nodate} we can then calculat
 The most important angle is $\theta$ as that is the one can be thought of as the cue angle on the table.
 
 <script type="text/tikz">
-  \begin{tikzpicture}
-    \draw (0,0) circle (1in);
-  \end{tikzpicture}
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[->]
+\draw (0,0) rectangle (8,4);
+\node at (4,4.5) {Cue-Camera frame};
+\draw (4,2) -- (5.5,2)node[anchor=north west]{$x$};
+\draw (4,2) -- (4,3.5,0)node[anchor=north west]{$z$};
+\draw (4,2) -- (4,2,-2)node[anchor=north west]{$y$};
+\draw[thick] (5,1) parabola (4,1.9);
+\node at (5.1,0.7) {Origin in the middle.};
+\end{tikzpicture}
+\caption{Coordinate system of the cue mounted camera.} \label{fig:cameracord}
+\end{figure}
 </script>
