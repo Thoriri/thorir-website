@@ -26,10 +26,6 @@ url_video: ""
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
-
-css:
-  - https://tikzjax.com/v1/fonts.css
-
 ---
 In 2018 Joe Warrington started the Automatic Control Lab’s project to build a robotic snooker player capable of challenging a top-ranking human. The project was called DeepGreen, inspired by Deep Blue, the chess computer that famously defeated Garry Kasparov back in 1996. In the spring of 2019 I worked on a research project with Joe that combined robotics, computer vision and a little bit of machine learning.
 
@@ -145,7 +141,7 @@ $$
 So the minimization problem \eqref{eqn:minimization_rewritten} can be thought of as maximizing $\operatorname{trace}\left(R B A^{T}\right)$  since $\operatorname{trace}\left(B^{T}R^{T} A\right) = \operatorname{trace}\left(R B A^{T}\right)$ by properties of the trace.
 Now let $BA^{T} = C$ and then:
 
-$$ \begin{align} \operatorname{trace}\left(R C\right) &=\operatorname{trace}\left(R U \Sigma V^{T}\right) \\ &=\operatorname{trace}\left(V^{T} R U \Sigma\right) \\ &=\operatorname{trace}(Z \Sigma)\end{align} $$
+$$ \begin{align} \operatorname{trace}\left(R C\right) & =\operatorname{trace}\left(R U \Sigma V^{T}\right) \\\ & =\operatorname{trace}\left(V^{T} R U \Sigma\right) \\\ & =\operatorname{trace}(Z \Sigma)\end{align} $$
 
 Where the singular value decomposition of $C$ is $U \Sigma V^T$ and $\Sigma = \operatorname{diag}(\hat{\sigma}_1,\hat{\sigma}_2,\ldots,\hat{\sigma}_N)$.
 To maximize $\operatorname{trace}\left(R B A^{T}\right)$ we must look at two cases, when $\operatorname{det}(VU^T) = \pm 1$. Note that the determinant of $VU^T$ can never be anything but $\pm 1$ since $V$ and $U$ are both orthogonal matrices and the product of two orthogonal matrices is also orthogonal. Based on algebraic proofs presented in \cite{lawrence_purely_2019} we are able to go through the following justification for each case.
