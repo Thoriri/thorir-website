@@ -163,10 +163,10 @@ $$
 \operatorname{trace}(Z \Sigma)=\operatorname{trace}\left(Z_{0} S_{0}\right)-\gamma \leq \operatorname{trace}\left(S_{0}\right)-\gamma=\operatorname{trace}(\Sigma)-\gamma-\gamma \leq \sum_{i=1}^{N-1} \hat{\sigma}_{i}-\hat{\sigma}_{N}
 $$
 These are then the two cases we must consider:
-\begin{itemize}
-\item When $\operatorname{det}(VU^T) = 1$\\
+
+* When $\operatorname{det}(VU^T) = 1$
 We maximize by choosing $Z = I_N$ so $R = VU^T$ minimizes \eqref{eqn:minimization_rewritten}.
-\item When $\operatorname{det}(VU^T) = -1$\\
+* When $\operatorname{det}(VU^T) = -1$
 Then define $\tilde{S} = \operatorname{diag}(1,1,\ldots,-1)$ a $N \times N$ diagonal matrix. And we know that:
 $$ 
 \operatorname{trace}(R C)=\operatorname{trace}\left(R U \Sigma V^{T}\right)=\operatorname{trace}\left(V^{T} R U \Sigma \right) \leq \sum_{j=1}^{N-1} \hat{\sigma}_{j}-\hat{\sigma}_{N}
@@ -176,7 +176,7 @@ $$
 \operatorname{trace}(R C)=\operatorname{trace}\left(V\tilde{S}U^TU\Sigma V^T\right)=\operatorname{trace}\left(V \tilde{S} \Sigma V^T \right) = \operatorname{trace}(\tilde{S}\Sigma) = \sum_{j=1}^{N-1} \hat{\sigma}_{j}-\hat{\sigma}_{N}
  $$
 Thus $R = V\tilde{S}U^T$ minimizes \eqref{eqn:minimization_rewritten}.
-\end{itemize}
+
 \section{Euler angles}
 Having estimated the rotation matrix we need to extract the Euler angles since we use them to correct the cue angle. Now let the rotation matrix be:
 $$
