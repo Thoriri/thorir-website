@@ -47,6 +47,13 @@ Similarly for $\phi$ we get:
 \phi = \frac{|y-360|}{360}\times\frac{49.5^\circ}{2}
 \end{equation}
 
-
-yo
-
+![(x, y) coordinates of three different balls.\label{mylabelsss}](uploads/cue_camera_frame.png) 
+![(x, y) coordinates of three different balls.\label{mylabelss}](uploads/div.png) 
+![(x, y) coordinates of three different balls.\label{mylabels}](uploads/divv.png) 
+Having extracted these two angles we can find the $(x,y,z)$ coordinates of the balls in the camera coordinate system.
+The $z$-coordinate of the balls is calculated as:
+\begin{equation}
+\label{eqn:z_camera}
+z = -\sin{(\phi)}d
+\end{equation}
+As can be seen in Figure \ref{fig:zcoardinate}.
