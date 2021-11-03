@@ -177,12 +177,14 @@ $$
  $$
 Thus $R = V\tilde{S}U^T$ minimizes \eqref{eqn:minimization_rewritten}.
 
-\section{Euler angles}
+### Euler Angles
 Having estimated the rotation matrix we need to extract the Euler angles since we use them to correct the cue angle. Now let the rotation matrix be:
 $$
 R=\left[ \begin{array}{lll}{R_{11}} & {R_{12}} & {R_{13}} \\ {R_{21}} & {R_{22}} & {R_{23}} \\ {R_{31}} & {R_{32}} & {R_{33}}\end{array}\right]
 $$
 Based on work presented in \cite{slabaugh_computing_nodate} we can then calculate the Euler angles as:
+
+```{.algorithm}
 \begin{algorithm}
 \begin{algorithmic}
 \If {$R_{31} \neq \pm 1$}
@@ -202,5 +204,6 @@ Based on work presented in \cite{slabaugh_computing_nodate} we can then calculat
 \end{algorithmic}
  \caption{Euler angle calculations from rotation matrix.}
 \end{algorithm}
+```
 The most important angle is $\theta$ as that is the one can be thought of as the cue angle on the table.
 
