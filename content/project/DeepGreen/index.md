@@ -100,9 +100,9 @@ Where $\sigma_i^{-2}, \ \ i = 1,2,\ldots,N $ accounts for the intrinsic uncertai
 $$
 \boldsymbol{\Sigma_e} = 
   \begin{pmatrix}
-    \sigma_1^{2} & 0 & \dots & 0 \\
-    0 & \sigma_2^{2} & \dots & 0 \\
-    \vdots & \vdots & \ddots & \vdots \\
+    \sigma_1^{2} & 0 & \dots & 0 \\\
+    0 & \sigma_2^{2} & \dots & 0 \\\
+    \vdots & \vdots & \ddots & \vdots \\\
     0 & 0 & \dots & \sigma_N^{2}
   \end{pmatrix}
 $$
