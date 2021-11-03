@@ -82,7 +82,7 @@ A_i = (x_i,y_i,0)^T, \ \ i = 1,2,\ldots,N
 $$
 represent the ball position in the world coordinate system. And the corresponding points as seen in the camera coordinate system let them be represented with: 
 $$
-B_i = (\tilde{x}_i,\tilde{y}_i,\tilde{z}_i)^T, \ \ i = 1,2,\ldots,N
+B_i = (\tilde x_i,\tilde y_i,\tilde z_i)^T, \ \ i = 1,2,\ldots,N
 $$
 Where $N$ denotes the total number of ball seen.
 We then should be able to write: 
