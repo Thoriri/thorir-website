@@ -99,12 +99,7 @@ To find $R$ and $T$ we minimize:
 Where $\sigma_i^{-2}, \ \ i = 1,2,\ldots,N $ accounts for the intrinsic uncertainty of each point pair, $A_i$ and $B_i$. Also define:
 $$
 \boldsymbol{\Sigma_e} = 
-  \begin{pmatrix}
-    \sigma_1^{2} & 0 & \dots & 0 \\\
-    0 & \sigma_2^{2} & \dots & 0 \\\
-    \vdots & \vdots & \ddots & \vdots \\\
-    0 & 0 & \dots & \sigma_N^{2}
-  \end{pmatrix}
+  \begin{pmatrix}\sigma_1^{2} & 0 & \dots & 0 \\\ 0 & \sigma_2^{2} & \dots & 0 \\\ \vdots & \vdots & \ddots & \vdots \\\ 0 & 0 & \dots & \sigma_N^{2} \end{pmatrix}
 $$
 $$\begin{pmatrix}a & b\\\ c & d\end{pmatrix}$$
 $\boldsymbol{\Sigma_e}$ is a diagonal matrix that models the point uncertainty. Now since the true $\boldsymbol{\Sigma_e}$ is not known we can conservatively define the diagonal values of $\boldsymbol{\Sigma_e}$ as follows:
