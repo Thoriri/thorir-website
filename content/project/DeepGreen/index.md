@@ -143,7 +143,7 @@ Now let $BA^{T} = C$ and then:
 
 $$ \begin{align} \operatorname{trace}\left(R C\right) & =\operatorname{trace}\left(R U \Sigma V^{T}\right) \\\ & =\operatorname{trace}\left(V^{T} R U \Sigma\right) \\\ & =\operatorname{trace}(Z \Sigma)\end{align} $$
 
-Where the singular value decomposition of $C$ is $U \Sigma V^T$ and $\Sigma = \operatorname{diag}(\hat{\sigma}_1,\hat{\sigma}_2,\ldots,\hat{\sigma}_N)$.
+Where the singular value decomposition of $C$ is $U \Sigma V^T$ and .
 To maximize $\operatorname{trace}\left(R B A^{T}\right)$ we must look at two cases, when $\operatorname{det}(VU^T) = \pm 1$. Note that the determinant of $VU^T$ can never be anything but $\pm 1$ since $V$ and $U$ are both orthogonal matrices and the product of two orthogonal matrices is also orthogonal. Based on algebraic proofs presented in \cite{lawrence_purely_2019} we are able to go through the following justification for each case.
 Firstly we note that $\operatorname{trace}(Z \Sigma) =\sum_{i=1}^{N} z_{i i}\hat{\sigma}_{i} \leq \sum_{i=1}^{N} \ \hat{\sigma}_{i}$ since $Z$ is orthogonal and $z_{i i} \leq 1, \ i = 1,2,\ldots,N$.
 If $\operatorname{det}(VU^T) = -1$, then let $D$ be a $N\times N$ orthogonal matrix so that: $\overline{Z}=D^{T} Z D,$ where $\overline{Z}=\left( \begin{array}{cc}{Z_{0}} & {O} \\ {O^{T}} & {-1}\end{array}\right)$ where $Z_{0}$ is the uppermost $N - 1 \times N - 1$ entries of $\overline{Z}$ and $O$ is a vertical column or vector of $N-1$ zeros. Then let $S=D^{T} \Sigma D = \left( \begin{array}{cc}{S_{0}} & {a} \\ {b^{T}} & {\gamma}\end{array}\right)$ where $S_0$ is the uppermost $N - 1 \times N - 1$ entries of $S$. $a$ and $b$ are vertical columns of $N-1$ entries and $\gamma$ is a scalar.\\\\
