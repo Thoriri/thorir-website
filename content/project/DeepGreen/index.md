@@ -133,7 +133,8 @@ T = \mu_{A} - R \mu_{B}
 $$
 where: $\bar{A} = [A_1,\ldots,A_N]$, $\bar{B} = [B_1,\ldots,B_N]$, $N_\sigma = \sum_{i=1}^{N}\sigma_i^{-2}$, $\unicode{x1D7D9} = [1,1,\ldots,1]^T \in \mathbb{R}^{N} $, $\mu_{A} = \frac{1}{N_\sigma}\bar{A}\boldsymbol{\Sigma_e^{-1}}\unicode{x1D7D9} $ and $\mu_{B} = \frac{1}{N_\sigma}\bar{B}\boldsymbol{\Sigma_e^{-1}}\unicode{x1D7D9}$
 
-We can then rewrite \ref{minimization} to be:
+We can then rewrite EQUATION to be:
+
 \begin{equation}
 \label{minimization_rewritten}
 \begin{aligned}
