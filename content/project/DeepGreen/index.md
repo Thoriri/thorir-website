@@ -47,18 +47,23 @@ Similarly for $\phi$ we get:
 \phi = \frac{|y-360|}{360}\times\frac{49.5^\circ}{2}
 \end{equation}
 
+
+```latex {cmd=true hide=true}
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\begin{document}
 \begin{tikzpicture}
-\draw (0,0) rectangle (8,4);
-\fill[red] (1,2) circle (0.5cm);
-\fill[black] (1,2) circle (0.05cm);
-\fill[yellow] (4,2) circle (0.5cm);
-\fill[black] (4,2) circle (0.05cm);
-\fill[green] (7,2) circle (0.5cm);
-\fill[black] (7,2) circle (0.05cm);
-\node at (1,3) {Ball 1};
-\node at (4,3) {Ball 2};
-\node at (7,3) {Ball 3};
-\node at (4,4.5) {Cue-Camera frame};
+  \matrix (m) [matrix of math nodes,row sep=3em,column sep=4em,minimum width=2em]
+  {
+     F & B \\
+      & A \\};
+  \path[-stealth]
+    (m-1-1) edge node [above] {$\beta$} (m-1-2)
+    (m-1-2) edge node [right] {$\rho$} (m-2-2)
+    (m-1-1) edge node [left] {$\alpha$} (m-2-2);
 \end{tikzpicture}
+\end{document}
+```
 yo
 
