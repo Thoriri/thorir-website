@@ -106,6 +106,7 @@ $$
     0 & 0 & \dots & \sigma_N^{2}
   \end{pmatrix}
 $$
+$$\begin{pmatrix}a & b\\\ c & d\end{pmatrix}$$
 $\boldsymbol{\Sigma_e}$ is a diagonal matrix that models the point uncertainty. Now since the true $\boldsymbol{\Sigma_e}$ is not known we can conservatively define the diagonal values of $\boldsymbol{\Sigma_e}$ as follows:
 $$
 \sigma_{i}^{2}=\lambda_{\max }\left(\boldsymbol{\Sigma}_{A_{i}}\right)+\lambda_{\max }\left(\boldsymbol{\Sigma}_{B_{i}}\right)
