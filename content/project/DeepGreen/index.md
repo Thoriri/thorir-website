@@ -132,12 +132,13 @@ $$
 T = \mu_{A} - R \mu_{B}
 $$
 where: $\bar{A} = [A_1,\ldots,A_N]$, $\bar{B} = [B_1,\ldots,B_N]$, $N_\sigma = \sum_{i=1}^{N}\sigma_i^{-2}$, $\unicode{x1D7D9} = [1,1,\ldots,1]^T \in \mathbb{R}^{N} $, $\mu_{A} = \frac{1}{N_\sigma}\bar{A}\boldsymbol{\Sigma_e^{-1}}\unicode{x1D7D9} $ and $\mu_{B} = \frac{1}{N_\sigma}\bar{B}\boldsymbol{\Sigma_e^{-1}}\unicode{x1D7D9}$
-We can then rewrite \eqref{eqn:minimization} to be:
+
+We can then rewrite \ref{eqn:minimization} to be:
 \begin{equation}
 \label{eqn:minimization_rewritten}
 \begin{aligned}
 & \underset{R}{\text{min}}
-& &  ||A - RB||_F^2\\
+& &  ||A - RB||_F^2\\\
 & \text{subject to}
 & & R^TR = I_3 \ \ \text{and}  \ \det{(R)} = 1
 \end{aligned}
@@ -208,25 +209,3 @@ Based on work presented in \cite{slabaugh_computing_nodate} we can then calculat
  \caption{Euler angle calculations from rotation matrix.}
 \end{algorithm}
 The most important angle is $\theta$ as that is the one can be thought of as the cue angle on the table.
-
-<script type="text/tikz">
-\begin{tikzpicture}[->]
-\draw (0,0) rectangle (8,4);
-\node at (4,4.5) {Cue-Camera frame};
-\draw (4,2) -- (5.5,2)node[anchor=north west]{$x$};
-\draw (4,2) -- (4,3.5,0)node[anchor=north west]{$z$};
-\draw (4,2) -- (4,2,-2)node[anchor=north west]{$y$};
-\draw[thick] (5,1) parabola (4,1.9);
-\node at (5.1,0.7) {Origin in the middle.};
-\end{tikzpicture}
-</script>
-blalbnllalslalsa
-blalbalbs
-
-as
-ba
-f
-sa
-f
-asf
-sa
