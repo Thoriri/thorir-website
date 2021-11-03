@@ -39,11 +39,7 @@ The cue mounted camera, using image processing techniques extracts the (x; y) po
 ### Cue camera coordinate system
 The field of view of the camera is 69.4&deg in the horizontal direction and 49:5&deg in the vertical direction. We make the assumption that the camera coordinate system is as seen in the figure below. We can then calculate the two angles $\theta$ (horizontal FOV) and $\phi$ (vertical FOV). For $\theta$ we divide the picture into two parts as seen in Figure 3.3, and we then calculate:
 
-```{=latex}
-\begin{tabular}{ll}
-A & B \\
-A & B \\
-\end{tabular}
-```
-
+$$
+x = y_1
+$$
 
