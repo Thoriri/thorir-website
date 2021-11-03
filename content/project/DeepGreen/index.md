@@ -119,7 +119,7 @@ $$
 $$
 or 
 $$
-T = \frac{1}{N_\sigma}(\bar{A}\boldsymbol{\Sigma_e^{-1}}\mathbbm{1} - R\bar{B}\boldsymbol{\Sigma_e^{-1}}\mathbbm{1})
+T = \frac{1}{N_\sigma}(\bar{A}\boldsymbol{\Sigma_e^{-1}}\unicode{x1D7D9}- R\bar{B}\boldsymbol{\Sigma_e^{-1}}\unicode{x1D7D9})
 $$
 or
 $$
