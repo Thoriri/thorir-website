@@ -132,6 +132,7 @@ $$
 T = \mu_{A} - R \mu_{B}
 $$
 where: $\bar{A} = [A_1,\ldots,A_N]$, $\bar{B} = [B_1,\ldots,B_N]$, $N_\sigma = \sum_{i=1}^{N}\sigma_i^{-2}$, $\unicode{x1D7D9} = [1,1,\ldots,1]^T \in \mathbb{R}^{N} $, $\mu_{A} = \frac{1}{N_\sigma}\bar{A}\boldsymbol{\Sigma_e^{-1}}\unicode{x1D7D9} $ and $\mu_{B} = \frac{1}{N_\sigma}\bar{B}\boldsymbol{\Sigma_e^{-1}}\unicode{x1D7D9}$
+
 We can then rewrite \eqref{eqn:minimization} to be:
 \begin{equation}
 \label{eqn:minimization_rewritten}
@@ -140,16 +141,17 @@ We can then rewrite \eqref{eqn:minimization} to be:
 & &  ||A - RB||_F^2\\\ & \text{subject to} & & R^TR = I_3 \ \ \text{and}  \ \det{(R)} = 1
 \end{aligned}
 \end{equation}
-where $A = \tilde{A}\boldsymbol{\Sigma_e^{-1/2}}$, $B = \tilde{B}\boldsymbol{\Sigma_e^{-1/2}}$, $\tilde{A} = (A_1 - \mu_A,A_2 - \mu_A,\ldots,A_N - \mu_A)$ and\\ $\tilde{B} = (B_1 - \mu_{B},B_2 - \mu_{B},\ldots,B_N - \mu_{B})$.
+where $A = \tilde{A}\boldsymbol{\Sigma_e^{-1/2}}$, $B = \tilde{B}\boldsymbol{\Sigma_e^{-1/2}}$, $\tilde{A} = (A_1 - \mu_A,A_2 - \mu_A,\ldots,A_N - \mu_A)$ and
+$\tilde{B} = (B_1 - \mu_{B},B_2 - \mu_{B},\ldots,B_N - \mu_{B})$.
 Now we can write:
 $$ 
 \|A-RB\|_{F}^{2}=\operatorname{trace}\left(A^{T} A-2 B^{T}R^{T} A+B^{T} B\right)
- $$
+$$
 So the minimization problem \eqref{eqn:minimization_rewritten} can be thought of as maximizing $\operatorname{trace}\left(R B A^{T}\right)$  since $\operatorname{trace}\left(B^{T}R^{T} A\right) = \operatorname{trace}\left(R B A^{T}\right)$ by properties of the trace.
 Now let $BA^{T} = C$ and then:
 $$ 
-\begin{aligned} \operatorname{trace}\left(R C\right) &=\operatorname{trace}\left(R U \Sigma V^{T}\right) \\ &=\operatorname{trace}\left(V^{T} R U \Sigma\right) \\ &=\operatorname{trace}(Z \Sigma)\end{aligned}
- $$
+\begin{aligned} \operatorname{trace}\left(R C\right) &=\operatorname{trace}\left(R U \Sigma V^{T}\right) \\\ &=\operatorname{trace}\left(V^{T} R U \Sigma\right) \\\ &=\operatorname{trace}(Z \Sigma)\end{aligned}
+$$
 Where the singular value decomposition of $C$ is $U \Sigma V^T$ and $\Sigma = \operatorname{diag}(\hat{\sigma}_1,\hat{\sigma}_2,\ldots,\hat{\sigma}_N)$.
 To maximize $\operatorname{trace}\left(R B A^{T}\right)$ we must look at two cases, when $\operatorname{det}(VU^T) = \pm 1$. Note that the determinant of $VU^T$ can never be anything but $\pm 1$ since $V$ and $U$ are both orthogonal matrices and the product of two orthogonal matrices is also orthogonal. Based on algebraic proofs presented in \cite{lawrence_purely_2019} we are able to go through the following justification for each case.
 Firstly we note that $\operatorname{trace}(Z \Sigma) =\sum_{i=1}^{N} z_{i i}\hat{\sigma}_{i} \leq \sum_{i=1}^{N} \ \hat{\sigma}_{i}$ since $Z$ is orthogonal and $z_{i i} \leq 1, \ i = 1,2,\ldots,N$.
