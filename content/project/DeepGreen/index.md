@@ -37,7 +37,7 @@ The cue mounted camera, using image processing techniques extracts the $(x,y)$ p
 ![(x, y) coordinates of three different balls.](uploads/balls.png) 
 
 ### Cue camera coordinate system
-The field of view of the camera is $69.4^{\circ}$ in the horizontal direction and $49.5^{\circ}$ in the vertical direction. We make the assumption that the camera coordinate system is as seen in Figure \ref{fig:cameracord}. We can then calculate the two angles $\theta$ (horizontal FOV) and $\phi$ (vertical FOV).\\
+The field of view of the camera is $69.4^{\circ}$ in the horizontal direction and $49.5^{\circ}$ in the vertical direction. We make the assumption that the camera coordinate system is as seen in Figure \ref{fig:cameracord}. We can then calculate the two angles $\theta$ (horizontal FOV) and $\phi$ (vertical FOV).
 For $\theta$ we divide the picture into two parts as seen in the figure beow, and we then calculate:
 \begin{equation}
 \theta = \frac{|x-640|}{640}\times\frac{69.4^\circ}{2}
@@ -47,4 +47,21 @@ Similarly for $\phi$ we get:
 \phi = \frac{|y-360|}{360}\times\frac{49.5^\circ}{2}
 \end{equation}
 
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+\draw (0,0) rectangle (8,4);
+\fill[red] (1,2) circle (0.5cm);
+\fill[black] (1,2) circle (0.05cm);
+\fill[yellow] (4,2) circle (0.5cm);
+\fill[black] (4,2) circle (0.05cm);
+\fill[green] (7,2) circle (0.5cm);
+\fill[black] (7,2) circle (0.05cm);
+\node at (1,3) {Ball 1};
+\node at (4,3) {Ball 2};
+\node at (7,3) {Ball 3};
+\node at (4,4.5) {Cue-Camera frame};
+\end{tikzpicture}
+\caption{$(x,y)$ coordinates of three different balls.} \label{fig:balls}
+\end{figure}
 
