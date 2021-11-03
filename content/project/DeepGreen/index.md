@@ -38,4 +38,9 @@ In 2018 Joe Warrington started the Automatic Control Lab’s project to build a 
 
 The project had the title of "High-Precision Control and Localisation for Robotic Billiard Shots" the project aimed at optimally combining the outputs from two cameras to take accurate billiard shots.
 | ![(x, y) coordinates of three different balls.](uploads/balls.png) | 
+\begin{tikzpicture}
+\begin{axis}
+\addplot[color=red]{exp(x)};
+\end{axis}
+\end{tikzpicture}
 
