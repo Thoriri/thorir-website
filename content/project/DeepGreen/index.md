@@ -101,24 +101,16 @@ $$
 \boldsymbol{\Sigma_e} = 
   \begin{pmatrix}\sigma_1^{2} & 0 & \dots & 0 \\\ 0 & \sigma_2^{2} & \dots & 0 \\\ \vdots & \vdots & \ddots & \vdots \\\ 0 & 0 & \dots & \sigma_N^{2} \end{pmatrix}
 $$
-$$\begin{pmatrix}a & b\\\ c & d\end{pmatrix}$$
+
 $\boldsymbol{\Sigma_e}$ is a diagonal matrix that models the point uncertainty. Now since the true $\boldsymbol{\Sigma_e}$ is not known we can conservatively define the diagonal values of $\boldsymbol{\Sigma_e}$ as follows:
 $$
 \sigma_{i}^{2}=\lambda_{\max }\left(\boldsymbol{\Sigma}_{A_{i}}\right)+\lambda_{\max }\left(\boldsymbol{\Sigma}_{B_{i}}\right)
 $$
 Where $\lambda_{\max}$ denotes the maximum eigenvalue and $$
 \boldsymbol{\Sigma}_{A_i} = 
-  \begin{pmatrix}
-    \delta \hat{x} & 0  & 0 \\
-    0 & \delta \hat{y}  & 0 \\
-    0 & 0 &  \delta \hat{z}
-  \end{pmatrix}, \ 
+  \begin{pmatrix} \delta \hat{x} & 0  & 0 \\\ 0 & \delta \hat{y}  & 0 \\\ 0 & 0 &  \delta \hat{z} \end{pmatrix}, \ 
 \boldsymbol{\Sigma}_{B_i} = 
-  \begin{pmatrix}
-    \delta \tilde{x} & 0  & 0 \\
-    0 & \delta \tilde{y}  & 0 \\
-    0 & 0 &  \delta \tilde{z}
-  \end{pmatrix}
+  \begin{pmatrix} \delta \tilde x & 0  & 0 \\\ 0 & \delta \tilde y  & 0 \\\ 0 & 0 &  \delta \tilde z \end{pmatrix}
 $$
 denote the uncertanty matrices of points detected by the overhead camera and cue camera respectively.
 By taking the derivative with regard to $T$ and setting equal to zero we get:
