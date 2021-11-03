@@ -137,7 +137,7 @@ We can then rewrite \eqref{eqn:minimization} to be:
 \label{eqn:minimization_rewritten}
 \begin{aligned}
 & \underset{R}{\text{min}}
-& &  ||A - RB||_F^2\\
+& &  ||A - RB||_F^2\\\
 & \text{subject to}
 & & R^TR = I_3 \ \ \text{and}  \ \det{(R)} = 1
 \end{aligned}
