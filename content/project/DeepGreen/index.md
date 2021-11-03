@@ -150,7 +150,7 @@ $$
 So the minimization problem \eqref{eqn:minimization_rewritten} can be thought of as maximizing $\operatorname{trace}\left(R B A^{T}\right)$  since $\operatorname{trace}\left(B^{T}R^{T} A\right) = \operatorname{trace}\left(R B A^{T}\right)$ by properties of the trace.
 Now let $BA^{T} = C$ and then:
 $$ 
-\begin{aligned} \operatorname{trace}\left(R C\right) &=\operatorname{trace}\left(R U \Sigma V^{T}\right) \\\ &=\operatorname{trace}\left(V^{T} R U \Sigma\right) \\\ &=\operatorname{trace}(Z \Sigma)\end{aligned}
+\begin{aligned} \operatorname{trace}\left(R C\right) &=\operatorname{trace}\left(R U \Sigma V^{T}\right) \\ &=\operatorname{trace}\left(V^{T} R U \Sigma\right) \\ &=\operatorname{trace}(Z \Sigma)\end{aligned}
 $$
 Where the singular value decomposition of $C$ is $U \Sigma V^T$ and $\Sigma = \operatorname{diag}(\hat{\sigma}_1,\hat{\sigma}_2,\ldots,\hat{\sigma}_N)$.
 To maximize $\operatorname{trace}\left(R B A^{T}\right)$ we must look at two cases, when $\operatorname{det}(VU^T) = \pm 1$. Note that the determinant of $VU^T$ can never be anything but $\pm 1$ since $V$ and $U$ are both orthogonal matrices and the product of two orthogonal matrices is also orthogonal. Based on algebraic proofs presented in \cite{lawrence_purely_2019} we are able to go through the following justification for each case.
