@@ -26,21 +26,17 @@ url_video: ""
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
-header-includes: |
-    \usepackage{tikz,pgfplots}
-    \usepackage{fancyhdr}
-    \pagestyle{fancy}
-    \fancyhead[CO,CE]{This is fancy}
-    \fancyfoot[CO,CE]{So is this}
-    \fancyfoot[LE,RO]{\thepage}
+
 ---
 In 2018 Joe Warrington started the Automatic Control Lab’s project to build a robotic snooker player capable of challenging a top-ranking human. The project was called DeepGreen, inspired by Deep Blue, the chess computer that famously defeated Garry Kasparov back in 1996. In the spring of 2019 I worked on a research project with Joe that combined robotics, computer vision and a little bit of machine learning.
 
 The project had the title of "High-Precision Control and Localisation for Robotic Billiard Shots" the project aimed at optimally combining the outputs from two cameras to take accurate billiard shots.
-| ![(x, y) coordinates of three different balls.](uploads/balls.png) | 
-\begin{tikzpicture}
-\begin{axis}
-\addplot[color=red]{exp(x)};
-\end{axis}
-\end{tikzpicture}
+
+The cue mounted camera, using image processing techniques extracts the (x; y) position in pixel coordinates of each ball as seen in the figure below, the distance to each ball, d, is then measured using the built in depth sensor. For being able to accurately estimate the pose of the cue camera we need to have each ball coordinate in a cue camera coordinate system.
+
+![(x, y) coordinates of three different balls.](uploads/balls.png) 
+
+### Cue camera coordinate system
+The field of view of the camera is 69.4&deg in the horizontal direction and 49:5&deg in the vertical direction. We make the assumption that the camera coordinate system is as seen in the figure below. We can then calculate the two angles $\theta$ (horizontal FOV) and $\phi$ (vertical FOV). For $\theta$ we divide the picture into two parts as seen in Figure 3.3, and we then calculate:
+
 
