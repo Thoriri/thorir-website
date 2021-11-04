@@ -270,11 +270,11 @@ And then from \eqref{eqn:x_y_camera} we get:
 \end{align*}
 We then build up the $\boldsymbol{\Sigma}_{B_i}$ matrix for each ball as (where $i = 1,\ldots,N$)
 
-$$ \boldsymbol{\Sigma}_{B_i} = \begin{pmatrix} \delta \tilde{x} & 0  & 0 \\\ 0 & \delta \tilde{y}  & 0 \\\ 0 & 0 &  \delta \tilde{z} \end{pmatrix} $$
+$$ \boldsymbol{\Sigma}_{B_i} = \begin{pmatrix} \delta \tilde x & 0  & 0 \\\ 0 & \delta \tilde y  & 0 \\\ 0 & 0 &  \delta \tilde z \end{pmatrix} $$
 
-Then we can build up the $\boldsymbol{\Sigma}_{A_i}$ matrix for each ball as:
+Then we can build up the $\boldsymbol{\Sigma}_{A_i}$ matrix for each ball as (from overhead camera uncertainty):
 
-$$ \boldsymbol{\Sigma}_{A_i} =  \begin{pmatrix} 3 & 0  & 0 \\\ 0 & 3  & 0 \\\ 0 & 0 &  0 \end{pmatrix} $$
+$$ \boldsymbol{\Sigma}_{A_i} = \begin{pmatrix} 3 & 0  & 0 \\\ 0 & 3  & 0 \\\ 0 & 0 &  0 \end{pmatrix} $$
 
 Note that the error on the z-value in $\boldsymbol{\Sigma}_{A_i}$ is 0 since we know that each ball is on the table and not hovering over it or under it.
 
@@ -283,6 +283,48 @@ Putting all this math together (with a lot of programming) we can see the follow
 
 {{< vimeo 335260829 >}}
 
+### Shot-Taking Algorithm
+The robot arm moves to a starting position which are calculated from the overhead camera, this starting position and angle of shot is very crude and often results in the cue striking the ball at an undesirable position. We then implemented a feedback loop that adjusts the cue position based on the pose estimation presented in Figure \ref{pose_estimation_update}.
+
+#### Shot-angle calculation
+To calculate the angle that the cue should be pointing in we use the ghost ball method. By drawing a line from the middle of the pocket through the center of the target ball one can see where the cue ball should strike the target ball as illustrated in the figure below.
+![Ghost ball method for calculating shot angle.](uploads/ghost_ball.png) 
+Let the $(x,y)$ positions of the pocket, target ball, cue ball be denoted by $(x_p,y_p), \ (x_t,y_t), \ (x_c,y_c)$ respectively and let the position of the "ghost ball" or desired cue ball position be denoted by $(x_g,y_g)$. We can then calculate:
+$$
+\alpha = \operatorname{arctantwo} (y_p - y_t, x_p - x_t)
+$$
+The desired cue ball position can then be calculated as:
+$$
+(x_g, y_g) = (x_t - \cos{\alpha} \cdot 52.5, y_t - \sin{\alpha} \cdot 52.5)
+$$
+Where $52.5$ is the diameter of a snooker ball and the shot angle is then calculated as:
+\begin{equation}
+\label{eqn:shot_angle}
+\beta = \operatorname{arctantwo} (y_g - y_c,x_g - x_c)
+\end{equation}
+#### Shot Difficulty Metric
+Each shot the robot tries to make has a difficulty metric which is defined as:
+\begin{equation}
+\label{eqn:difficulty}
+\textbf{difficulty} = \frac{d_1\cdot d_2}{\cos{\tilde{\theta}}}
+\end{equation}
+Where $d_1$ is the distance between cue ball and target ball, $d_2$ is the distance between target ball and pocket. $\tilde{\theta}$ is the cut angle. As depicted on the figure below.
+![Illustration of variables used to calculate shot difficulty metric.](uploads/difficulty.png) 
+
+#### Feedback correction
+Two approaches to the feedback correction were implemented and tested, location based and image based.
+##### Location based feedback correction
+In the location based feedback approach we had a fixed $(x,y)$ position on the snooker table that we wanted the cue to be in. By reading of the first two lines in the translation matrix that we get from the pose estimation we were then able to correct the cue position until a threshold was met. At the same time the shot angle \eqref{eqn:shot_angle} was calculated and the cue rotated in the correct direction.
+This method quickly proved to be too noisy to use, and resulted in the cue striking the ball in very undesirable locations or simply not striking the cue ball at all. We then moved on to the next method to implement the feedback correction.
+
+##### Image based feedback correction
+Since the location based feedback correction was not robust enough for the high precision task of striking the cue ball in a precise location, we used a different approach to correcting the $(x,y)$ position of the cue. By testing we saw that the ball striking was best if the cue camera was approximately $261$ millimeters from the cue ball. And the cue struck the cue ball dead center if it was at a fixed point $(\tilde{x}, \tilde{y})$ in the cue camera frame as is illustrated in the figure below. As well as we used the Procrustes solution for the rotation matrix to rotate the cue to the correct shot angle.
+![Desirable position of cue ball as seen from cue camera.](uploads/camera_desirable.png) 
+
+So the procedure went as is shown in the figure below.
+![Image based feedback correction procedure.](uploads/feedback_correction_proccedure.png) 
+
+In practice there is also lag implemented to allow the pose estimate to settle after each feedback correction.
 
 
 
