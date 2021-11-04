@@ -325,7 +325,7 @@ So the procedure went as is shown in the figure below.
 
 In practice there is also lag implemented to allow the pose estimate to settle after each feedback correction.
 
-## Video of Performance
+### Video of Performance
 Putting all this math together (with a lot of programming) we can see the following performance:
 
 {{< vimeo 335260829 >}}
