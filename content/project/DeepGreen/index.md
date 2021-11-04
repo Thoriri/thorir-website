@@ -291,7 +291,7 @@ To calculate the angle that the cue should be pointing in we use the ghost ball 
 ![Ghost ball method for calculating shot angle.](uploads/ghost_ball.png) 
 Let the $(x,y)$ positions of the pocket, target ball, cue ball be denoted by $(x_p,y_p), \ (x_t,y_t), \ (x_c,y_c)$ respectively and let the position of the "ghost ball" or desired cue ball position be denoted by $(x_g,y_g)$. We can then calculate:
 $$
-\alpha = \operatorname{arctantwo} (y_p - y_t, x_p - x_t)
+\alpha = \operatorname{arctan2} (y_p - y_t, x_p - x_t)
 $$
 The desired cue ball position can then be calculated as:
 $$
@@ -300,14 +300,13 @@ $$
 Where $52.5$ is the diameter of a snooker ball and the shot angle is then calculated as:
 \begin{equation}
 \label{eqn:shot_angle}
-\beta = \operatorname{arctantwo} (y_g - y_c,x_g - x_c)
+\beta = \operatorname{arctan2} (y_g - y_c,x_g - x_c)
 \end{equation}
 #### Shot Difficulty Metric
 Each shot the robot tries to make has a difficulty metric which is defined as:
-\begin{equation}
-\label{eqn:difficulty}
+\begin{equation*}
 \textbf{difficulty} = \frac{d_1\cdot d_2}{\cos{\tilde{\theta}}}
-\end{equation}
+\end{equation*}
 Where $d_1$ is the distance between cue ball and target ball, $d_2$ is the distance between target ball and pocket. $\tilde{\theta}$ is the cut angle. As depicted on the figure below.
 ![Illustration of variables used to calculate shot difficulty metric.](uploads/difficulty.png) 
 
