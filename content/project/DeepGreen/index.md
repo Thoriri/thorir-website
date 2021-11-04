@@ -40,10 +40,12 @@ The field of view of the camera is $69.4^{\circ}$ in the horizontal direction an
 For $\theta$ we divide the picture into two parts as seen in the figure beow, and we then calculate:
 \begin{equation}
 \theta = \frac{|x-640|}{640}\times\frac{69.4^\circ}{2}
+\label{eqn:theta}
 \end{equation}
 Similarly for $\phi$ we get:
 \begin{equation}
 \phi = \frac{|y-360|}{360}\times\frac{49.5^\circ}{2}
+\label{eqn:phi}
 \end{equation}
 
 ![Coordinate system of the cue mounted camera.](uploads/cue_camera_frame.png) 
@@ -128,9 +130,11 @@ T = \mu_{A} - R \mu_{B}
 $$
 where: $\bar{A} = [A_1,\ldots,A_N]$, $\bar{B} = [B_1,\ldots,B_N]$, $N_\sigma = \sum_{i=1}^{N}\sigma_i^{-2}$, $\unicode{x1D7D9} = [1,1,\ldots,1]^T \in \mathbb{R}^{N} $, $\mu_{A} = \frac{1}{N_\sigma}\bar{A}\boldsymbol{\Sigma_e^{-1}}\unicode{x1D7D9} $ and $\mu_{B} = \frac{1}{N_\sigma}\bar{B}\boldsymbol{\Sigma_e^{-1}}\unicode{x1D7D9}$
 
-We can then rewrite EQUATION to be
-
-$$ \begin{align} & \underset{R}{\text{min}} & &  ||A - RB||_F^2\\\ & \text{subject to} & & R^TR = I_3 \ \ \text{and}  \ \det{(R)} = 1   \end{align} $$
+We can then rewrite \eqref{eqn:minimization} to be
+\begin{equation}
+\label{eqn:minimization_rewritten}
+\begin{align*} & \underset{R}{\text{min}} & &  ||A - RB||_F^2\\\ & \text{subject to} & & R^TR = I_3 \ \ \text{and}  \ \det{(R)} = 1   \end{align*}
+\end{equation}
 
 where $A = \tilde{A}\boldsymbol{\Sigma_e^{-1/2}}$, $B = \tilde{B}\boldsymbol{\Sigma_e^{-1/2}}$, $\tilde{A} = (A_1 - \mu_A,A_2 - \mu_A,\ldots,A_N - \mu_A)$ and $\tilde{B} = (B_1 - \mu_{B},B_2 - \mu_{B},\ldots,B_N - \mu_{B})$.
 Now we can write:
