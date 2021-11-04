@@ -133,7 +133,7 @@ where: $\bar{A} = [A_1,\ldots,A_N]$, $\bar{B} = [B_1,\ldots,B_N]$, $N_\sigma = \
 We can then rewrite \eqref{eqn:minimization} to be
 
 
-\begin{align}\label{eqn:minimization_rewritten} \begin{split} & \underset{R}{\text{min}} & &  ||A - RB||_F^2\\\ & \text{subject to} & & R^TR = I_3 \ \ \text{and}  \ \det{(R)} = 1  \end{split} \end{align}
+\begin{align}\label{eqn:minimization_rewritten} \begin{split} & \underset{R}{\text{min}} & &  ||A - RB||_F^2\\\ & \text{subject to} & \ & R^TR = I_3 \ \ \text{and}  \ \det{(R)} = 1  \end{split} \end{align}
 
 
 where $A = \tilde{A}\boldsymbol{\Sigma_e^{-1/2}}$, $B = \tilde{B}\boldsymbol{\Sigma_e^{-1/2}}$, $\tilde{A} = (A_1 - \mu_A,A_2 - \mu_A,\ldots,A_N - \mu_A)$ and $\tilde{B} = (B_1 - \mu_{B},B_2 - \mu_{B},\ldots,B_N - \mu_{B})$.
@@ -141,10 +141,10 @@ Now we can write:
 $$ 
 \|A-RB\|_{F}^{2}=\operatorname{trace}\left(A^{T} A-2 B^{T}R^{T} A+B^{T} B\right)
 $$
-So the minimization problem \ref{eqn:minimization_rewritten} can be thought of as maximizing $\operatorname{trace}\left(R B A^{T}\right)$  since $\operatorname{trace}\left(B^{T}R^{T} A\right) = \operatorname{trace}\left(R B A^{T}\right)$ by properties of the trace.
+So the minimization problem \eqref{eqn:minimization_rewritten} can be thought of as maximizing $\operatorname{trace}\left(R B A^{T}\right)$  since $\operatorname{trace}\left(B^{T}R^{T} A\right) = \operatorname{trace}\left(R B A^{T}\right)$ by properties of the trace.
 Now let $BA^{T} = C$ and then:
 
-$$ \begin{align} \operatorname{trace}\left(R C\right) & =\operatorname{trace}\left(R U \Sigma V^{T}\right) \\\ & =\operatorname{trace}\left(V^{T} R U \Sigma\right) \\\ & =\operatorname{trace}(Z \Sigma)\end{align} $$
+$$ \begin{align*} \operatorname{trace}\left(R C\right) & =\operatorname{trace}\left(R U \Sigma V^{T}\right) \\\ & =\operatorname{trace}\left(V^{T} R U \Sigma\right) \\\ & =\operatorname{trace}(Z \Sigma)\end{align*} $$
 
 Where the singular value decomposition of $C$ is $U \Sigma V^T$ and $\Sigma = \operatorname{diag}(\hat \sigma_1,\hat \sigma_2,\ldots,\hat \sigma_N)$
 To maximize $\operatorname{trace}\left(R B A^{T}\right)$ we must look at two cases, when $\operatorname{det}(VU^T) = \pm 1$. Note that the determinant of $VU^T$ can never be anything but $\pm 1$ since $V$ and $U$ are both orthogonal matrices and the product of two orthogonal matrices is also orthogonal.
@@ -242,10 +242,9 @@ $$
 \delta\theta  = \frac{69.4}{1280}\delta x , \ \ \delta\phi = \frac{49.5}{720}\delta y
 $$ 
 If we have a general function of the form:
-\begin{equation}
-\label{eqn:general_fcn}
+\begin{equation*}
 R(X,Y,\ldots)
-\end{equation}
+\end{equation*}
 we can write the uncertainty of that function as:
 \begin{equation}
 \label{eqn:general_fcn_uncert} 
@@ -263,7 +262,8 @@ $$
 $$
 And then from \eqref{eqn:x_y_camera} we get:
 $$
-\delta \tilde{x} = \sqrt{(\cos(\theta)\cdot d' \cdot \delta\theta)^2+(\sin{(\theta)}\delta d')^2} , \ \ \delta \tilde{y} = \sqrt{(-\sin(\theta)\cdot d' \cdot \delta \theta)^2+(\cos{(\theta)}\delta d')^2}
+\delta \tilde{x} = \sqrt{(\cos(\theta)\cdot d' \cdot \delta\theta)^2+(\sin{(\theta)}\delta d')^2} \\\
+\delta \tilde{y} = \sqrt{(-\sin(\theta)\cdot d' \cdot \delta \theta)^2+(\cos{(\theta)}\delta d')^2}
 $$
 We then build up the $\boldsymbol{\Sigma}_{B_i}$ matrix for each ball as (where $i = 1,\ldots,N$):
 $$ \boldsymbol{\Sigma}_{B_i} = \begin{pmatrix} \delta \tilde{x} & 0  & 0 \\\ 0 & \delta \tilde{y}  & 0 \\\ 0 & 0 &  \delta \tilde{z} \end{pmatrix} $$
@@ -280,12 +280,5 @@ Putting all this math together (with a lot of programming) we can see the follow
 {{< vimeo 335260829 >}}
 
 
-### Testing 
-In equation \eqref{eq:sample}, we find the value of an
-interesting integral:
 
-\begin{equation}
-  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
-  \label{eq:sample}
-\end{equation}
 
