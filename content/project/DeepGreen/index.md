@@ -26,6 +26,8 @@ url_video: ""
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
+header-includes:
+  - \usepackage{algorithm2e}
 ---
 In 2018 Joe Warrington started the Automatic Control Lab’s project to build a robotic snooker player capable of challenging a top-ranking human. The project was called DeepGreen, inspired by Deep Blue, the chess computer that famously defeated Garry Kasparov back in 1996. In the spring of 2019 I worked on a research project with Joe that combined robotics, computer vision and a little bit of machine learning.
 
@@ -206,4 +208,5 @@ Based on work presented in \cite{slabaugh_computing_nodate} we can then calculat
 \end{algorithm}
 ```
 The most important angle is $\theta$ as that is the one can be thought of as the cue angle on the table.
+{{< vimeo 335260829 >}}
 
