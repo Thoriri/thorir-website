@@ -26,8 +26,6 @@ url_video: ""
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
 slides: ""
-header-includes:
-  - \usepackage{algorithm2e}
 ---
 In 2018 Joe Warrington started the Automatic Control Lab’s project to build a robotic snooker player capable of challenging a top-ranking human. The project was called DeepGreen, inspired by Deep Blue, the chess computer that famously defeated Garry Kasparov back in 1996. In the spring of 2019 I worked on a research project with Joe that combined robotics, computer vision and a little bit of machine learning.
 
@@ -38,7 +36,7 @@ The cue mounted camera, using image processing techniques extracts the $(x,y)$ p
 ![(x, y) coordinates of three different balls.\label{mylabel}](uploads/balls.png) 
 
 ### Cue camera coordinate system
-The field of view of the camera is $69.4^{\circ}$ in the horizontal direction and $49.5^{\circ}$ in the vertical direction. We make the assumption that the camera coordinate system is as seen in Figure \ref{mylabel}. We can then calculate the two angles $\theta$ (horizontal FOV) and $\phi$ (vertical FOV).
+The field of view of the camera is $69.4^{\circ}$ in the horizontal direction and $49.5^{\circ}$ in the vertical direction. We make the assumption that the camera coordinate system is as seen in the figure below. We can then calculate the two angles $\theta$ (horizontal FOV) and $\phi$ (vertical FOV).
 For $\theta$ we divide the picture into two parts as seen in the figure beow, and we then calculate:
 \begin{equation}
 \theta = \frac{|x-640|}{640}\times\frac{69.4^\circ}{2}
@@ -66,7 +64,7 @@ For the $(x,y)$ coordinates we calculate the projection of $d$ onto the $x-y$ pl
 d' = \cos{(\phi)}d
 \end{equation}
 The $(x,y)$ coordinate is then calculated as can be seen from figure below.
-![Trigonometry for finding (x; y)-coordinate.](uploads/2.png)
+![Trigonometry for finding (x, y)-coordinate.](uploads/2.png)
 \begin{equation}
 \label{eqn:x_y_camera}
 x = \sin{(\theta)}d', \ \ y = \cos{(\theta)}d'
