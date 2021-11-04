@@ -278,13 +278,13 @@ $$ \boldsymbol{\Sigma}_{A_i} = \begin{pmatrix} 3 & 0  & 0 \\\ 0 & 3  & 0 \\\ 0 &
 
 Note that the error on the z-value in $\boldsymbol{\Sigma}_{A_i}$ is 0 since we know that each ball is on the table and not hovering over it or under it.
 
-### Video of Performance
-Putting all this math together (with a lot of programming) we can see the following performance:
+With each new measurement our belief of the rotation and translation is updated according to the following:
+![Pose estimation updating.](uploads/pose_estimation_update.png)
+Where we implement a low pass filter to filter out high frequency changes in rotation and translation that might influence the pose estimation negatively.
 
-{{< vimeo 335260829 >}}
 
 ### Shot-Taking Algorithm
-The robot arm moves to a starting position which are calculated from the overhead camera, this starting position and angle of shot is very crude and often results in the cue striking the ball at an undesirable position. We then implemented a feedback loop that adjusts the cue position based on the pose estimation presented in Figure \ref{pose_estimation_update}.
+The robot arm moves to a starting position which are calculated from the overhead camera, this starting position and angle of shot is very crude and often results in the cue striking the ball at an undesirable position. We then implemented a feedback loop that adjusts the cue position based on the pose estimation presented in the figure above
 
 #### Shot-angle calculation
 To calculate the angle that the cue should be pointing in we use the ghost ball method. By drawing a line from the middle of the pocket through the center of the target ball one can see where the cue ball should strike the target ball as illustrated in the figure below.
@@ -325,6 +325,11 @@ So the procedure went as is shown in the figure below.
 ![Image based feedback correction procedure.](uploads/feedback_correction_proccedure.png) 
 
 In practice there is also lag implemented to allow the pose estimate to settle after each feedback correction.
+
+## Video of Performance
+Putting all this math together (with a lot of programming) we can see the following performance:
+
+{{< vimeo 335260829 >}}
 
 
 
