@@ -187,7 +187,7 @@ $$
 We can then calculate the Euler angles as:
 $$
 \begin{align}
-\text{if} \ & R_{31} & \neq \pm 1 \text{then} \\\ & \theta \gets -\operatorname{arcsin}\left(R_{31}\right)$ \\\ & \psi \gets \operatorname{arctan2} \left(\frac{R_{32}}{\cos{\theta}},\frac{R_{33}}{\cos{\theta}}\right) \\\ & \phi \gets \operatorname{arctan2} \left(\frac{R_{21}}{\cos{\theta}},\frac{R_{11}}{\cos{\theta}}\right) \end{align}
+\text{if} \ & R_{31}  \neq \pm 1 & \text{then} \\\ & \theta \gets -\operatorname{arcsin}\left(R_{31}\right)$ \\\ & \psi \gets \operatorname{arctan2} \left(\frac{R_{32}}{\cos{\theta}},\frac{R_{33}}{\cos{\theta}}\right) \\\ & \phi \gets \operatorname{arctan2} \left(\frac{R_{21}}{\cos{\theta}},\frac{R_{11}}{\cos{\theta}}\right) \end{align}
 $$
 $$
 \begin{align}
