@@ -261,10 +261,13 @@ $$
 \delta d'  = \sqrt{(-\sin(\phi)\cdot d \cdot \delta \phi)^2+(\cos{(\phi)}\delta d)^2}
 $$
 And then from \eqref{eqn:x_y_camera} we get:
-$$
+
+\begin{align*}
+\begin{split}
 \delta \tilde{x} = \sqrt{(\cos(\theta)\cdot d' \cdot \delta\theta)^2+(\sin{(\theta)}\delta d')^2} \\\\
 \delta \tilde{y} = \sqrt{(-\sin(\theta)\cdot d' \cdot \delta \theta)^2+(\cos{(\theta)}\delta d')^2}
-$$
+\end{split}
+\end{align*}
 We then build up the $\boldsymbol{\Sigma}_{B_i}$ matrix for each ball as (where $i = 1,\ldots,N$)
 
 $$ \boldsymbol{\Sigma}_{B_i} = \begin{pmatrix} \delta \tilde{x} & 0  & 0 \\\ 0 & \delta \tilde{y}  & 0 \\\ 0 & 0 &  \delta \tilde{z} \end{pmatrix} $$
