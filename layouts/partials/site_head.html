@@ -90,7 +90,7 @@
   {{ if or .Params.math site.Params.math }}
     {{ $mathjax_config := resources.Get "js/mathjax-config.js" }}
     
-    <script type="text/x-mathjax-config">
+    <script type="text/javascript">
           window.MathJax = {
             tex: {
               inlineMath: [
