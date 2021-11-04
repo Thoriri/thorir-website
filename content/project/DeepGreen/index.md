@@ -184,16 +184,16 @@ Having estimated the rotation matrix we need to extract the Euler angles since w
 $$
 R=\left[ \begin{array}{lll}{R_{11}} & {R_{12}} & {R_{13}} \\\ {R_{21}} & {R_{22}} & {R_{23}} \\\ {R_{31}} & {R_{32}} & {R_{33}}\end{array}\right]
 $$
-We can then calculate the Euler angles as:
+We can then calculate the Euler angles as, if $R_{31} \neq \pm 1$
 $$
 \begin{align}
-\text{if} \ & R_{31}  \neq \pm 1 & \text{then} \\\ & \theta \gets -\operatorname{arcsin}\left(R_{31}\right)$ \\\ & \psi \gets \operatorname{arctan2} \left(\frac{R_{32}}{\cos{\theta}},\frac{R_{33}}{\cos{\theta}}\right) \\\ & \phi \gets \operatorname{arctan2} \left(\frac{R_{21}}{\cos{\theta}},\frac{R_{11}}{\cos{\theta}}\right) \end{align}
+\theta \gets -\operatorname{arcsin}\left(R_{31}\right)$ \\\ & \psi \gets \operatorname{arctan2} \left(\frac{R_{32}}{\cos{\theta}},\frac{R_{33}}{\cos{\theta}}\right) \\\ & \phi \gets \operatorname{arctan2} \left(\frac{R_{21}}{\cos{\theta}},\frac{R_{11}}{\cos{\theta}}\right) \end{align}
 $$
+else
 $$
-\begin{align}
-\text{else} & \phi \gets 0
-\end{align}
+\phi \gets 0
 $$
+and if $R_{31} = -1$
 
 ```{.algorithm}
 \begin{algorithm}
