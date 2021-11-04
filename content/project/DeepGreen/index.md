@@ -200,7 +200,19 @@ $$
 \phi \gets 0
 $$
 and if $R_{31} = -1$
-
+$$
+\theta \gets \frac{\pi}{2}
+$$
+$$
+\psi \gets \operatorname{arctan2} (R_{12},R_{13})
+$$
+else
+$$
+\theta \gets -\frac{\pi}{2}
+$$
+$$
+\psi \gets \operatorname{arctan2} (-R_{12}-,R_{13})
+$$
 ```{.algorithm}
 \begin{algorithm}
 \begin{algorithmic}
