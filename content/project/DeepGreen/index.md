@@ -217,34 +217,14 @@ $$
 $$
 \psi \gets \operatorname{arctan2} (-R_{12}-,R_{13})
 $$
-```{.algorithm}
-\begin{algorithm}
-\begin{algorithmic}
-\If {$R_{31} \neq \pm 1$}
-    \State $\theta \gets -\operatorname{arcsin}\left(R_{31}\right)$
-    \State $\psi \gets \arctantwo \left(\frac{R_{32}}{\cos{\theta}},\frac{R_{33}}{\cos{\theta}}\right)$
-    \State $\phi \gets \arctantwo \left(\frac{R_{21}}{\cos{\theta}},\frac{R_{11}}{\cos{\theta}}\right)$
-\Else
-    \State $\phi \gets 0$
-    \If {$R_{31} = -1$}
-        \State $\theta \gets \frac{\pi}{2}$
-	\State $\psi \gets \arctantwo (R_{12},R_{13})$
-    \Else
-        \State $\theta \gets -\frac{\pi}{2}$
-	\State $\psi \gets \arctantwo (-R_{12}-,R_{13})$	
-    \EndIf
-\EndIf
-\end{algorithmic}
- \caption{Euler angle calculations from rotation matrix.}
-\end{algorithm}
-```
+
 The most important angle is $\theta$ as that is the one can be thought of as the cue angle on the table.
-\section{Uncertainty estimation}
+### Uncertainty Estimation
 For uncertainty calculations of the cue camera frame of reference ball coordinates. We write:
 $$
 x \pm \delta x , \ \ y \pm \delta y \ \textrm{and} \ d \pm \delta d
 $$
-From \cite{grunnet-jepsen_tuning_2018} we can write the distance RMS error as:
+We can write the distance RMS error as:
 $$
 \text{Distance RMS error (mm)} = \frac{d^2\cdot \text{Subpixel}}{\text{Focal length (pixels)}\cdot \text{Baseline (mm)}}
 $$
@@ -289,6 +269,9 @@ Then we can build up the $\boldsymbol{\Sigma}_{A_i}$ matrix for each ball as:
 $$ \boldsymbol{\Sigma}_{A_i} =  \begin{pmatrix} 3 & 0  & 0 \\\ 0 & 3  & 0 \\\ 0 & 0 &  0 \end{pmatrix} $$
 
 Note that the error on the z-value in $\boldsymbol{\Sigma}_{A_i}$ is 0 since we know that each ball is on the table and not hovering over it or under it.
+
+### Video of Performance
+Putting all this math together (with a lot of programming) we can see the following performance:
 
 {{< vimeo 335260829 >}}
 
