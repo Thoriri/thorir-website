@@ -184,7 +184,15 @@ Having estimated the rotation matrix we need to extract the Euler angles since w
 $$
 R=\left[ \begin{array}{lll}{R_{11}} & {R_{12}} & {R_{13}} \\\ {R_{21}} & {R_{22}} & {R_{23}} \\\ {R_{31}} & {R_{32}} & {R_{33}}\end{array}\right]
 $$
-Based on work presented in \cite{slabaugh_computing_nodate} we can then calculate the Euler angles as:
+We can then calculate the Euler angles as:
+$$
+\begin{align}
+\text{if} & R_{31} & \neq \pm 1 \text{then} \\\
+& \theta \gets -\operatorname{arcsin}\left(R_{31}\right)$ \\\
+& \psi \gets \arctantwo \left(\frac{R_{32}}{\cos{\theta}},\frac{R_{33}}{\cos{\theta}}\right) \\\
+& \phi \gets \arctantwo \left(\frac{R_{21}}{\cos{\theta}},\frac{R_{11}}{\cos{\theta}}\right) 
+\end{align}
+$$
 
 ```{.algorithm}
 \begin{algorithm}
@@ -208,5 +216,56 @@ Based on work presented in \cite{slabaugh_computing_nodate} we can then calculat
 \end{algorithm}
 ```
 The most important angle is $\theta$ as that is the one can be thought of as the cue angle on the table.
+\section{Uncertainty estimation}
+For uncertainty calculations of the cue camera frame of reference ball coordinates. We write:
+$$
+x \pm \delta x , \ \ y \pm \delta y \ \textrm{and} \ d \pm \delta d
+$$
+From \cite{grunnet-jepsen_tuning_2018} we can write the distance RMS error as:
+$$
+\text{Distance RMS error (mm)} = \frac{d^2\cdot \text{Subpixel}}{\text{Focal length (pixels)}\cdot \text{Baseline (mm)}}
+$$
+Where $\text{Subpixel} = 0.08$, $\text{Baseline (mm)} = 50$ and 
+$$
+\text{Focal length (pixels)} = \frac{1}{2} \frac{\text{Xres (pixels)}}{\tan{\text{HFOV}/2}} = \frac{1}{2} \frac{848}{\tan{45^{\circ}}}
+$$ 
+
+Now from \eqref{eqn:theta} and \eqref{eqn:phi} we get that:
+$$
+\delta\theta  = \frac{69.4}{1280}\delta x , \ \ \delta\phi = \frac{49.5}{720}\delta y
+$$ 
+If we have a general function of the form:
+\begin{equation}
+\label{eqn:general_fcn}
+R(X,Y,\ldots)
+\end{equation}
+we can write the uncertainty of that function as:
+\begin{equation}
+\label{eqn:general_fcn_uncert} 
+\delta R=\sqrt{\left(\frac{\partial R}{\partial X} \cdot \delta X\right)^{2}+\left(\frac{\partial R}{\partial Y} \cdot \delta Y\right)^{2}+\ldots}
+ \end{equation}
+Where we assume that variations in $X,Y$ and $Z$ directions are independant.
+From \eqref{eqn:z_camera} and \eqref{eqn:general_fcn_uncert} we write:
+$$
+\delta \tilde{z}  = \sqrt{(-\cos(\phi)\cdot d \cdot \delta \phi)^2+(-\sin{(\phi)}\delta d)^2}
+$$
+
+Similarly from \eqref{eqn:d_prime} we get:
+$$
+\delta d'  = \sqrt{(-\sin(\phi)\cdot d \cdot \delta \phi)^2+(\cos{(\phi)}\delta d)^2}
+$$
+And then from \eqref{eqn:x_y_camera} we get:
+$$
+\delta \tilde{x} = \sqrt{(\cos(\theta)\cdot d' \cdot \delta\theta)^2+(\sin{(\theta)}\delta d')^2} , \ \ \delta \tilde{y} = \sqrt{(-\sin(\theta)\cdot d' \cdot \delta \theta)^2+(\cos{(\theta)}\delta d')^2}
+$$
+We then build up the $\boldsymbol{\Sigma}_{B_i}$ matrix for each ball as (where $i = 1,\ldots,N$):
+$$ \boldsymbol{\Sigma}_{B_i} = \begin{pmatrix} \delta \tilde{x} & 0  & 0 \\\ 0 & \delta \tilde{y}  & 0 \\\ 0 & 0 &  \delta \tilde{z} \end{pmatrix} $$
+
+Then we can build up the $\boldsymbol{\Sigma}_{A_i}$ matrix for each ball as:
+
+$$ \boldsymbol{\Sigma}_{A_i} =  \begin{pmatrix} 3 & 0  & 0 \\\ 0 & 3  & 0 \\\ 0 & 0 &  0 \end{pmatrix} $$
+
+Note that the error on the z-value in $\boldsymbol{\Sigma}_{A_i}$ is 0 since we know that each ball is on the table and not hovering over it or under it.
+
 {{< vimeo 335260829 >}}
 
