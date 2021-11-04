@@ -91,9 +91,24 @@
     {{ $mathjax_config := resources.Get "js/mathjax-config.js" }}
     <script src="{{ $mathjax_config.RelPermalink }}"></script>
     <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-          TeX: { equationNumbers: { autoNumber: "AMS" } }
-        });
+          window.MathJax = {
+            tex: {
+              inlineMath: [
+                ['$', '$'],
+                ['\\(', '\\)'],
+              ],
+              displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]'],
+              ],
+              processEscapes: false,
+              packages: {'[+]': ['noerrors']},
+              tags: 'ams'
+            },
+            loader: {
+              load: ['[tex]/noerrors'],
+            },
+          };
     </script>
   {{ end }}
 
