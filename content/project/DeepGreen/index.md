@@ -57,7 +57,7 @@ The $z$-coordinate of the balls is calculated as:
 \label{eqn:z_camera}
 z = -\sin{(\phi)}d
 \end{equation}
-As can be seen in Figure \ref{fig:zcoardinate}.
+As can be seen in the figure above.
 ![Trigonometry for finding z-coordinate.](uploads/1.png) 
 The negative sign is because we assume that the camera is always above the balls.
 For the $(x,y)$ coordinates we calculate the projection of $d$ onto the $x-y$ plane which is given as: 
@@ -65,7 +65,7 @@ For the $(x,y)$ coordinates we calculate the projection of $d$ onto the $x-y$ pl
 \label{eqn:d_prime}
 d' = \cos{(\phi)}d
 \end{equation}
-The $(x,y)$ coordinate is then calculated as can be seen from Figure \ref{fig:xycoardinate}.
+The $(x,y)$ coordinate is then calculated as can be seen from figure below.
 ![Trigonometry for finding (x; y)-coordinate.](uploads/2.png)
 \begin{equation}
 \label{eqn:x_y_camera}
@@ -91,7 +91,6 @@ $$
 A_i = RB_i + T
 $$
 Where $R$ is a 3x3 rotation matrix and $T$ is a 3x1 translation matrix. This kind of problem falls under so called Procrustes analysis, and since we have the necessary condition of $R$ having to be a valid rotation matrix the problem is better known as the Orthogonal Procrustes problem. The name Procrustes refers to a bandit from Greek mythology who made his victims fit his bed by either stretching their limbs or cutting them off.
-Based on work presented in \cite{lourenco_uncertainty_2017} we were able to include uncertainty in our minimization.
 To find $R$ and $T$ we minimize:
 \begin{equation}
 \label{eqn:minimization}
@@ -140,13 +139,13 @@ Now we can write:
 $$ 
 \|A-RB\|_{F}^{2}=\operatorname{trace}\left(A^{T} A-2 B^{T}R^{T} A+B^{T} B\right)
 $$
-So the minimization problem \eqref{eqn:minimization_rewritten} can be thought of as maximizing $\operatorname{trace}\left(R B A^{T}\right)$  since $\operatorname{trace}\left(B^{T}R^{T} A\right) = \operatorname{trace}\left(R B A^{T}\right)$ by properties of the trace.
+So the minimization problem \ref{eqn:minimization_rewritten} can be thought of as maximizing $\operatorname{trace}\left(R B A^{T}\right)$  since $\operatorname{trace}\left(B^{T}R^{T} A\right) = \operatorname{trace}\left(R B A^{T}\right)$ by properties of the trace.
 Now let $BA^{T} = C$ and then:
 
 $$ \begin{align} \operatorname{trace}\left(R C\right) & =\operatorname{trace}\left(R U \Sigma V^{T}\right) \\\ & =\operatorname{trace}\left(V^{T} R U \Sigma\right) \\\ & =\operatorname{trace}(Z \Sigma)\end{align} $$
 
 Where the singular value decomposition of $C$ is $U \Sigma V^T$ and $\Sigma = \operatorname{diag}(\hat \sigma_1,\hat \sigma_2,\ldots,\hat \sigma_N)$
-To maximize $\operatorname{trace}\left(R B A^{T}\right)$ we must look at two cases, when $\operatorname{det}(VU^T) = \pm 1$. Note that the determinant of $VU^T$ can never be anything but $\pm 1$ since $V$ and $U$ are both orthogonal matrices and the product of two orthogonal matrices is also orthogonal. Based on algebraic proofs presented in \cite{lawrence_purely_2019} we are able to go through the following justification for each case.
+To maximize $\operatorname{trace}\left(R B A^{T}\right)$ we must look at two cases, when $\operatorname{det}(VU^T) = \pm 1$. Note that the determinant of $VU^T$ can never be anything but $\pm 1$ since $V$ and $U$ are both orthogonal matrices and the product of two orthogonal matrices is also orthogonal.
 
 First we note that $\operatorname{trace}(Z \Sigma) =\sum_{i=1}^{N} z_{i i}\hat{\sigma}_{i} \leq \sum_{i=1}^{N} \ \hat{\sigma}_{i}$ since $Z$ is orthogonal and $z_{i i} \leq 1, \ i = 1,2,\ldots,N$.
 
