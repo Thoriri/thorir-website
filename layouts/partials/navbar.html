@@ -23,8 +23,6 @@
           <img src="{{ $logo.RelPermalink }}" alt="{{ site.Title }}"
           {{with site.Params.header.image.width}}width="{{.}}"{{end}}
           {{with site.Params.header.image.height}}height="{{.}}"{{end}}>
-          </a>
-          <a class="navbar-brand" href="{{ "/" | relLangURL }}">{{- site.Title -}}
         {{- else -}}
           {{- site.Title -}}
         {{- end -}}
