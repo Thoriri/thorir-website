@@ -4,6 +4,7 @@ summary: Taking successful shots on a snooker table is an hard task and requires
 date: "2019-05-30T00:00:00Z"
 tags:
 - Other
+- Computer Vision
 # Optional external URL for project (replaces project detail page).
 external_link: ""
 
