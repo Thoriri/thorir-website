@@ -23,14 +23,15 @@
           <img src="{{ $logo.RelPermalink }}" alt="{{ site.Title }}"
           {{with site.Params.header.image.width}}width="{{.}}"{{end}}
           {{with site.Params.header.image.height}}height="{{.}}"{{end}}>
-          </a>
-          <a class="navbar-brand" href="{{ "/" | relLangURL }}">Thorir Mar
         {{- else -}}
           {{- site.Title -}}
         {{- end -}}
       </a>
     </div>
     {{end}}
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="{{ "/" | relLangURL }}">Thorir Mar Ingolfsson</a>
+    </div>
 
     {{ if site.Menus.main }}
     <button type="button" class="navbar-toggler" data-toggle="collapse"
