@@ -42,5 +42,5 @@ Temporal Convolutional Networks (TCN) which are a variaton of Convolutional Neur
 For sake of illusration I will explain all of these concepts here in 1D, but they also work in higher dimensions. First let us look at normal a CNN, let's assume that we have one layer, which has a kernel size of 3 and 1 filter. And let's assume that we have a input time series that looks like the one here below:
 ![Time series example](uploads/time_series.PNG "Example of time series")
 
-Now since our 1D convolutional layer has a kernel size of 3 we can
-
+When we then want to apply the 1D convolution to this input time series we do the following: We take our kernel size, which is 3, and slide it over the input time series to produce a output time series. Now how does this actually look like? Let's look at the first output of the output time series and see how that is produced,
+![Time series example](uploads/time_series_kernel.pdf "Example of time series")
