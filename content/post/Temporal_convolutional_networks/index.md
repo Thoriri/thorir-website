@@ -43,4 +43,4 @@ For sake of illusration I will explain all of these concepts here in 1D, but the
 ![Time series example](uploads/time_series.PNG "Example of time series")
 
 When we then want to apply the 1D convolution to this input time series we do the following: We take our kernel size, which is 3, and slide it over the input time series to produce a output time series. Now how does this actually look like? Let's look at the first output of the output time series and see how that is produced,
-![Time series example](uploads/time_series_kernel.pdf "Example of time series")
+![Time series example](uploads/time_series_kernel.png "Example of time series")
