@@ -3,7 +3,7 @@ title: Insights into LSTM architecture
 subtitle: Finding the total number of multiply and accumulate operations in a LSTM layer
 
 # Summary for listings and search engines
-summary: Finding the total number of multiply and accumulate operations in a LSTM layer
+summary: Finding the total number of multiply and accumulate operations in a LSTM layer, and looking at how many parameters there are in an LSTM cell.
 
 # Link this post with a project
 projects: []
