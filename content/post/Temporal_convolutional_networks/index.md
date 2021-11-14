@@ -15,7 +15,7 @@ date: "2021-11-10T12:00:00Z"
 lastmod: "2021-11-10T12:00:00Z"
 
 # Is this an unpublished draft?
-draft: false
+draft: true
 
 # Show this page in the Featured widget?
 featured: false
@@ -50,5 +50,4 @@ Now first thing we notice is that the output time series is not the same length 
 $$
 T_{out} = T_{in} - (k-1)
 $$
-Where $k$ is the kernel size.
-
+Where $k$ is the kernel size. Now when we 
