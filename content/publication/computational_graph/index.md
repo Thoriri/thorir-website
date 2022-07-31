@@ -19,7 +19,7 @@ url_project: ""
 publication_short: In *CF22*
 url_source: ""
 url_video: ""
-title: "Reducing neural architecture search spaces with training-free statistics and computational graph clustering"
+title: "Reducing Neural Architecture Search Spaces with Training-Free Statistics and Computational Graph Clustering"
 doi: 
 featured: true
 tags: []
