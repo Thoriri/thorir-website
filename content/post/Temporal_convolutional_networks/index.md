@@ -1,9 +1,9 @@
 ---
 title: Temporal Convolutional Networks
-subtitle: A short introduction into how Temporal Convolutional Networks function
+subtitle: A short introduction to how Temporal Convolutional Networks function
 
 # Summary for listings and search engines
-summary: An introduction into dilated causal convolutions, and a look into how Temporal Convolutional Networks (TCN) function.
+summary: An introduction to dilated causal convolutions and a look into how Temporal Convolutional Networks (TCN) function.
 
 # Link this post with a project
 projects: []
@@ -23,7 +23,7 @@ featured: false
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
 image:
-  caption: 'Residual blcok'
+  caption: 'Residual block
   focal_point: ""
   placement: 2
   preview_only: false
@@ -37,51 +37,51 @@ tags:
 categories:
 ---
 
-Temporal Convolutional Networks (TCN) which are a variaton of Convolutional Neural Networks (CNN), recently have been used by deep learning practitioners to solve time series tasks with promising and successful outcomes as seen here [CITE]. I for one have employed TCNs for detecting Arythmia in ECG signals with great success. In this short post I want to explain how these networks work, how they differ from normal CNNs and take a look into the computational workload.
+Temporal Convolutional Networks (TCN), which are a variation of Convolutional Neural Networks (CNN), have recently been used by deep learning practitioners to solve time series tasks with promising and successful outcomes, as seen here [CITE]. I, for one, have employed TCNs for detecting Arrhythmia in ECG signals with great success. In this short post, I want to explain how these networks work and how they differ from normal CNNs and look into the computational workload.
 
-For sake of illusration I will explain all of these concepts here in 1D, but they also work in higher dimensions. First let us look at normal a CNN, let's assume that we have one layer, which has a kernel size of 3 and 1 filter. And let's assume that we have a input time series that looks like the one here below:
+For illustration, I will explain all of these concepts here in 1D, but they also work in higher dimensions. First, let us look at a standard CNN. Let us assume that we have one layer with a kernel size of 3 and 1 filter. Moreover, let us assume that we have an input time series that looks like the one here below:
 ![Time series example](uploads/time_series.PNG "Example of time series")
 
-When we then want to apply the 1D convolution to this input time series we do the following: We take our kernel size, which is 3, and slide it over the input time series to produce a output time series. Now how does this actually look like? Let's look at the first output of the output time series and see how that is produced,
-![Showing how first sample of output time series is formed](uploads/conv.gif "Showing how first sample of output time seris is formed")
+When we then want to apply the 1D convolution to this input time series, we do the following: We take our kernel size, 3, and slide it over the input time series to produce an output time series. Now, what does this look like? Let us look at the first output of the output time series and see how that is produced,
+![Showing how the first sample of output time series is formed](uploads/conv.gif "Showing how the first sample of output time series is formed")
 We then slide the kernel over the whole input time series and get the following output:
 ![Output time series](uploads/time_series_output.PNG "Output time series")
-Now first thing we notice is that the output time series is not the same length as the input time series. This is because we do not do any padding, and we can calculate the output length by the following formula:
+We first notice that the output time series is not the same length as the input time series. This is because we do not do any padding, and we can calculate the output length by the following formula:
 $$
 T_{out} = T_{in} - (k-1)
 $$
-Where $k$ is the kernel size. TCNs work in a very similar way, with one addidional factor which is called dilation. Dilation is a way to increase the receptive field size of the network, with low cost to the number of operations needed. Let's look at a similar 1D convolution as before, but here we add the factor of $D = 2$ where $D$ stands for dilation. Note that in normal CNNs, dilation is fixed at $1$:
+Where $k$ is the kernel size. TCNs work in a very similar way, with one additional factor, which is called dilation. Dilation is a way to increase the receptive field size of the network at a low cost to the number of operations needed. Let us look at a similar 1D convolution as before, but here we add the factor of $D = 2$ where $D$ stands for dilation. Note that in normal CNNs, dilation is fixed at $1$:
 ![Showing how the first sample of output time series is formed with dilation.](uploads/dilated_1.gif "First sample formed with dilation")
 ![Showing how the second sample of output time series is formed with dilation.](uploads/dilated_2.gif "Second sample formed with dilation")
-As we can see adding the factor of dilation into our simple convolutional example radically changes the output time series:
+As we can see, adding the factor of dilation into our simple convolutional example radically changes the output time series:
 ![Output time series dilated](uploads/time_series_dilated_output.PNG "Output time series dilated")
-Another thing that has changed is the size of our output series, as it is now not of length 6 but of length 4. This is since our formula before changes slightly with the addition of a dilation factor:
+Another thing that has changed is the size of our output series, which is now not of length 6 but of length 4. This is since our formula before changes slightly with the addition of a dilation factor:
 $$
 T_{out} = T_{in} - (k-1)*D
 $$
-We can also see that this also holds true for normal convolutions as the dilation there is simply $D = 1$. One thing I noted here above was the 'Receptive Field Size (RFS)'. This is essentially how much of the time series each output node sees for computation. In this simple case we have here above the formula is simply:
+We can also see that this also holds for regular convolutions as the dilation there is simply $D = 1$. One thing I noted here above was the 'Receptive Field Size (RFS)'. This is essentially how much of the time series each output node sees for computation. In this simple case we have here above, the formula is:
 $$
 RFS = (k-1) * D + 1
 $$
-For the first case our RFS was simply $RFS = 3$ since $D =1$ and $k = 3$. Now for the dilated case this RFS increases to $RFS = 5$. Often when working with time series problems we want our network to be able output a time-series that is causal, meaning that when we calculate each time step we do not look into the future. To do so we need to add zero padding on the left hand side of the input time series. The size of the padding depends on both the kernel size and the dilation factor:
+For the first case our RFS was simply $RFS = 3$ since $D =1$ and $k = 3$. Now for the dilated case, this RFS increases to $RFS = 5$. Often when working with time series problems, we want our network to be able to output a time series that is causal, meaning that when we calculate each time step, we do not look into the future. To do so, we need to add zero padding on the left-hand side of the input time series. The size of the padding depends on both the kernel size and the dilation factor:
 $$
 Padding = (k-1) * D
 $$
 ![Output time series dilated causal](uploads/time_series_padded_dilated_output.PNG "Output time series dilated causal")
 Having this causal padding introduces an output time series that is the same length as our previous one simply because we know that $T_{in}^* = T_{in} + (k-1) * D$ and plugging that into the formula above gives us $T_{out} = T_{in}$. 
 
-The last building block we need to introduce to be able to fully introduce the TCN network is the Residual block. 
+The final building block we need to introduce to fully introduce the TCN network is the Residual block. 
 ![Residual Block](uploads/residual_block.png "Residual block")
-The residual block consists of two dilated causal convolutions with normaliztion, non-linear activation and dropout inbetween. These residual blocks are then stacked on top of each other to build a network that has a receptive field size that fits the task at hand. Note that in these TCN networks the dilation factor is exponentially increased the more blocks you add to the network. The calculation of the receptive field size then changes a bit and becomes:
+The residual block consists of two dilated causal convolutions with normalization, non-linear activation, and dropout in between. These residual blocks are then stacked on top of each other to build a network that has a receptive field size that fits the task at hand. Note that in these TCN networks, the dilation factor increases exponentially the more blocks you add to the network. The calculation of the receptive field size then changes a bit and becomes:
 $$
 RFS = 1 + (2^L -1)(k-1)*2
 $$
 Where $L$ stands for the number of residual blocks that are stacked on top of each other. 
 
-Now let's look at a code example of a TCN tackling a time series task (Both in PyTorch and Tensorflow/Keras). 
+Now let us look at a code example of a TCN tackling a time series task (Both in PyTorch and Tensorflow/Keras). 
 
 
-We will focus on the FordA dataset from the [UCR/UEA archive](https://www.cs.ucr.edu/~eamonn/time_series_data_2018/). We base the data preprocessing of the one availale online from Keras, for further information on why certain steps in the data preprocessing were done please take a look at the source: See [here](https://keras.io/examples/timeseries/timeseries_classification_from_scratch/) 
+We will focus on the FordA dataset from the [UCR/UEA archive](https://www.cs.ucr.edu/~eamonn/time_series_data_2018/). We base the data preprocessing on the one available online from Keras. For further information on why specific steps in the data preprocessing were done, please take a look at the source: See [here](https://keras.io/examples/timeseries/timeseries_classification_from_scratch/) 
 
 
 ```python
@@ -115,7 +115,7 @@ y_test[y_test == -1] = 0
     We have 2 classes
 
 
-Next we make the TCN model, we have a time series of length 500 in the dataset so we must model the receptive field size of the network to be equal or more than 500. We have two variables we can change to influence the receptive field size, the kernel size and then the number of layers of the TCN.
+Next, we make the TCN model. We have a time series of length 500 in the dataset, so we must model the receptive field size of the network to be equal or more than 500. We have two variables we can change to influence the receptive field size, the kernel size, and then the number of layers of the TCN.
 
 We will work with a kernel size of 10 and 5 layers as that gives us a RFS = 1 + (2^5-1)(10-1)*2 = 559 > 500.
 
@@ -280,9 +280,9 @@ TCN_model_1.summary()
     __________________________________________________________________________________________________
 
 
-While looking at the summary of the TCN we see that we have roughly 2372 trainable parameters, we can decrease and increase this number by increasing the number of filters the network has. Let's first work with 5 filters and see how well the network does.
+While looking at the summary of the TCN we see that we have roughly 2372 trainable parameters. We can decrease and increase this number by increasing the number of filters the network has. Let us first work with five filters and see how well the network does.
 
-We do the same proccedure as done in the Keras example, with learning rate reduction and early stopping depending on validation loss.
+We do the same procedure as done in the Keras example, with learning rate reduction and early stopping depending on validation loss.
 
 
 ```python
@@ -439,7 +439,7 @@ history = TCN_model_1.fit(
     Epoch 61: early stopping
 
 
-We can see that our model does quite well, having a final validation accuracy of around 91%, looking at the training and validation accuracy graph we can see that it very quickly gets up to this 91% and then doesn't improve
+We can see that our model does quite well, having a final validation accuracy of around 91%, looking at the training and validation accuracy graph, we can see that it very quickly gets up to this 91% and then does not improve.
 
 
 ```python
@@ -749,7 +749,7 @@ plt.close()
 ![png](uploads/Untitled68_14_0.png)
 
 
-Another trick we can try is to change the source code of the TCN model and instead of only looking at the last sample of each filter (the out layer) we instead flatten the network, this increases the number of parameters in network so let's again decrease the number of filters we use.
+Another trick we can try is to change the source code of the TCN model, and instead of only looking at the last sample of each filter (the out layer), we instead flatten the network. This increases the number of parameters in the network so let us again decrease the number of filters we use.
 
 
 ```python
@@ -1062,7 +1062,7 @@ plt.close()
 ![png](uploads/Untitled68_18_0.png)
 
 
-But as always, the best thing is to do cross validated hyperparameter search to see how many filters you need to get a good performing network, for our case I believe that the second network we tested was the best one so let's look at the final test accuracy of that network:
+However, as always, the best thing is to do a cross-validated hyperparameter search to see how many filters you need to get a good-performing network. For our case, I believe that the second network we tested was the best one, so let us look at the final test accuracy of that network:
 
 
 
