@@ -37,7 +37,7 @@ tags:
 categories:
 ---
 
-Temporal Convolutional Networks (TCN), which are a variation of Convolutional Neural Networks (CNN), have recently been used by deep learning practitioners to solve time series tasks with promising and successful outcomes, as seen here [CITE]. I, for one, have employed TCNs for detecting Arrhythmia in ECG signals with great success. In this short post, I want to explain how these networks work and how they differ from normal CNNs and look into the computational workload.
+Temporal Convolutional Networks (TCN), which are a variation of Convolutional Neural Networks (CNN), have recently been used by deep learning practitioners to solve time series tasks with promising and successful outcomes, as seen [here](https://arxiv.org/abs/1803.01271). I, for one, have employed TCNs for detecting Arrhythmia in ECG signals with great success. In this short post, I want to explain how these networks work and how they differ from normal CNNs and look into the computational workload.
 
 For illustration, I will explain all of these concepts here in 1D, but they also work in higher dimensions. First, let us look at a standard CNN. Let us assume that we have one layer with a kernel size of 3 and 1 filter. Moreover, let us assume that we have an input time series that looks like the one here below:
 ![Time series example](uploads/time_series.PNG "Example of time series")
