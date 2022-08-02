@@ -71,7 +71,7 @@ $$
 Having this causal padding introduces an output time series that is the same length as our previous one simply because we know that $T_{in}^* = T_{in} + (k-1) * D$ and plugging that into the formula above gives us $T_{out} = T_{in}$. 
 
 The last building block we need to introduce to be able to fully introduce the TCN network is the Residual block. 
-![Residual Block](uploads/residual_block.pdf "Residual block")
+![Residual Block](uploads/residual_block.png "Residual block")
 The residual block consists of two dilated causal convolutions with normaliztion, non-linear activation and dropout inbetween. These residual blocks are then stacked on top of each other to build a network that has a receptive field size that fits the task at hand. Note that in these TCN networks the dilation factor is exponentially increased the more blocks you add to the network. The calculation of the receptive field size then changes a bit and becomes:
 $$
 RFS = 1 + (2^L -1)(k-1)*2
