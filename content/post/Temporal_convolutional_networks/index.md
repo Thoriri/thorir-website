@@ -51,9 +51,10 @@ $$
 T_{out} = T_{in} - (k-1)
 $$
 Where $k$ is the kernel size. TCNs work in a very similar way, with one addidional factor which is called dilation. Dilation is a way to increase the receptive field size of the network, with low cost to the number of operations needed. Let's look at a similar 1D convolution as before, but here we add the factor of $D = 2$ where $D$ stands for dilation. Note that in normal CNNs, dilation is fixed at $1$:
-![Showing how first sample of output time series is formed with dilation.](uploads/time_series_dilation.gif "First sample formed with dilation")
+![Showing how the first sample of output time series is formed with dilation.](uploads/dilated_1.gif "First sample formed with dilation")
+![Showing how the second sample of output time series is formed with dilation.](uploads/dilated_2.gif "Second sample formed with dilation")
 As we can see adding the factor of dilation into our simple convolutional example radically changes the output time series:
-![Output time series dilated](uploads/time_series_dilation.PNG "Output time series dilated")
+![Output time series dilated](uploads/time_series_dilated_output.PNG "Output time series dilated")
 Another thing that has changed is the size of our output series, as it is now not of length 6 but of length 4. This is since our formula before changes slightly with the addition of a dilation factor:
 $$
 T_{out} = T_{in} - (k-1)*D
@@ -66,7 +67,7 @@ For the first case our RFS was simply $RFS = 3$ since $D =1$ and $k = 3$. Now fo
 $$
 Padding = (k-1) * D
 $$
-![Output time series dilated causal](uploads/time_series_dilation_causal.PNG "Output time series dilated causal")
+![Output time series dilated causal](uploads/time_series_padded_dilated.PNG "Output time series dilated causal")
 Having this causal padding introduces an output time series that is the same length as our previous one simply because we know that $T_{in}^* = T_{in} + (k-1) * D$ and plugging that into the formula above gives us $T_{out} = T_{in}$. 
 
 The last building block we need to introduce to be able to fully introduce the TCN network is the Residual block. 
