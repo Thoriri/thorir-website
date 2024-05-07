@@ -31,7 +31,7 @@ image:
   caption: ""
   focal_point: Smart
   preview_only: false
-  filename: featured.pdf
+  filename: featured-1.png
 date: 2024-02-05T00:00:00.000Z
 url_slides: ""
 publishDate: 2024-02-05T00:00:00.000Z
