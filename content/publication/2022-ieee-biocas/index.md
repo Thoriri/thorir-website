@@ -24,7 +24,7 @@ url_source: ""
 url_video: ""
 title: "EEGformer: Transformer-Based Epilepsy Detection on Raw EEG Traces for Low-Channel-Count Wearable Continuous Monitoring Devices"
 doi: "10.1109/BioCAS54905.2022.9948637"
-featured: false
+featured: true
 tags: []
 projects: []
 image:

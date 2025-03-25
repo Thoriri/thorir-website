@@ -28,7 +28,7 @@ url_source: ""
 url_video: ""
 title: "Reducing False Alarms in Wearable Seizure Detection With EEGformer: A Compact Transformer Model for MCUs"
 doi: "10.1109/TBCAS.2024.3357509"
-featured: false
+featured: true
 tags: []
 projects: []
 image:

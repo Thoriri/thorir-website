@@ -21,7 +21,7 @@ url_source: ""
 url_video: ""
 title: "Skilog: A Smart Sensor System for Performance Analysis and Biofeedback in Ski Jumping"
 doi: "10.1109/BioCAS58349.2023.10389124"
-featured: false
+featured: true
 tags: []
 projects: []
 image:
