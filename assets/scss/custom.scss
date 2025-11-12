@@ -1,0 +1,256 @@
+// Custom SCSS for Academic Modern Theme
+// Enhances the professional appearance with subtle effects
+
+// Make biography section more prominent
+.wg-about .portrait {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Enhanced role/title styling
+.wg-about .role {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e40af;
+  margin-top: 0.5rem;
+}
+
+// Research interests cards enhancement
+.wg-blank {
+  h3 {
+    color: #1e40af;
+    margin-top: 0;
+    font-size: 1.4rem;
+  }
+}
+
+// Better link styling
+a {
+  transition: color 0.2s ease;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Enhanced publication cards
+.card {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  }
+}
+
+// Better section spacing
+.home-section {
+  padding: 60px 0;
+
+  .section-heading h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1f2937;
+  }
+}
+
+// Enhanced buttons
+.btn {
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  border-color: #2563eb;
+
+  &:hover {
+    background-color: #1e40af;
+    border-color: #1e40af;
+  }
+}
+
+// Project cards
+.project-card {
+  .card-text {
+    color: #4b5563;
+  }
+
+  .article-title a {
+    color: #1f2937;
+    font-weight: 600;
+
+    &:hover {
+      color: #2563eb;
+    }
+  }
+}
+
+// Enhanced social icons
+.social-icon {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    transform: scale(1.15);
+    color: #2563eb;
+  }
+}
+
+// Stats/metrics styling
+.metrics {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px 0;
+
+  .metric {
+    text-align: center;
+
+    .metric-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2563eb;
+      display: block;
+    }
+
+    .metric-label {
+      font-size: 0.9rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  }
+}
+
+// Featured work section with gradient background
+.featured-work-section {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-radius: 12px;
+  padding: 40px;
+  margin: 30px 0;
+  border: 2px solid #3b82f6;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .home-section .section-heading h1 {
+    font-size: 2rem;
+  }
+
+  .metrics {
+    .metric {
+      .metric-value {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .wg-about .portrait {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+// Dark mode adjustments
+.dark {
+  .home-section .section-heading h1 {
+    color: #f3f4f6;
+  }
+
+  .card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+
+    &:hover {
+      border-color: #60a5fa;
+    }
+  }
+
+  .project-card {
+    .card-text {
+      color: #cbd5e1;
+    }
+
+    .article-title a {
+      color: #f3f4f6;
+
+      &:hover {
+        color: #60a5fa;
+      }
+    }
+  }
+
+  .featured-work-section {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border-color: #60a5fa;
+  }
+
+  .wg-blank h3 {
+    color: #60a5fa;
+  }
+}
+
+// Code blocks (for technical content)
+pre {
+  border-radius: 8px;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+code {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  background-color: #f1f5f9;
+}
+
+.dark code {
+  background-color: #334155;
+}
+
+// Tags and categories
+.article-tags {
+  .badge {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    font-weight: 500;
+    background-color: #e0f2fe;
+    color: #0369a1;
+    border-radius: 16px;
+
+    &:hover {
+      background-color: #bae6fd;
+    }
+  }
+}
+
+.dark .article-tags .badge {
+  background-color: #1e3a5f;
+  color: #93c5fd;
+
+  &:hover {
+    background-color: #2563eb;
+  }
+}

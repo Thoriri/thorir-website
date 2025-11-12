@@ -1,0 +1,40 @@
+# Academic Modern Theme
+# Light background with dark accents - professional and readable
+
+name = "Academic Modern"
+
+# Primary colors
+[light]
+  # Primary color (links, buttons, headings)
+  primary = "#1e40af"  # Deep blue - academic and trustworthy
+
+  # Link colors
+  link = "#2563eb"  # Bright blue for links
+  link_hover = "#1e40af"  # Darker on hover
+
+  # Menu colors
+  menu_primary = "#1f2937"  # Dark gray for menu text
+  menu_text = "#ffffff"
+  menu_text_active = "#60a5fa"  # Light blue for active menu items
+  menu_title = "#1f2937"  # Dark for menu titles
+
+  # Background colors
+  home_section_odd = "#ffffff"  # White
+  home_section_even = "#f8fafc"  # Very light blue-gray
+
+[dark]
+  primary = "#60a5fa"  # Light blue
+  link = "#93c5fd"  # Lighter blue
+  link_hover = "#60a5fa"  # Medium blue on hover
+  menu_primary = "#1f2937"
+  menu_text = "#d1d5db"
+  menu_text_active = "#60a5fa"
+  menu_title = "#f3f4f6"
+  home_section_odd = "#0f172a"  # Dark blue-gray
+  home_section_even = "#1e293b"  # Slightly lighter dark blue-gray
+
+# Font style
+[font]
+  # Use larger, more readable fonts
+  size = "18"
+  size_small = "16"

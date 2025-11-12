@@ -1,13 +1,13 @@
 ---
 title: Thorir Mar Ingolfsson
-role: "PhD Student in Robust and Practical Machine Learning "
+role: "Postdoctoral Researcher | ML Group Leader"
 avatar_filename: avatar.jpg
-bio: My research interests include TinyML, Hardware Aware NAS and application of
-  ML for bio-signals.
+bio: I develop efficient machine learning systems for biomedical wearables that operate under extreme resource constraints. My work bridges foundation models, neural architecture design, and edge deployment to enable real-time biosignal analysis on microwatt-scale devices.
 interests:
-  - Artificial Intelligence
-  - Neural Architecture Search
-  - Bio-signal Classification
+  - Foundation Models for Biosignals
+  - Tiny Recursion Models & Deep Supervision
+  - TinyML & Edge AI Deployment
+  - Hardware-Aware Neural Architecture Search
 social:
   - icon: envelope
     icon_pack: fas
@@ -31,6 +31,7 @@ education:
   courses:
     - course: Ph.D. in Electrical Engineering and Information Technology
       institution: ETH Zurich
+      year: 2024
     - course: M.Sc. in Electrical Engineering and Information Technology
       institution: ETH Zurich
       year: 2020
@@ -41,4 +42,8 @@ email: thoriri@iis.ee.ethz.ch
 superuser: true
 highlight_name: true
 ---
-Hi! I am Thorir, and I am currently a Ph.D. student at ETH Zurich under the supervision of [Prof. Dr. Luca Benini](https://ee.ethz.ch/the-department/people-a-z/person-detail.luca-benini.html). My research interest is applying Robust and Practical Machine Learning approaches, focusing on a bio-signal analysis taking into account the characteristics and constraints of wearable edge devices and IoT units. A use case that I am currently researching is the usage of bio-signals to detect and forecast seizures, where the bio-signals come from wearable devices and are classified with ML and DL algorithms on the same wearable edge devices.
+I am a Postdoctoral Researcher at ETH Zurich working with [Prof. Dr. Luca Benini](https://ee.ethz.ch/the-department/people-a-z/person-detail.luca-benini.html), where I lead the machine learning research direction within the group. My work focuses on making AI accessible on the most resource-constrained devices - enabling foundation models and advanced ML systems to run on wearable biomedical devices consuming microwatts of power.
+
+I develop efficient neural architectures that bridge the gap between large-scale foundation models and ultra-low-power edge deployment. My recent work on **LUNA** (NeurIPS 2024) achieves 300× reduction in computational costs while maintaining state-of-the-art performance for EEG analysis. I'm particularly interested in tiny recursion models, deep supervision techniques for time-series signals, and hardware-aware neural architecture design.
+
+**I'm building a research team** at the intersection of TinyML and biomedical AI. If you're a student passionate about making AI work on edge devices, or a researcher interested in collaboration, I'd love to hear from you.
