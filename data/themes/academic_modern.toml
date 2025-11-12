@@ -32,9 +32,3 @@ name = "Academic Modern"
   menu_title = "#f3f4f6"
   home_section_odd = "#0f172a"  # Dark blue-gray
   home_section_even = "#1e293b"  # Slightly lighter dark blue-gray
-
-# Font style
-[font]
-  # Use larger, more readable fonts
-  size = "18"
-  size_small = "16"
