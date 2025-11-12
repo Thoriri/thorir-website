@@ -5,8 +5,8 @@
 
 # Appearance
 
-theme: minimal
-day_night: false
+theme: academic_modern
+day_night: true
 font: ''
 font_size: L
 
