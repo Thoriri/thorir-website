@@ -1,7 +1,7 @@
 ---
 title: "Quantized Tiny Recursive Models for Edge Deployment"
 summary: "Quantize TRMs to low precision and deploy them on GAP9 or Cortex-M, exploring accuracy–energy trade-offs and adaptive compute."
-type: project
+type: student-project
 status: "Open MSc Thesis"
 date: 2025-01-01
 categories: ["MSc Thesis"]

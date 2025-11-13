@@ -1,7 +1,7 @@
 ---
 title: "Tiny Recursive Models for Time-Series"
 summary: "Adapt Tiny Recursive Models (TRMs) to non-visual time-series domains and analyse recursion, deep supervision, and adaptive compute."
-type: project
+type: student-project
 status: "Open MSc Thesis"
 date: 2025-01-01
 categories: ["MSc Thesis"]
