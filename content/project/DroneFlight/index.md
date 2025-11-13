@@ -13,6 +13,7 @@ external_link: ""
 image:
   caption: Wearable 8-channel EEG headband with integrated BioGAP module used for real-time drone control.
   focal_point: Smart
+  filename: Drone.jpeg
 
 links:
 - icon: twitter
