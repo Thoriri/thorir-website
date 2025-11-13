@@ -12,7 +12,7 @@ design:
     padding: ['40px', '0', '40px', '0']
 ---
 
-<div style="border: 2px solid #3b82f6; border-radius: 12px; padding: 40px; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); margin-bottom: 30px;">
+<div class="featured-work-section" style="margin-bottom: 30px;">
 
 ## 🏆 LUNA: Foundation Model for EEG Analysis
 
@@ -71,8 +71,8 @@ The model uses learned queries and cross-attention mechanisms to compress multi-
 </div>
 
 <div style="margin-top: 20px; text-align: center;">
-<a href="https://arxiv.org/abs/2510.22257" style="display: inline-block; background: #3b82f6; color: white; padding: 12px 30px; border-radius: 6px; text-decoration: none; margin-right: 10px;">📄 Read the Paper</a>
-<a href="https://github.com/pulp-bio/biofoundation" style="display: inline-block; background: #1f2937; color: white; padding: 12px 30px; border-radius: 6px; text-decoration: none;">💻 View Code</a>
+<a href="https://arxiv.org/abs/2510.22257" class="btn btn-primary" style="margin-right: 10px;">📄 Read the Paper</a>
+<a href="https://github.com/pulp-bio/biofoundation" class="btn" style="background: var(--nordic-primary); color: white; border-color: var(--nordic-primary);">💻 View Code</a>
 </div>
 
 </div>
