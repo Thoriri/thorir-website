@@ -10,6 +10,7 @@
   --nordic-accent: #E8F4F8;          // Ice blue
   --nordic-bg-even: #FAFAFA;         // Subtle off-white
   --nordic-text: #2C3E50;            // Slate for text
+  --nordic-muted: #4b5563;           // Muted gray for secondary text
 }
 
 // Typography - Inter for headings, system fonts for body
@@ -149,6 +150,18 @@ a {
   &:hover {
     background-color: var(--nordic-link-hover);
     border-color: var(--nordic-link-hover);
+  }
+}
+
+.btn-secondary {
+  background-color: var(--nordic-primary);
+  border-color: var(--nordic-primary);
+  color: #ffffff;
+
+  &:hover {
+    background-color: #1f2f42;
+    border-color: #1f2f42;
+    color: #ffffff;
   }
 }
 
@@ -317,40 +330,125 @@ a {
 
 // Dark mode adjustments
 .dark {
+  --nordic-muted: rgba(226, 232, 240, 0.78);
+
   .home-section .section-heading h1 {
     color: #f3f4f6;
   }
 
+  // Generic cards (project lists, publications, etc.)
   .card {
-    background-color: #1e293b;
-    border: 1px solid #334155;
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.92) 0%, rgba(15, 23, 42, 0.88) 100%);
+    border: 1px solid rgba(96, 165, 250, 0.28);
+    box-shadow: 0 16px 44px rgba(8, 47, 73, 0.35);
 
     &:hover {
-      border-color: #60a5fa;
+      border-color: rgba(96, 165, 250, 0.6);
+      box-shadow: 0 20px 56px rgba(8, 47, 73, 0.45);
+    }
+
+    .card-text,
+    .article-title,
+    .article-title a {
+      color: rgba(226, 232, 240, 0.88);
+    }
+
+    .article-title a:hover {
+      color: rgba(96, 165, 250, 0.9);
     }
   }
 
-  .project-card {
-    .card-text {
-      color: #cbd5e1;
+  // “What I'm working on” (WG blank blocks)
+  .wg-blank {
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.92) 0%, rgba(15, 23, 42, 0.88) 100%);
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid rgba(96, 165, 250, 0.32);
+    box-shadow: 0 18px 48px rgba(8, 47, 73, 0.4);
+
+    h3 {
+      color: #93c5fd;
     }
 
-    .article-title a {
-      color: #f3f4f6;
+    p,
+    li {
+      color: rgba(226, 232, 240, 0.82);
+    }
+  }
+
+  // Featured work block
+  .featured-work-section {
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.94) 0%, rgba(15, 23, 42, 0.9) 100%);
+    border-color: rgba(96, 165, 250, 0.45);
+    box-shadow: 0 20px 55px rgba(8, 47, 73, 0.45);
+
+    h2,
+    h3,
+    strong {
+      color: #e2e8f0;
+    }
+
+    p,
+    li,
+    a {
+      color: rgba(226, 232, 240, 0.82);
+    }
+
+    a {
+      border-color: rgba(96, 165, 250, 0.55);
 
       &:hover {
-        color: #60a5fa;
+        color: #93c5fd;
+        border-color: rgba(96, 165, 250, 0.85);
       }
     }
   }
 
-  .featured-work-section {
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-    border-color: #60a5fa;
+  // Foundation model highlight cards reuse dark styles defined earlier
+
+  // Available project snippet cards
+  .project-card-snippet {
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.92) 0%, rgba(15, 23, 42, 0.88) 100%);
+    border-color: rgba(96, 165, 250, 0.35);
+    box-shadow: 0 18px 48px rgba(8, 47, 73, 0.38);
+
+    h4 {
+      color: #e2e8f0;
+    }
+
+    .project-card-summary {
+      color: rgba(226, 232, 240, 0.78);
+    }
   }
 
-  .wg-blank h3 {
-    color: #60a5fa;
+  .project-card-image {
+    box-shadow: 0 14px 36px rgba(8, 47, 73, 0.45);
+  }
+
+  .project-card-actions {
+    .btn-primary {
+      background-color: rgba(59, 130, 246, 0.35);
+      border-color: rgba(59, 130, 246, 0.6);
+      color: #e8f1ff;
+
+      &:hover {
+        background-color: rgba(59, 130, 246, 0.55);
+        border-color: rgba(59, 130, 246, 0.85);
+        color: #ffffff;
+      }
+    }
+
+    .btn-secondary {
+      background-color: rgba(30, 41, 59, 0.85);
+      border-color: rgba(96, 165, 250, 0.4);
+      color: #e2e8f0;
+
+      &:hover {
+        background-color: rgba(59, 130, 246, 0.3);
+        border-color: rgba(96, 165, 250, 0.7);
+        color: #ffffff;
+      }
+    }
   }
 }
 
@@ -524,5 +622,73 @@ html {
 
   .foundation-logo {
     filter: drop-shadow(0 10px 24px rgba(96, 165, 250, 0.25));
+  }
+}
+
+// Student project snippets
+.project-card-grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.project-card-snippet {
+  border: 1px solid rgba(44, 62, 80, 0.12);
+  border-radius: 12px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 12px 32px rgba(44, 62, 80, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 42px rgba(44, 62, 80, 0.14);
+    border-color: rgba(52, 152, 219, 0.35);
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 1.35rem;
+    color: var(--nordic-primary);
+  }
+}
+
+.project-card-image {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 8px 22px rgba(44, 62, 80, 0.12);
+}
+
+.project-card-summary {
+  margin: 8px 0 0;
+  color: var(--nordic-muted);
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.project-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.dark {
+  .project-card-snippet {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.92) 0%, rgba(15, 23, 42, 0.88) 100%);
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 18px 45px rgba(8, 47, 73, 0.35);
+
+    h4 {
+      color: #e2e8f0;
+    }
+  }
+
+  .project-card-image {
+    box-shadow: 0 12px 36px rgba(8, 47, 73, 0.45);
   }
 }
