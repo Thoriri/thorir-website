@@ -559,6 +559,90 @@ html {
   box-shadow: 0 8px 20px rgba(8, 47, 73, 0.35);
 }
 
+// Research interest cards
+.research-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 25px;
+  background: #f9fafb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(44, 62, 80, 0.12);
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+// Featured work resource boxes
+.resource-box {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(44, 62, 80, 0.08);
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.1);
+  }
+
+  strong {
+    color: var(--nordic-primary);
+  }
+
+  ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    color: rgba(44, 62, 80, 0.8);
+  }
+}
+
+// Student recruitment highlight box
+.recruitment-box {
+  background: #f0fdf4;
+  border: 2px solid #10b981;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.15);
+  }
+
+  h3 {
+    margin-top: 0;
+    color: #065f46;
+  }
+
+  p {
+    color: rgba(6, 95, 70, 0.9);
+  }
+}
+
+// Project card
+.project-opportunity-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 25px;
+  background: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(44, 62, 80, 0.12);
+  }
+
+  h4 {
+    margin-top: 0;
+    color: var(--nordic-primary);
+  }
+}
+
 // Foundation model highlight cards
 .foundation-grid {
   display: grid;
@@ -609,7 +693,71 @@ html {
   margin-top: auto;
 }
 
+// Dark mode overrides for all custom components
 .dark {
+  // Research cards dark mode
+  .research-card {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: rgba(71, 85, 105, 0.5);
+
+    &:hover {
+      box-shadow: 0 8px 20px rgba(8, 47, 73, 0.4);
+      border-color: rgba(96, 165, 250, 0.3);
+    }
+  }
+
+  // Resource boxes dark mode
+  .resource-box {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: rgba(71, 85, 105, 0.4);
+
+    &:hover {
+      box-shadow: 0 4px 12px rgba(8, 47, 73, 0.5);
+    }
+
+    strong {
+      color: #93c5fd;
+    }
+
+    ul {
+      color: rgba(226, 232, 240, 0.8);
+    }
+  }
+
+  // Recruitment box dark mode
+  .recruitment-box {
+    background: rgba(6, 78, 59, 0.25);
+    border-color: rgba(16, 185, 129, 0.5);
+
+    &:hover {
+      box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
+    }
+
+    h3 {
+      color: #6ee7b7;
+    }
+
+    p {
+      color: rgba(167, 243, 208, 0.9);
+    }
+  }
+
+  // Project card dark mode
+  .project-opportunity-card {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: rgba(71, 85, 105, 0.5);
+
+    &:hover {
+      box-shadow: 0 8px 20px rgba(8, 47, 73, 0.4);
+      border-color: rgba(96, 165, 250, 0.3);
+    }
+
+    h4 {
+      color: #93c5fd;
+    }
+  }
+
+  // Foundation cards dark mode
   .foundation-card {
     background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.85) 100%);
     border-color: rgba(59, 130, 246, 0.25);

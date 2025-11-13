@@ -12,9 +12,9 @@ design:
     padding: ['40px', '0', '40px', '0']
 ---
 
-<div style="background: #f0fdf4; border: 2px solid #10b981; border-radius: 12px; padding: 30px; margin-bottom: 20px;">
-<h3 style="margin-top: 0; color: #065f46;">🎓 I'm Building a Research Team</h3>
-<p>I'm looking for motivated students to join my research on TinyML and biomedical AI. If you're excited about tiny recursive models, biosignal foundation models, or deploying deep learning on edge devices, let's talk.</p>
+<div class="recruitment-box">
+<h3>🎓 I'm Building a Research Team</h3>
+<p>I'm looking for motivated students to join my research on TinyML and biomedical AI. If you're passionate about making AI work on edge devices and have a strong background in machine learning, I'd love to hear from you.</p>
 </div>
 
 <div style="margin: 30px 0;">

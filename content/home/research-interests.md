@@ -18,7 +18,7 @@ As a researcher at the intersection of TinyML and biomedical AI, I'm currently e
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px;">
 
-<div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 25px; background: #f9fafb;">
+<div class="research-card">
 
 ### 🧠 Foundation Models for Biosignals
 
@@ -28,7 +28,7 @@ I'm developing large-scale pre-trained models that can understand diverse biomed
 
 </div>
 
-<div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 25px; background: #f9fafb;">
+<div class="research-card">
 
 ### 🔄 Tiny Recursion Models
 
@@ -38,7 +38,7 @@ I'm investigating how deep recursion and supervision techniques can be applied t
 
 </div>
 
-<div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 25px; background: #f9fafb;">
+<div class="research-card">
 
 ### 🚀 Edge AI Deployment
 
