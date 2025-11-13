@@ -30,7 +30,7 @@ education:
   courses:
     - course: Ph.D. in Electrical Engineering and Information Technology
       institution: ETH Zurich
-      year: 2024
+      year: 2025
     - course: M.Sc. in Electrical Engineering and Information Technology
       institution: ETH Zurich
       year: 2020
