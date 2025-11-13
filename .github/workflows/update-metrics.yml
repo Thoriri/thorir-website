@@ -1,0 +1,42 @@
+name: Update metrics
+
+on:
+  schedule:
+    - cron: "0 6 */2 * *"   # every 2 days at 06:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          ref: new-main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Run metrics updater
+        env:
+          # GITHUB_TOKEN is provided automatically in Actions
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Add any other secrets you need (e.g., METRICS_API_KEY)
+        run: python scripts/update_metrics.py
+
+      - name: Commit & push if changed
+        id: commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(metrics): automated update"
+          branch: new-main
+          file_pattern: |
+            content/home/metrics.md
+            content/home/featured-work.md
+            content/project/biofoundation/index.md

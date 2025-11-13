@@ -15,6 +15,7 @@ Relies only on the Python standard library.
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -26,10 +27,15 @@ ROOT = Path(__file__).resolve().parents[1]
 SCHOLAR_USER = "TyRxmUkAAAAJ"
 GITHUB_REPO = "pulp-bio/biofoundation"
 USER_AGENT = "Mozilla/5.0 (MetricsUpdater)"
+GH_TOKEN = os.getenv("GITHUB_TOKEN") or os.getenv("GH_TOKEN")
 
 
 def fetch_text(url: str) -> Optional[str]:
-    req = Request(url, headers={"User-Agent": USER_AGENT})
+    headers = {"User-Agent": USER_AGENT}
+    if "api.github.com" in url and GH_TOKEN:
+        headers["Authorization"] = f"Bearer {GH_TOKEN}"
+        headers["Accept"] = "application/vnd.github+json"
+    req = Request(url, headers=headers)
     try:
         with urlopen(req, timeout=20) as resp:
             charset = resp.headers.get_content_charset() or "utf-8"
@@ -45,12 +51,10 @@ def fetch_scholar_metrics(user_id: str) -> Optional[tuple[int, int]]:
         return None
 
     citations_match = re.search(
-        r"Citations</a></td><td class=\"gsc_rsb_std\">(\d+)", html,
-        re.IGNORECASE,
+        r"Citations</a></td><td class=\"gsc_rsb_std\">(\d+)", html, re.IGNORECASE
     )
     hindex_match = re.search(
-        r"h-index</a></td><td class=\"gsc_rsb_std\">(\d+)", html,
-        re.IGNORECASE,
+        r"h-index</a></td><td class=\"gsc_rsb_std\">(\d+)", html, re.IGNORECASE
     )
 
     if not citations_match or not hindex_match:
@@ -76,9 +80,29 @@ def fetch_github_stats(repo: str) -> Optional[tuple[int, int]]:
     return stars, forks
 
 
-def update_metrics_card(citations: int, h_index: int) -> None:
+def write_if_changed(path: Path, new_text: str) -> bool:
+    """Write new_text to path if content differs. Returns True if file updated."""
+    if not path.exists():
+        print(f"[warn] File not found, creating: {path}")
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(new_text, encoding="utf-8")
+        return True
+
+    old_text = path.read_text(encoding="utf-8")
+    if old_text != new_text:
+        path.write_text(new_text, encoding="utf-8")
+        return True
+    return False
+
+
+def update_metrics_card(citations: int, h_index: int) -> bool:
     path = ROOT / "content/home/metrics.md"
-    text = path.read_text(encoding="utf-8")
+    if not path.exists():
+        print(f"[warn] Missing metrics card, skipping: {path}")
+        return False
+
+    original = path.read_text(encoding="utf-8")
+    text = original
 
     text = re.sub(
         r'(data-target=")\d+(" aria-live="polite" aria-label="Total citations")',
@@ -101,46 +125,66 @@ def update_metrics_card(citations: int, h_index: int) -> None:
         text,
     )
 
-    path.write_text(text, encoding="utf-8")
+    changed = write_if_changed(path, text)
+    print(f"[info] metrics.md {'updated' if changed else 'no change'} "
+          f"(citations={citations}, h-index={h_index})")
+    return changed
 
 
-def update_biofoundation_stats(stars: int, forks: int) -> None:
+def update_biofoundation_stats(stars: int, forks: int) -> bool:
+    changed_any = False
+
     featured = ROOT / "content/home/featured-work.md"
-    featured_text = featured.read_text(encoding="utf-8")
-    featured_text = re.sub(
-        r"⭐\s*\d+\s*stars • 🍴\s*\d+\s*forks",
-        f"⭐ {stars} stars • 🍴 {forks} forks",
-        featured_text,
-    )
-    featured.write_text(featured_text, encoding="utf-8")
+    if featured.exists():
+        original = featured.read_text(encoding="utf-8")
+        text = re.sub(
+            r"⭐\s*\d+\s*stars • 🍴\s*\d+\s*forks",
+            f"⭐ {stars} stars • 🍴 {forks} forks",
+            original,
+        )
+        changed = write_if_changed(featured, text)
+        print(f"[info] featured-work.md {'updated' if changed else 'no change'} "
+              f"(stars={stars}, forks={forks})")
+        changed_any = changed_any or changed
+    else:
+        print(f"[warn] Missing: {featured}")
 
     project = ROOT / "content/project/biofoundation/index.md"
-    project_text = project.read_text(encoding="utf-8")
-    project_text = re.sub(
-        r"- ⭐\s*\d+\s*GitHub stars • 🍴\s*\d+\s*forks",
-        f"- ⭐ {stars} GitHub stars • 🍴 {forks} forks",
-        project_text,
-    )
-    project.write_text(project_text, encoding="utf-8")
+    if project.exists():
+        original = project.read_text(encoding="utf-8")
+        text = re.sub(
+            r"- ⭐\s*\d+\s*GitHub stars • 🍴\s*\d+\s*forks",
+            f"- ⭐ {stars} GitHub stars • 🍴 {forks} forks",
+            original,
+        )
+        changed = write_if_changed(project, text)
+        print(f"[info] project biofoundation index.md "
+              f"{'updated' if changed else 'no change'} (stars={stars}, forks={forks})")
+        changed_any = changed_any or changed
+    else:
+        print(f"[warn] Missing: {project}")
+
+    return changed_any
 
 
 def main() -> int:
+    changed = False
+
     scholar_metrics = fetch_scholar_metrics(SCHOLAR_USER)
     if scholar_metrics:
         citations, h_index = scholar_metrics
-        update_metrics_card(citations, h_index)
-        print(f"[info] Updated citations={citations}, h-index={h_index}")
+        changed = update_metrics_card(citations, h_index) or changed
     else:
         print("[warn] Skipped updating citation metrics.")
 
     gh_metrics = fetch_github_stats(GITHUB_REPO)
     if gh_metrics:
         stars, forks = gh_metrics
-        update_biofoundation_stats(stars, forks)
-        print(f"[info] Updated GitHub stats: stars={stars}, forks={forks}")
+        changed = update_biofoundation_stats(stars, forks) or changed
     else:
         print("[warn] Skipped updating GitHub stats.")
 
+    print(f"[info] Done. Changes written: {changed}")
     return 0
 
 
