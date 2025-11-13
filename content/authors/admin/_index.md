@@ -1,6 +1,6 @@
 ---
 title: Thorir Mar Ingolfsson
-role: "Postdoctoral Researcher | ML Group Leader"
+role: "Postdoctoral Researcher"
 avatar_filename: avatar.jpg
 bio: I develop efficient machine learning systems for biomedical wearables that operate under extreme resource constraints. My work bridges foundation models, neural architecture design, and edge deployment to enable real-time biosignal analysis on microwatt-scale devices.
 interests:
@@ -45,4 +45,4 @@ I am a Postdoctoral Researcher at ETH Zurich working with [Prof. Dr. Luca Benini
 
 I develop efficient neural architectures that bridge the gap between large-scale foundation models and ultra-low-power edge deployment. My recent work on **LUNA** (NeurIPS 2025) achieves 300× reduction in computational costs while maintaining state-of-the-art performance for EEG analysis. I'm particularly interested in tiny recursion models, deep supervision techniques for time-series signals, and scalable foundation models for biosignals.
 
-**I'm building a research team** at the intersection of TinyML and biomedical AI. If you're a student passionate about making AI work on edge devices, or a researcher interested in collaboration, I'd love to hear from you.
+**I'm looking for students and collaborators** to work with me at the intersection of TinyML and biomedical AI. If you're passionate about making AI work on edge devices, I'd love to hear from you.

@@ -13,8 +13,8 @@ design:
 ---
 
 <div class="recruitment-box">
-<h3>🎓 I'm Building a Research Team</h3>
-<p>I'm looking for motivated students to join my research on TinyML and biomedical AI. If you're passionate about making AI work on edge devices and have a strong background in machine learning, I'd love to hear from you.</p>
+<h3>🎓 Looking for Students & Collaborators</h3>
+<p>I'm looking for motivated students to work with me on TinyML and biomedical AI research. If you're passionate about making AI work on edge devices and have a strong background in machine learning, I'd love to hear from you.</p>
 </div>
 
 <div style="margin: 30px 0;">
