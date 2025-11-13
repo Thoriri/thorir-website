@@ -30,36 +30,46 @@ design:
 
 ---
 
-### 📋 Project Opportunities
+### 📋 Open MSc Thesis Topics (Snippet View)
 
-<div style="display: grid; gap: 25px; margin-top: 25px;">
+<div class="project-card-grid">
 
-<div class="project-opportunity-card">
+<div class="project-card-snippet">
+  <img src="/uploads/trm_time_series.png" alt="Tiny Recursive Models for Time-Series" class="project-card-image">
+  <div>
+    <h4>Tiny Recursive Models for Time-Series</h4>
+    <p class="project-card-summary">Adapt TRMs to non-visual domains (e.g., UCR, EEG) and analyse how deep supervision and adaptive halting impact accuracy and compute.</p>
+  </div>
+  <div class="project-card-actions">
+    <a href="/project/trm-timeseries/" class="btn btn-primary">View Project →</a>
+    <a href="mailto:thoriri@iis.ee.ethz.ch?subject=%5BMSc%20Thesis%5D%20Tiny%20Recursive%20Models%20for%20Time-Series" class="btn btn-secondary">Apply</a>
+  </div>
+</div>
 
-#### 🎯 Project 1: [To be announced]
-
-*Coming soon - Check back for available projects or contact me directly to discuss opportunities.*
-
-**Prerequisites:** Strong Python skills, ML fundamentals, self-motivated
-**Type:** MSc Thesis / Semester Project
-**Duration:** 4-6 months
-
-<a href="mailto:thoriri@iis.ee.ethz.ch?subject=Interest%20in%20Research%20Projects" style="display: inline-block; background: #3b82f6; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; margin-top: 15px;">📧 Contact Me About Projects</a>
-
+<div class="project-card-snippet">
+  <img src="/uploads/trm_quantized.png" alt="Quantized TRMs for Edge Deployment" class="project-card-image">
+  <div>
+    <h4>Quantized TRMs for Edge Deployment</h4>
+    <p class="project-card-summary">Quantise TRMs to INT8/INT4, deploy them on GAP9 or Cortex-M, and study accuracy–energy trade-offs and on-device adaptive halting.</p>
+  </div>
+  <div class="project-card-actions">
+    <a href="/project/trm-quantized/" class="btn btn-primary">View Project →</a>
+    <a href="mailto:thoriri@iis.ee.ethz.ch?subject=%5BMSc%20Thesis%5D%20Quantized%20TRMs%20for%20Edge%20Deployment" class="btn btn-secondary">Apply</a>
+  </div>
 </div>
 
 </div>
 
 ---
 
-### 💡 Not Sure Where to Start?
+### 💡 Not Seeing Your Dream Topic?
 
-If you're interested in working with me but don't see a perfect fit above, feel free to reach out! I'm always open to discussing new project ideas at the intersection of:
+If you're interested in working with me but don't see a perfect fit above, feel free to reach out. I'm always open to discussing new ideas at the intersection of:
 
 - Foundation models for biosignals
-- Tiny recursion models and deep supervision
+- Tiny recursive models and deep supervision
 - Hardware-aware neural architecture search
-- TinyML deployment and optimization
+- TinyML deployment and optimisation
 
 <div style="text-align: center; margin-top: 30px;">
 <a href="mailto:thoriri@iis.ee.ethz.ch?subject=Research%20Collaboration%20Inquiry" style="display: inline-block; background: #1f2937; color: white; padding: 15px 40px; border-radius: 8px; text-decoration: none; font-size: 16px;">✉️ Schedule a Chat</a>
