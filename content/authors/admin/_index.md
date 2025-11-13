@@ -44,6 +44,6 @@ highlight_name: true
 ---
 I am a Postdoctoral Researcher at ETH Zurich working with [Prof. Dr. Luca Benini](https://ee.ethz.ch/the-department/people-a-z/person-detail.luca-benini.html), where I lead the machine learning research direction within the group. My work focuses on making AI accessible on the most resource-constrained devices - enabling foundation models and advanced ML systems to run on wearable biomedical devices consuming microwatts of power.
 
-I develop efficient neural architectures that bridge the gap between large-scale foundation models and ultra-low-power edge deployment. My recent work on **LUNA** (NeurIPS 2024) achieves 300× reduction in computational costs while maintaining state-of-the-art performance for EEG analysis. I'm particularly interested in tiny recursion models, deep supervision techniques for time-series signals, and hardware-aware neural architecture design.
+I develop efficient neural architectures that bridge the gap between large-scale foundation models and ultra-low-power edge deployment. My recent work on **LUNA** (NeurIPS 2025) achieves 300× reduction in computational costs while maintaining state-of-the-art performance for EEG analysis. I'm particularly interested in tiny recursion models, deep supervision techniques for time-series signals, and hardware-aware neural architecture design.
 
 **I'm building a research team** at the intersection of TinyML and biomedical AI. If you're a student passionate about making AI work on edge devices, or a researcher interested in collaboration, I'd love to hear from you.

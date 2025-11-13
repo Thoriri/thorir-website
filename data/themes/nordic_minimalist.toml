@@ -1,0 +1,42 @@
+# Nordic Minimalist Theme
+# Clean, Scandinavian aesthetic - fits Icelandic background
+# Subtle, sophisticated, professional
+
+name = "Nordic Minimalist"
+
+# Primary colors - inspired by Nordic design
+[light]
+  # Primary color (links, buttons, headings)
+  primary = "#2C3E50"  # Slate gray - sophisticated and calm
+  
+  # Link colors
+  link = "#3498DB"  # Bright blue - energetic but professional
+  link_hover = "#2980B9"  # Darker blue on hover
+  
+  # Menu colors
+  menu_primary = "#2C3E50"  # Slate for menu background
+  menu_text = "#FFFFFF"  # White text
+  menu_text_active = "#3498DB"  # Bright blue for active items
+  menu_title = "#2C3E50"  # Slate for titles
+  
+  # Background colors - clean and minimal
+  home_section_odd = "#FFFFFF"  # Pure white
+  home_section_even = "#FAFAFA"  # Subtle off-white (ice accent)
+  
+  # Accent colors
+  accent = "#E8F4F8"  # Ice blue for highlights
+  accent_dark = "#34495E"  # Darker slate for contrast
+
+[dark]
+  primary = "#3498DB"  # Bright blue for dark mode
+  link = "#5DADE2"  # Lighter blue
+  link_hover = "#3498DB"  # Medium blue on hover
+  menu_primary = "#1A1A1A"  # Very dark
+  menu_text = "#ECF0F1"  # Light gray
+  menu_text_active = "#3498DB"  # Bright blue
+  menu_title = "#ECF0F1"  # Light gray
+  home_section_odd = "#1A1A1A"  # Very dark
+  home_section_even = "#2C2C2C"  # Slightly lighter dark
+  accent = "#34495E"  # Dark slate
+  accent_dark = "#1A1A1A"  # Very dark
+

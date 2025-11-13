@@ -1,9 +1,6 @@
 ---
-abstract: The long-term, continuous analysis of electroencephalography (EEG) signals on wearable devices to automatically detect seizures in epileptic patients is a high-potential application field for deep neural networks, and specifically for transformers, which are highly suited for end-to-end time series processing without handcrafted feature extraction. In this work, we propose a small-scale transformer detector, the EEGformer, compatible with unobtrusive acquisition setups that use only the temporal channels. EEGformer is the result of a hardware-oriented design exploration, aiming for efficient execution on tiny low-power micro-controller units (MCUs) and low latency and false alarm rate to increase patient and caregiver acceptance.Tests conducted on the CHB-MIT dataset show a 20% reduction of the onset detection latency with respect to the state-of-the-art model for temporal acquisition, with a competitive 73% seizure detection probability and 0.15 false-positive-per-hour (FP/h). Further investigations on a novel and challenging scalp EEG dataset result in the successful detection of 88% of the annotated seizure events, with 0.45 FP/h. We evaluate the deployment of the EEGformer on three commercial low-power computing platforms the single-core Apollo4 MCU and the GAP8 and GAP9 parallel MCUs. The most efficient implementation (on GAP9) results in as low as 13.7 ms and 0.31 mJ per inference, demonstrating the feasibility of deploying the EEGformer on wearable seizure detection systems with reduced channel count and multi-day battery duration.
-slides: ""
-url_pdf: "https://ieeexplore.ieee.org/abstract/document/10412626"
-publication_types:
-  - "1"
+title: "Reducing False Alarms in Wearable Seizure Detection With EEGformer: A Compact Transformer Model for MCUs"
+publication_short: In *IEEE TBioCAS 2024*
 authors:
   - Paola Busia
   - Andrea Cossettini
@@ -18,27 +15,49 @@ authors:
   - Philippe Ryvlin
   - Paolo Meloni
   - Luca Benini
-author_notes: []
-publication: IEEE Transactions on Biomedical Circuits and Systems
-summary: An extended version of EEGformer, demonstrating improved false alarm reduction and efficient deployment on various MCU platforms.
-url_dataset: ""
-url_project: ""
-publication_short: In *IEEE TBioCAS*
-url_source: ""
+publication_types:
+  - "2"
+date: 2024-03-25T00:00:00Z
+publishDate: 2024-03-25T00:00:00Z
+venue: "IEEE Transactions on Biomedical Circuits and Systems"
+abstract: |
+  Long-term seizure monitoring in wearables suffers from high false-alarm rates. EEGformer is a compact transformer-based detector tailored for low-power microcontroller units that operates directly on raw temporal EEG channels. Hardware-aware optimization enables EEGformer to detect 73% of seizures on the CHB-MIT dataset with only 0.15 false positives per hour while reducing detection latency by 20%. Deployment on the GAP9 MCU performs inference in 13.7 ms at 0.31 mJ per inference, demonstrating practical suitability for wearable seizure detection devices with multi-day autonomy.
+summary: "Compact transformer seizure detector that achieves 73% sensitivity with 0.15 FP/h and runs in 13.7 ms at 0.31 mJ on GAP9."
+featured: false
+projects:
+  - EEGformer
+tags:
+  - EEGformer
+  - seizure detection
+  - transformer
+  - low-power MCU
+url_pdf: "https://ieeexplore.ieee.org/abstract/document/10412626"
+url_arxiv: ""
+url_code: ""
+url_dataset: "https://physionet.org/content/chbmit/1.0.0/"
 url_video: ""
-title: "Reducing False Alarms in Wearable Seizure Detection With EEGformer: A Compact Transformer Model for MCUs"
-doi: "10.1109/TBCAS.2024.3357509"
-featured: true
-tags: []
-projects: []
+url_slides: ""
+url_project: ""
+url_doi: "https://doi.org/10.1109/TBCAS.2024.3357509"
+url_poster: ""
 image:
-  caption: ""
+  caption: "EEGformer hardware-aware deployment"
   focal_point: Smart
   preview_only: false
   filename: featured.png
-date: 2024-03-25T00:00:00.000Z
-url_slides: ""
-publishDate: 2024-03-25T00:00:00.000Z
-url_poster: ""
-url_code: ""
+links:
+  - icon: external-link-alt
+    icon_pack: fas
+    name: IEEE Xplore
+    url: "https://ieeexplore.ieee.org/document/10412626"
+  - icon: database
+    icon_pack: fas
+    name: CHB-MIT Dataset
+    url: "https://physionet.org/content/chbmit/1.0.0/"
 ---
+
+## Key Highlights
+
+- Tiny transformer architecture tailored for raw temporal EEG and low-channel wearable acquisition.
+- Detects 73% of seizures with 0.15 false positives per hour and reduces detection latency by 20% on CHB-MIT.
+- Hardware-aware implementation achieves 13.7 ms inference latency at 0.31 mJ on GAP9, enabling multi-day wearable deployment.

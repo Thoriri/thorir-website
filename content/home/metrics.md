@@ -1,49 +1,84 @@
 ---
 widget: blank
 headless: true
-weight: 22
+weight: 24
+
+title: ""
+subtitle: ""
 
 design:
   columns: '1'
   spacing:
-    padding: ['20px', '0', '40px', '0']
+    padding: ['30px', '0', '40px', '0']
 ---
 
-<div style="text-align: center; max-width: 800px; margin: 0 auto;">
-  <div style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; padding: 30px 20px; background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%); border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+<div class="metrics-card" id="stats-section" role="region" aria-label="Research impact metrics">
+  <div class="metric">
+    <span class="metric-value" data-target="687" aria-live="polite" aria-label="Total citations">687</span>
+    <span class="metric-label">Citations</span>
+    <a class="metric-link" href="https://scholar.google.com/citations?user=TyRxmUkAAAAJ&hl=en" target="_blank" rel="noopener">
+      <i class="ai ai-google-scholar" aria-hidden="true"></i>
+      Google Scholar
+    </a>
+  </div>
 
-    <div style="text-align: center; min-width: 150px;">
-      <div style="font-size: 3rem; font-weight: 700; color: #0369a1; line-height: 1;">687</div>
-      <div style="font-size: 0.9rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 8px; font-weight: 600;">Citations</div>
-      <a href="https://scholar.google.com/citations?user=TyRxmUkAAAAJ&hl=en" target="_blank" rel="noopener" style="font-size: 0.85rem; color: #0369a1; text-decoration: none; margin-top: 6px; display: inline-block; border-bottom: 1px solid transparent; transition: border-color 0.2s;">
-        <i class="ai ai-google-scholar" style="margin-right: 4px;"></i>Google Scholar
-      </a>
-    </div>
+  <div class="metric">
+    <span class="metric-value" data-target="12" aria-live="polite" aria-label="H-index">12</span>
+    <span class="metric-label">h-index</span>
+    <span class="metric-caption">Core research impact</span>
+  </div>
 
-    <div style="text-align: center; min-width: 150px;">
-      <div style="font-size: 3rem; font-weight: 700; color: #0369a1; line-height: 1;">12</div>
-      <div style="font-size: 0.9rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 8px; font-weight: 600;">h-index</div>
-      <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 6px;">Research Impact</div>
-    </div>
-
-    <div style="text-align: center; min-width: 150px;">
-      <div style="font-size: 3rem; font-weight: 700; color: #0369a1; line-height: 1;">15+</div>
-      <div style="font-size: 0.9rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 8px; font-weight: 600;">Publications</div>
-      <a href="#featured" style="font-size: 0.85rem; color: #0369a1; text-decoration: none; margin-top: 6px; display: inline-block; border-bottom: 1px solid transparent; transition: border-color 0.2s;">
-        View Publications →
-      </a>
-    </div>
-
+  <div class="metric">
+    <span class="metric-value" data-target="24" aria-live="polite" aria-label="Publications">0</span>
+    <span class="metric-label">Publications</span>
+    <a class="metric-link" href="/publication/">
+      View publications →
+    </a>
   </div>
 </div>
 
-<style>
-  @media (max-width: 768px) {
-    .stats-container > div {
-      min-width: 120px !important;
-    }
-    .stats-number {
-      font-size: 2.5rem !important;
-    }
+<script>
+  // Animated counter function
+  function animateCounter(element, target, duration = 2000) {
+    const start = 0;
+    const increment = target / (duration / 16); // 60fps
+    let current = start;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        element.textContent = target.toLocaleString();
+        clearInterval(timer);
+      } else {
+        element.textContent = Math.floor(current).toLocaleString();
+      }
+    }, 16);
   }
-</style>
+
+  // Intersection Observer for scroll-triggered animation
+  const observerOptions = {
+    threshold: 0.4,
+    rootMargin: '0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+        entry.target.classList.add('counted');
+        const metrics = entry.target.querySelectorAll('.metric-value');
+        metrics.forEach(metric => {
+          const target = parseInt(metric.getAttribute('data-target'), 10);
+          animateCounter(metric, target);
+        });
+      }
+    });
+  }, observerOptions);
+
+  // Observe the stats section when DOM is ready
+  document.addEventListener('DOMContentLoaded', () => {
+    const statsSection = document.getElementById('stats-section');
+    if (statsSection) {
+      observer.observe(statsSection);
+    }
+  });
+</script>
