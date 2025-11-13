@@ -38,8 +38,8 @@ image:
 links:
 - icon: twitter
   icon_pack: fab
-  name: Follow
-  url: https://twitter.com/Thorirmar
+  name: Follow on X
+  url: https://x.com/ThorirMar
 url_code: ""
 url_pdf: "uploads/EMBC2022_eposter_thorir.pdf"
 url_slides: ""

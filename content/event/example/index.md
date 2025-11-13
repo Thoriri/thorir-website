@@ -42,8 +42,8 @@ image:
 links:
 - icon: twitter
   icon_pack: fab
-  name: Follow
-  url: https://twitter.com/Thorirmar
+  name: Follow on X
+  url: https://x.com/ThorirMar
 url_code: ""
 url_pdf: "uploads/AIX_summit_poster_compressed.pdf"
 url_slides: "uploads/HANNA.pdf"

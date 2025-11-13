@@ -193,6 +193,23 @@ a {
   }
 }
 
+// Custom X icon replacement for Twitter icon
+// Replaces all Twitter bird icons with X (for X.com links and sharing buttons)
+i.fab.fa-twitter,
+i.fa-twitter,
+a[href*="x.com"] i.fab.fa-twitter,
+a[href*="x.com"] i.fa-twitter,
+a[href*="twitter.com"] i.fab.fa-twitter,
+a[href*="twitter.com"] i.fa-twitter {
+  // Override Font Awesome's ::before to show X instead
+  &::before {
+    content: "𝕏" !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+  }
+}
+
 // Metrics card styling (homepage impact section)
 .metrics-card {
   display: flex;

@@ -18,8 +18,8 @@ image:
 links:
 - icon: twitter
   icon_pack: fab
-  name: Follow
-  url: https://twitter.com/thorirmar
+  name: Follow on X
+  url: https://x.com/thorirmar
 url_code: ""
 url_pdf: "uploads/BCIAward2023.pdf"
 url_slides: ""

@@ -13,7 +13,7 @@ social:
     link: /#contact
   - icon: twitter
     icon_pack: fab
-    link: https://twitter.com/thorirmar
+    link: https://x.com/thorirmar
   - icon: graduation-cap
     icon_pack: fas
     link: https://scholar.google.com/citations?user=TyRxmUkAAAAJ&hl=en
