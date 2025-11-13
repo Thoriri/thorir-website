@@ -12,8 +12,8 @@ design:
     padding: ['40px', '0', '40px', '0']
 ---
 
-<div style="background: #f0fdf4; border: 2px solid #10b981; border-radius: 12px; padding: 30px; margin-bottom: 20px;">
-<h3 style="margin-top: 0; color: #065f46;">🎓 I'm Building a Research Team</h3>
+<div class="recruitment-box">
+<h3>🎓 I'm Building a Research Team</h3>
 <p>I'm looking for motivated students to join my research on TinyML and biomedical AI. If you're passionate about making AI work on edge devices and have a strong background in machine learning, I'd love to hear from you.</p>
 </div>
 
@@ -34,7 +34,7 @@ design:
 
 <div style="display: grid; gap: 25px; margin-top: 25px;">
 
-<div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 25px; background: white;">
+<div class="project-opportunity-card">
 
 #### 🎯 Project 1: [To be announced]
 

@@ -39,15 +39,15 @@ The model uses learned queries and cross-attention mechanisms to compress multi-
 
 **🔗 Resources**
 
-<div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+<div class="resource-box">
 <strong>GitHub Repository</strong><br>
 <a href="https://github.com/pulp-bio/biofoundation" style="font-size: 14px;">github.com/pulp-bio/biofoundation</a><br>
 ⭐ 29 stars • 🍴 2 forks • Apache 2.0 License
 </div>
 
-<div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+<div class="resource-box">
 <strong>Key Features</strong>
-<ul style="margin: 10px 0; padding-left: 20px;">
+<ul>
 <li>PyTorch Lightning implementation</li>
 <li>Hydra configuration system</li>
 <li>Pre-trained model weights available</li>
@@ -56,9 +56,9 @@ The model uses learned queries and cross-attention mechanisms to compress multi-
 </ul>
 </div>
 
-<div style="background: white; padding: 20px; border-radius: 8px;">
+<div class="resource-box">
 <strong>Applications</strong>
-<ul style="margin: 10px 0; padding-left: 20px;">
+<ul>
 <li>Abnormality detection</li>
 <li>Artifact rejection</li>
 <li>Slowing classification</li>
