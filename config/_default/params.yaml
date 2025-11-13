@@ -21,27 +21,21 @@ twitter: ''
 # Contact (edit or remove options as required)
 
 email: thoriri@iis.ee.ethz.ch
-phone: +41 78 251 26 44
 address:
-  street: Gloriastrasse 35
+  street: 'OAT (Andreasturm 5)'
   city: Zurich
-  postcode: '8092'
+  postcode: '8050'
   country: Switzerland
   country_code: CH
 coordinates:
-  latitude: '47.377419'
-  longitude: '8.552900'
-directions: Enter ETZ and take the stairs to Office 76.2 on Floor J
+  latitude: '47.411250'
+  longitude: '8.544640'
+directions: 'Take the elevator to floor 16, Office U21.'
 contact_links:
   - icon: twitter
     icon_pack: fab
     name: DM Me
     link: 'https://twitter.com/ThorirMar'
-  - icon: skype
-    icon_pack: fab
-    name: Skype Me
-    link: 'live:thorirmar1'
-
 # Site header
 
 main_menu:

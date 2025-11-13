@@ -1,0 +1,680 @@
+
+Title: LUNA: Efficient and Topology‑Agnostic Foundation Model for EEG Signal Analysis
+Short Title (optional, for listings): LUNA Foundation Model
+
+Year: 2025
+Venue: NeurIPS
+Publication Type: 1
+
+Authors (in order, mark me as "admin”): Berkay Döner; Thorir Mar Ingolfsson (admin); Luca Benini; Yawei Li
+Abstract (2-4 sentences, plaintext Markdown):  
+Electroencephalography (EEG) datasets use diverse electrode layouts, which hampers generalization of large‑scale models. LUNA (Latent Unified Network Architecture) is a self‑supervised foundation model that compresses multi‑channel EEG into a fixed‑size topology‑agnostic latent space, allowing patch‑wise linear and cross‑attention operations that decouple computation from electrode count. Trained on >21 000 hours of TUEG and Siena EEG using a masked reconstruction objective, LUNA transfers to tasks such as abnormality detection, artifact rejection, slowing classification and emotion recognition and achieves state‑of‑the‑art AUROC on TUAR and TUSL while reducing FLOPs by 300× and GPU memory by 10×https://openreview.net/forum#:~:text=Abstract%3A%20Electroencephalography%20,will%20be%20released%20upon%20publication.
+
+Keywords/Tags (comma-separated): EEG, foundation model, topology-agnostic, self‑supervised learning, transformer
+Projects (if this ties to an existing project page—e.g., biofoundation): biofoundation
+
+Links:
+- PDF (direct URL if available): https://arxiv.org/pdf/2510.22257
+- Code repo (if any): https://github.com/pulp-bio/biofoundation
+- Dataset (if any): 
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.48550/arXiv.2510.22257
+- ArXiv (if applicable): https://arxiv.org/abs/2510.22257
+
+Key Highlights (optional bullets, 2-4 lines):
+- Compresses multi‑channel EEG into a topology‑agnostic latent space.  
+- Pre‑trained on >21 000 h of EEG; transfers to abnormality detection, artifact rejection and other tasks.  
+- Achieves 0.921 AUROC on TUAR while reducing computational cost by 300× and memory by 10×https://openreview.net/forum#:~:text=Abstract%3A%20Electroencephalography%20,will%20be%20released%20upon%20publication.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: A Wearable Ultra‑Low‑Power System for EEG‑Based Speech‑Imagery Interfaces
+Short Title (optional, for listings): Wearable Speech Imagery
+
+Year: 2025
+Venue: IEEE Transactions on Biomedical Circuits and Systems
+Publication Type: 2
+
+Authors (in order, mark me as "admin”): Thorir Mar Ingolfsson (admin); Victor Javier Kartsch; Luca Benini; Andrea Cossettini
+Abstract (2-4 sentences, plaintext Markdown):  
+Speech imagery—mentally simulating speech without vocalization—is a promising control modality for brain–computer interfaces. This paper presents the first end‑to‑end demonstration of EEG‑based speech‑imagery decoding on a low‑channel, ultra‑low‑power wearable device. Building on the BioGAP platform and the lightweight VOWELNET neural network, the system classifies 13 classes (vowels, commands and rest) with subject‑specific training, achieving up to 50 % accuracy (42.8 % average) and operating in real time at 25.93 mW on a GAP9 processorhttps://www.researchgate.net/publication/392030556_A_Wearable_Ultra-Low-Power_System_for_EEG-based_Speech-Imagery_Interfaces. It runs continuously for more than 21 hours with 40.9 ms latency and explores continual learning strategies and electrode placementhttps://www.researchgate.net/publication/392030556_A_Wearable_Ultra-Low-Power_System_for_EEG-based_Speech-Imagery_Interfaces.
+
+Keywords/Tags (comma-separated): speech imagery, brain–computer interface, wearable EEG, ultra‑low power, BioGAP, VOWELNET
+Projects (if this ties to an existing project page—e.g., biofoundation): BioGAP Speech‑Imagery BCI
+
+Links:
+- PDF (direct URL if available): 
+- Code repo (if any): 
+- Dataset (if any): 
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.1109/TBCAS.2025.3573027
+- ArXiv (if applicable): 
+
+Key Highlights (optional bullets, 2-4 lines):
+- First fully wearable EEG speech‑imagery decoding system with 13‑class vocabulary.  
+- Uses VOWELNET on BioGAP (GAP9) for real‑time inference with 25.93 mW power and >21 h run timehttps://www.researchgate.net/publication/392030556_A_Wearable_Ultra-Low-Power_System_for_EEG-based_Speech-Imagery_Interfaces.  
+- Achieves up to 50 % accuracy (42.8 % average) in subject‑specific training and investigates continual learning and electrode selection.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: SzCORE: Seizure Community Open‑Source Research Evaluation framework for the validation of electroencephalography‑based automated seizure detection algorithms
+Short Title (optional, for listings): SzCORE Framework
+
+Year: 2025
+Venue: Epilepsia 66 Suppl 3
+Publication Type: 2
+
+Authors (in order, mark me as "admin”): Jonathan Dan; Una Pale; Alireza Amirshahi; William Cappelletti; Thorir Mar Ingolfsson (admin); Xiaying Wang; Andrea Cossettini; Adriano Bernini; Luca Benini; Sándor Beniczky; David Atienza; Philippe Ryvlin
+Abstract (2-4 sentences, plaintext Markdown):  
+Ambulatory and long‑term EEG monitoring relies on automated seizure detection algorithms, yet variability in datasets, evaluation methodologies and performance metrics makes fair comparison difficult. The SzCORE framework introduces a unified set of recommendations for validating EEG‑based seizure detection algorithms, including standardized datasets, file formats, seizure annotations, cross‑validation strategies and performance metrics. It proposes a 10–20 seizure‑detection benchmark built from public datasets converted to a common format, defining the machine‑learning task and reporting metrics. The framework and open‑source software library enable rigorous evaluation of clinical significance and aim to foster community‑driven improvement of seizure detectionhttps://pubmed.ncbi.nlm.nih.gov/39292446/.
+
+Keywords/Tags (comma-separated): seizure detection, EEG, benchmark, open‑source, evaluation, standardization
+Projects (if this ties to an existing project page—e.g., biofoundation): SzCORE
+
+Links:
+- PDF (direct URL if available): https://pmc.ncbi.nlm.nih.gov/PMC12489712 or https://arxiv.org/pdf/2402.13005
+- Code repo (if any): https://github.com/esl-epfl/sz-validation-framework
+- Dataset (if any): 10–20 seizure detection benchmark (uses CHB‑MIT, TUH EEG, Siena, SeizeIT1)
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.1111/epi.18113
+- ArXiv (if applicable): https://arxiv.org/abs/2402.13005
+
+Key Highlights (optional bullets, 2-4 lines):
+- Provides a standardized evaluation framework for EEG‑based seizure detection algorithmshttps://pubmed.ncbi.nlm.nih.gov/39292446/.  
+- Introduces a 10–20 seizure detection benchmark and open‑source library for reproducible research.  
+- Harmonizes dataset formats, annotations, cross‑validation strategies and metrics to enable fair comparison and community contributions.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: Reducing False Alarms in Wearable Seizure Detection With EEGformer: A Compact Transformer Model for MCUs
+Short Title (optional, for listings): EEGformer TBCAS
+
+Year: 2024
+Venue: IEEE Transactions on Biomedical Circuits and Systems (Vol. 18, Issue 3)
+Publication Type: 2
+
+Authors (in order, mark me as "admin”): Paola Busia; Andrea Cossettini; Thorir Mar Ingolfsson (admin); Simone Benatti; Alessio Burrello; Victor J. B. Jung; Moritz Scherer; Matteo A. Scrugli; Adriano Bernini; Pauline Ducouret; Philippe Ryvlin; Paolo Meloni; Luca Benini
+Abstract (2-4 sentences, plaintext Markdown):  
+Long‑term seizure monitoring in wearables suffers from high false‑alarm rates. EEGformer is a compact transformer‑based model tailored for low‑power microcontroller units that directly processes raw multi‑channel EEG segments. With hardware‑aware optimization, EEGformer detects 73 % of seizures on the CHB‑MIT dataset with only 0.15 false positives per hour while reducing detection latency by 20 %https://www.researchgate.net/publication/377632342_Reducing_False_Alarms_in_Wearable_Seizure_Detection_with_EEGformer_A_Compact_Transformer_Model_for_MCUs#:~:text=Reducing%20False%20Alarms%20in%20W,earable%20Seizure. An embedded implementation on the GAP9 MCU performs inference in 13.7 ms and consumes 0.31 mJ per inference, enabling practical deploymenthttps://www.researchgate.net/publication/377632342_Reducing_False_Alarms_in_Wearable_Seizure_Detection_with_EEGformer_A_Compact_Transformer_Model_for_MCUs#:~:text=Reducing%20False%20Alarms%20in%20W,earable%20Seizure.
+
+Keywords/Tags (comma-separated): EEGformer, seizure detection, transformer, false alarms, low‑power MCU
+Projects (if this ties to an existing project page—e.g., biofoundation): EEGformer
+
+Links:
+- PDF (direct URL if available): 
+- Code repo (if any): 
+- Dataset (if any): CHB‑MIT Scalp EEG dataset
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.1109/TBCAS.2024.3357509
+- ArXiv (if applicable): 
+
+Key Highlights (optional bullets, 2-4 lines):
+- Introduces a tiny transformer‑based model for seizure detection with low false‑alarm rate.  
+- Achieves 73 % seizure detection probability and 0.15 false positives/hour on CHB‑MIThttps://www.researchgate.net/publication/377632342_Reducing_False_Alarms_in_Wearable_Seizure_Detection_with_EEGformer_A_Compact_Transformer_Model_for_MCUs#:~:text=Reducing%20False%20Alarms%20in%20W,earable%20Seizure.  
+- Hardware‑aware design reduces latency by 20 % and runs on GAP9 MCU in 13.7 ms using 0.31 mJ per inference.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: A Muscle Pennation Angle Estimation Framework From Raw Ultrasound Data for Wearable Biomedical Instrumentation
+Short Title (optional, for listings): Muscle Pennation Estimation
+
+Year: 2024
+Venue: IEEE Transactions on Instrumentation and Measurement
+Publication Type: 2
+
+Authors (in order, mark me as "admin”): Sergei Vostrikov; Thorir Mar Ingolfsson (admin); Soley Hafthorsdottir; Christoph Leitner; Michele Magno; Luca Benini; Andrea Cossettini
+Abstract (2-4 sentences, plaintext Markdown):  
+The pennation angle of muscles is a key parameter in musculoskeletal research. This work proposes a framework that estimates pennation angles directly from raw 32‑channel ultrasound data using an XGBoost regressor and signal alignment. The method delivers near‑real‑time predictions with an RMSE of ~1.6° and compresses the model to 11 kB, achieving 1.31 ms inference and 1.03 mJ energy consumption on a GAP9 microcontrollerhttps://thorirmar.com/publication/2024-ieee-tim/https://www.researchgate.net/publication/376026748_A_Muscle_Pennation_Angle_Estimation_Framework_from_Raw_Ultrasound_Data_for_Wearable_Biomedical_Instrumentation#:~:text=Abstract. The approach enables wearable biomedical instrumentation for continuous muscle analysis.
+
+Keywords/Tags (comma-separated): pennation angle, ultrasound, XGBoost, wearable, GAP9
+Projects (if this ties to an existing project page—e.g., biofoundation): 
+
+Links:
+- PDF (direct URL if available): 
+- Code repo (if any): 
+- Dataset (if any): 
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.1109/TIM.2023.3335535
+- ArXiv (if applicable): 
+
+Key Highlights (optional bullets, 2-4 lines):
+- Estimates muscle pennation angles from raw ultrasound using an XGBoost regressor.  
+- Achieves ~1.6° RMSE with only 11 kB model size and 1.31 ms inference timehttps://thorirmar.com/publication/2024-ieee-tim/https://www.researchgate.net/publication/376026748_A_Muscle_Pennation_Angle_Estimation_Framework_from_Raw_Ultrasound_Data_for_Wearable_Biomedical_Instrumentation#:~:text=Abstract.  
+- Enables energy‑efficient implementation on GAP9 with ~1 mJ per prediction.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: Minimizing artifact‑induced false‑alarms for seizure detection in wearable EEG devices with gradient‑boosted tree classifiers
+Short Title (optional, for listings): Artifact Detection for Seizure Monitoring
+
+Year: 2024
+Venue: Scientific Reports, 14:2980
+Publication Type: 2
+
+Authors (in order, mark me as "admin”): Thorir Mar Ingolfsson (admin); Simone Benatti; Xiaying Wang; Adriano Bernini; Pauline Ducouret; Philippe Ryvlin; Sándor Beniczky; Luca Benini; Andrea Cossettini
+Abstract (2-4 sentences, plaintext Markdown):  
+Motion, muscle and eye‑blink artifacts cause false alarms in continuous seizure monitoring. This study proposes a combined seizure and artifact detection scheme using gradient‑boosted decision trees. On the CHB‑MIT dataset, the subject‑specific approach yields 65.27 % sensitivity and 93.95 % artifact‑detection accuracy, reducing false alarms by up to 96 %https://thorirmar.com/publication/seizure_artifact/https://www.nature.com/articles/s41598-024-52551-0#:~:text=Abstract. The energy‑efficient implementation enables 300‑hour battery life for wearable EEG deviceshttps://thorirmar.com/publication/seizure_artifact/.
+
+Keywords/Tags (comma-separated): artifact detection, seizure detection, gradient boosted trees, wearable EEG, false alarms
+Projects (if this ties to an existing project page—e.g., biofoundation): 
+
+Links:
+- PDF (direct URL if available): 
+- Code repo (if any): 
+- Dataset (if any): CHB‑MIT Scalp EEG dataset, TUH EEG Artifact Corpus
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.1038/s41598-024-52551-0
+- ArXiv (if applicable): 
+
+Key Highlights (optional bullets, 2-4 lines):
+- Combines seizure and artifact detection using gradient‑boosted tree classifiers.  
+- Achieves 65.27 % sensitivity and 93.95 % artifact‑detection accuracy, lowering false alarms by up to 96 %https://thorirmar.com/publication/seizure_artifact/https://www.nature.com/articles/s41598-024-52551-0#:~:text=Abstract.  
+- Optimized implementation supports 300‑hour battery life on wearable devices.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: Skilog: A Smart Sensor System for Performance Analysis and Biofeedback in Ski Jumping
+Short Title (optional, for listings): Skilog
+
+Year: 2023
+Venue: IEEE Biomedical Circuits and Systems Conference (BioCAS) 2023
+Publication Type: 1
+
+Authors (in order, mark me as "admin”): Lukas Schulthess; Thorir Mar Ingolfsson (admin); Marc Nölke; Michele Magno; Luca Benini; Christoph Leitner
+Abstract (2-4 sentences, plaintext Markdown):  
+Skilog is a wearable system designed to assist ski jumpers by analyzing take‑off and providing real‑time biofeedback. Pressure‑sensitive insoles in each boot sample data at 100 Hz and transmit it to an embedded GAP9 microcontroller, where an XGBoost model classifies the athlete’s jump phases. The system achieves 92.7 % accuracy in classifying jumps and offers immediate feedback on timing and technique while weighing about 20 g and consuming little power, enabling multi‑day operationhttps://thorirmar.com/publication/2023-ieee-biocas/.
+
+Keywords/Tags (comma-separated): ski jumping, smart sensor, biofeedback, pressure sensors, XGBoost, wearable
+Projects (if this ties to an existing project page—e.g., biofoundation): 
+
+Links:
+- PDF (direct URL if available): 
+- Code repo (if any): 
+- Dataset (if any): 
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.1109/BioCAS58349.2023.10389124
+- ArXiv (if applicable): 
+
+Key Highlights (optional bullets, 2-4 lines):
+- Provides real‑time biofeedback for ski jumpers using pressure‑sensitive insoles and an XGBoost model.  
+- Achieves 92.7 % jump‑classification accuracy and runs on a lightweight GAP9 processorhttps://thorirmar.com/publication/2023-ieee-biocas/.  
+- Enables multi‑day operation due to low weight (~20 g) and energy consumption.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: EpiDeNet: An Energy‑Efficient Approach to Seizure Detection for Embedded Systems
+Short Title (optional, for listings): EpiDeNet
+
+Year: 2023
+Venue: IEEE Biomedical Circuits and Systems Conference (BioCAS) 2023
+Publication Type: 1
+
+Authors (in order, mark me as "admin”): Thorir Mar Ingolfsson (admin); Upasana Chakraborty; Xiaying Wang; Sándor Beniczky; Pauline Ducouret; Simone Benatti; Philippe Ryvlin; Andrea Cossettini; Luca Benini
+Abstract (2-4 sentences, plaintext Markdown):  
+EpiDeNet is a lightweight seizure‑detection network designed for embedded systems. It introduces the Shannon–Stevens Weighted Cross Entropy (SSWCE) loss to handle class imbalance and employs a compact CNN architecture optimized for RISC‑V PULP platforms. On the CHB‑MIT and PEDESITE datasets, EpiDeNet detects more than 91 % of seizures while reducing false positives to 1.18 FP/hhttps://thorirmar.com/publication/epidenet/https://ieeexplore.ieee.org/abstract/document/10388554#:~:text=development%20of%20machine%20learning%20algorithms,constrained%20platforms. Post‑training quantization and vector instructions enable real‑time inference on GAP8/GAP9 with low memory footprint and energy consumptionhttps://thorirmar.com/publication/epidenet/.
+
+Keywords/Tags (comma-separated): seizure detection, embedded systems, energy efficiency, RISC‑V, deep learning
+Projects (if this ties to an existing project page—e.g., biofoundation): 
+
+Links:
+- PDF (direct URL if available): 
+- Code repo (if any): 
+- Dataset (if any): CHB‑MIT and PEDESITE datasets
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.1109/BioCAS58349.2023.10388554
+- ArXiv (if applicable): 
+
+Key Highlights (optional bullets, 2-4 lines):
+- Presents a compact neural network for seizure detection with a novel weighted cross‑entropy loss.  
+- Achieves >91 % detection accuracy with 1.18 false positives/hour on CHB‑MIT and PEDESITE datasetshttps://thorirmar.com/publication/epidenet/.  
+- Implementation on GAP8/GAP9 uses post‑training quantization and RISC‑V vector instructions for real‑time inferencehttps://ieeexplore.ieee.org/abstract/document/10388554#:~:text=development%20of%20machine%20learning%20algorithms,constrained%20platforms.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: EEGformer: Transformer‑Based Epilepsy Detection on Raw EEG Traces for Low‑Channel‑Count Wearable Continuous Monitoring Devices
+Short Title (optional, for listings): EEGformer 2022
+
+Year: 2022
+Venue: IEEE Biomedical Circuits and Systems Conference (BioCAS) 2022
+Publication Type: 1
+
+Authors (in order, mark me as "admin”): Thorir Mar Ingolfsson (admin); Xiaying Wang; Simone Benatti; Alessio Burrello; Victor J. B. Jung; Matteo A. Scrugli; Paola Busia; Luca Benini; Andrea Cossettini
+Abstract (2-4 sentences, plaintext Markdown):  
+Long‑term seizure monitoring on wearable devices requires accurate detection with minimal channels and energy consumption. EEGformer introduces a transformer‑based model that processes raw multi‑channel EEG segments using patch extraction and transformer encoders, followed by post‑processing to suppress spurious detections. On the CHB‑MIT dataset it detects 73 % of seizures with low false‑positive rate, and a hardware‑aware design enables execution on an Apollo4 microcontroller in ~405 ms with about 0.31 mJ per inferencehttps://thorirmar.com/publication/2022-ieee-biocas/.
+
+Keywords/Tags (comma-separated): transformer, EEG, seizure detection, embedded system, low channel count
+Projects (if this ties to an existing project page—e.g., biofoundation): EEGformer
+
+Links:
+- PDF (direct URL if available): 
+- Code repo (if any): 
+- Dataset (if any): CHB‑MIT Scalp EEG dataset
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.1109/BioCAS54905.2022.9948637
+- ArXiv (if applicable): 
+
+Key Highlights (optional bullets, 2-4 lines):
+- First transformer‑based seizure detector for low‑channel wearable monitoring.  
+- Achieves 73 % detection with low false positives and runs on microcontroller with 405 ms inference timehttps://thorirmar.com/publication/2022-ieee-biocas/.  
+- Uses patch‑based input and post‑processing to reduce false alarms.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: Energy‑Efficient Tree‑Based EEG Artifact Detection
+Short Title (optional, for listings): Tree‑Based Artifact Detection
+
+Year: 2022
+Venue: IEEE Engineering in Medicine & Biology Conference (EMBC) 2022
+Publication Type: 1
+
+Authors (in order, mark me as "admin”): Thorir Mar Ingolfsson (admin); Andrea Cossettini; Simone Benatti; Luca Benini
+Abstract (2-4 sentences, plaintext Markdown):  
+EEG recordings on wearable devices are prone to artifacts that degrade seizure detection accuracy. This paper presents a tree‑based artifact detection algorithm using only temporal EEG channels and optimized decision‑tree classifiers. Evaluated on the TUH EEG Artifact Corpus, the system attains 93.95 % classification accuracy and a high F1‑score for eye‑blink and muscle artifacts while running on a PULP RISC‑V platform. The implementation improves energy efficiency by 5.21× relative to state‑of‑the‑art and enables up to 300 hours of continuous monitoring on a 300 mAh batteryhttps://thorirmar.com/publication/artifact_detection/#:~:text=In%20the%20context%20of%20epilepsy,positive%20rates%20and%20highrxiv.org/pdf/2204.09577.
+
+Keywords/Tags (comma-separated): artifact detection, EEG, decision tree, energy efficiency, wearable
+Projects (if this ties to an existing project page—e.g., biofoundation): 
+
+Links:
+- PDF (direct URL if available): 
+- Code repo (if any): 
+- Dataset (if any): TUH EEG Artifact Corpus
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.1109/EMBC48229.2022.9871413
+- ArXiv (if applicable): 
+
+Key Highlights (optional bullets, 2-4 lines):
+- Uses decision trees to detect EEG artifacts with 93.95 % accuracy using minimal channelshttps://thorirmar.com/publication/artifact_detection/#:~:text=In%20the%20context%20of%20epilepsy,positive%20rates%20and%20high.  
+- Embedded implementation on PULP RISC‑V platform achieves 5.21× energy efficiency improvementrxiv.org/pdf/2204.09577.  
+- Enables up to 300 hours of monitoring on a 300 mAh battery.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: Reducing Neural Architecture Search Spaces with Training‑Free Statistics and Computational Graph Clustering
+Short Title (optional, for listings): C‑BRED: Search Space Reduction
+
+Year: 2022
+Venue: Computing Frontiers 2022
+Publication Type: 1
+
+Authors (in order, mark me as "admin”): Thorir Mar Ingolfsson (admin); Mark Vero; Xiaying Wang; Lorenzo Lamberti; Luca Benini; Matteo Spallanzani
+Abstract (2-4 sentences, plaintext Markdown):  
+C‑BRED proposes a technique to reduce neural architecture search (NAS) spaces by clustering candidate architectures based on proxy statistics and computational graph edit distance. The method groups architectures with similar predicted performance and selects representative candidates, dramatically shrinking the search space without exhaustive training. On NASBench‑201 tasks, C‑BRED improves average accuracy from 64 % to 70 % while exploring only a handful of architectureshttps://thorirmar.com/publication/computational_graph/#:~:text=The%20computational%20demands%20of%20neural,average. The approach facilitates efficient NAS under limited computational budgetshttps://arxiv.org/abs/2204.14103#:~:text=Title%3AReducing%20Neural%20Architecture%20Search%20Spaces,Statistics%20and%20Computational%20Graph%20Clustering.
+
+Keywords/Tags (comma-separated): neural architecture search, search space reduction, training‑free statistics, graph clustering
+Projects (if this ties to an existing project page—e.g., biofoundation): 
+
+Links:
+- PDF (direct URL if available): 
+- Code repo (if any): 
+- Dataset (if any): NASBench‑201
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.1145/3528416.3530873
+- ArXiv (if applicable): https://arxiv.org/abs/2204.14103
+
+Key Highlights (optional bullets, 2-4 lines):
+- Clusters candidate architectures using training‑free proxy statistics to reduce NAS search spaces.  
+- Achieves 70 % average accuracy on NASBench‑201 with only a few candidateshttps://thorirmar.com/publication/computational_graph/#:~:text=The%20computational%20demands%20of%20neural,average.  
+- Enables efficient NAS with minimal training costhttps://arxiv.org/abs/2204.14103#:~:text=Title%3AReducing%20Neural%20Architecture%20Search%20Spaces,Statistics%20and%20Computational%20Graph%20Clustering.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: Towards Long‑term Non‑invasive Monitoring for Epilepsy via Wearable EEG Devices
+Short Title (optional, for listings): Long‑term EEG Monitoring
+
+Year: 2021
+Venue: IEEE Biomedical Circuits and Systems Conference (BioCAS) 2021
+Publication Type: 1
+
+Authors (in order, mark me as "admin”): Thorir Mar Ingolfsson (admin); Andrea Cossettini; Xiaying Wang; Enrico Tabanelli; Giuseppe Tagliavini; Philippe Ryvlin; Luca Benini; Simone Benatti
+Abstract (2-4 sentences, plaintext Markdown):  
+The study explores seizure‑detection techniques for long‑term non‑invasive monitoring using wearable EEG devices. Various classifiers (support‑vector machines, random forests, shallow CNNs) are combined with pre‑processing and post‑processing to handle noise and artifacts. On the CHB‑MIT dataset, a subject‑specific approach using 8‑s windows yields zero false positives and 100 % sensitivity, while energy‑efficient implementation on PULP platforms enables 300 hours of continuous monitoring on a 300 mAh batteryhttps://thorirmar.com/publication/seizure/#:~:text=We%20present%20the%20implementation%20of,both%20patient%20and%20caregiver%20requirements. The paper also compares subject‑independent models and discusses design trade‑offshttps://thorirmar.com/publication/seizure/#:~:text=We%20present%20the%20implementation%20of,both%20patient%20and%20caregiver%20requirements.
+
+Keywords/Tags (comma-separated): epilepsy monitoring, wearable EEG, seizure detection, energy efficiency, long‑term monitoring
+Projects (if this ties to an existing project page—e.g., biofoundation): 
+
+Links:
+- PDF (direct URL if available): 
+- Code repo (if any): 
+- Dataset (if any): CHB‑MIT Scalp EEG dataset
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.1109/BioCAS49922.2021.9644949
+- ArXiv (if applicable): https://arxiv.org/abs/2106.08008
+
+Key Highlights (optional bullets, 2-4 lines):
+- Evaluates subject‑specific and subject‑independent seizure detection for wearable EEG.  
+- Achieves zero false positives and 100 % sensitivity with 8‑s windows and energy‑efficient PULP implementationhttps://thorirmar.com/publication/seizure/#:~:text=We%20present%20the%20implementation%20of,both%20patient%20and%20caregiver%20requirements.  
+- Enables 300‑hour continuous monitoring on a 300 mAh battery.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: ECG‑TCN: Wearable Cardiac Arrhythmia Detection with a Temporal Convolutional Network
+Short Title (optional, for listings): ECG‑TCN
+
+Year: 2021
+Venue: IEEE 3rd International Conference on Artificial Intelligence Circuits and Systems (AICAS) 2021
+Publication Type: 1
+
+Authors (in order, mark me as "admin”): Thorir Mar Ingolfsson (admin); Xiaying Wang; Michael Hersche; Alessio Burrello; Lukas Cavigelli; Luca Benini
+Abstract (2-4 sentences, plaintext Markdown):  
+This paper introduces a temporal convolutional network (TCN) for arrhythmia detection from single‑lead ECG signals. The proposed model attains 94.2 % accuracy on the ECG5000 dataset, improving balanced accuracy by 16.5 % while using 27× fewer parameters and 37× fewer multiply‑accumulate operations than prior networkshttps://ieeexplore.ieee.org/document/9458520#:~:text=Abstract%3A. Implementations on a STM32L475 (ARM Cortex‑M4F) and a GAP8 (RISC‑V) show real‑time performance: the GAP8 system consumes 0.10 mJ per inference, offering a 23× energy efficiency improvement and 46.85× faster inference over the ARM baselinehttps://ieeexplore.ieee.org/document/9458520#:~:text=Abstract%3A.
+
+Keywords/Tags (comma-separated): ECG, arrhythmia detection, temporal convolutional network, wearable, energy efficiency
+Projects (if this ties to an existing project page—e.g., biofoundation): 
+
+Links:
+- PDF (direct URL if available): 
+- Code repo (if any): https://github.com/pulp-platform/ecg-tcn
+- Dataset (if any): ECG5000 dataset
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.1109/AICAS51828.2021.9458520
+- ArXiv (if applicable): https://arxiv.org/abs/2103.13740
+
+Key Highlights (optional bullets, 2-4 lines):
+- Proposes an energy‑efficient TCN for arrhythmia detection, achieving 94.2 % accuracy with minimal parametershttps://ieeexplore.ieee.org/document/9458520#:~:text=Abstract%3A.  
+- Implements the model on STM32L475 and GAP8 platforms; the GAP8 version consumes 0.10 mJ per inference with 23× energy efficiency improvementhttps://ieeexplore.ieee.org/document/9458520#:~:text=Abstract%3A.  
+- Demonstrates 8.1 % higher accuracy and 35.1× faster inference than previous embedded implementations.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: EEG‑TCNet: An Accurate Temporal Convolutional Network for Embedded Motor‑Imagery Brain–Machine Interfaces
+Short Title (optional, for listings): EEG‑TCNet
+
+Year: 2020
+Venue: IEEE International Conference on Systems, Man, and Cybernetics (SMC) 2020
+Publication Type: 1
+
+Authors (in order, mark me as "admin”): Thorir Mar Ingolfsson (admin); Michael Hersche; Xiaying Wang; Nobuaki Kobayashi; Lukas Cavigelli; Luca Benini
+Abstract (2-4 sentences, plaintext Markdown):  
+EEG‑TCNet combines depthwise separable convolutions with temporal convolutional blocks to classify motor imagery from EEG signals with high accuracy and efficiency. On the BCI Competition IV‑2a dataset it achieves 77.35 % average accuracy (up to 83.84 % with per‑subject tuning) while using significantly fewer parameters than existing deep networkshttps://thorirmar.com/publication/example/#:~:text=In%20recent%20years%2C%20deep%20learning,effect%20of%200.25. Its compact architecture generalizes to multiple datasets and is suitable for embedded brain–machine interface deviceshttps://thorirmar.com/publication/example/#:~:text=In%20recent%20years%2C%20deep%20learning,effect%20of%200.25.
+
+Keywords/Tags (comma-separated): motor imagery, EEG, temporal convolutional network, brain–machine interface, embedded
+Projects (if this ties to an existing project page—e.g., biofoundation): 
+
+Links:
+- PDF (direct URL if available): 
+- Code repo (if any): https://github.com/iis-eth-zurich/eeg-tcnet
+- Dataset (if any): BCI Competition IV‑2a dataset
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.1109/SMC42975.2020.9283028
+- ArXiv (if applicable): https://arxiv.org/abs/2006.00622
+
+Key Highlights (optional bullets, 2-4 lines):
+- Novel TCN architecture for motor‑imagery EEG classification with small parameter counthttps://thorirmar.com/publication/example/#:~:text=In%20recent%20years%2C%20deep%20learning,effect%20of%200.25.  
+- Achieves 77.35 % average accuracy (up to 83.84 % with tuning) and generalizes across datasetshttps://thorirmar.com/publication/example/#:~:text=In%20recent%20years%2C%20deep%20learning,effect%20of%200.25.  
+- Suitable for embedded brain–machine interfaces due to compact design and low power.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: CEReBrO: Compact Encoder for Representations of Brain Oscillations Using Efficient Alternating Attention
+Short Title (optional, for listings): CEReBrO
+
+Year: 2025
+Venue: arXiv (preprint)
+Publication Type: 3
+
+Authors (in order, mark me as "admin”): Alexandru Dimofte; Glenn Anta Bucagu; Thorir Mar Ingolfsson (admin); Xiaying Wang; Andrea Cossettini; Luca Benini; Yawei Li
+Abstract (2-4 sentences, plaintext Markdown):  
+CEReBrO introduces a compact EEG foundation model that tokenizes multi‑channel recordings into per‑channel patches and uses an **alternating attention** mechanism to jointly model intra‑channel temporal dynamics and inter‑channel spatial correlations.  Compared to standard self‑attention, this approach delivers a two‑fold speedup and requires six times less memory while allowing models with 3.6–85 M parameters.  Pre‑trained on more than **20 000 hours** of publicly available EEG data with diverse channel configurations, CEReBrO sets new benchmarks for emotion and seizure detection tasks and maintains competitive performance for anomaly classification and gait predictionhttps://arxiv.org/abs/2501.10885#:~:text=reproducibility,our%20models%27%20effectiveness%20and%20efficiency.
+
+Keywords/Tags (comma-separated): EEG, foundation model, alternating attention, self‑supervised learning
+Projects (if this ties to an existing project page—e.g., biofoundation): biofoundation
+
+Links:
+- PDF (direct URL if available): https://arxiv.org/pdf/2501.10885
+- Code repo (if any): 
+- Dataset (if any): 
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.48550/arXiv.2501.10885
+- ArXiv (if applicable): https://arxiv.org/abs/2501.10885
+
+Key Highlights (optional bullets, 2-4 lines):
+- Alternating attention tokenizes EEG into per‑channel patches and jointly captures temporal and spatial correlations.  
+- Achieves 2× speed improvement and 6× memory reduction versus standard self‑attentionhttps://arxiv.org/abs/2501.10885#:~:text=reproducibility,our%20models%27%20effectiveness%20and%20efficiency.  
+- Pre‑trained on >20 k hours of EEG and sets new benchmarks for emotion and seizure detection taskshttps://arxiv.org/abs/2501.10885#:~:text=reproducibility,our%20models%27%20effectiveness%20and%20efficiency.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: Finetuning and Quantization of EEG‑Based Foundational BioSignal Models on ECG and PPG Data for Blood Pressure Estimation
+Short Title (optional, for listings): Fine‑tuning & Quantization for BP Estimation
+
+Year: 2025
+Venue: IEEE Engineering in Medicine & Biology Conference (EMBC) 2025
+Publication Type: 1
+
+Authors (in order, mark me as "admin”): Bálint Tóth; Dominik Senti; Thorir Mar Ingolfsson (admin); Jeffrey Zweidler; Alexandre Elsig; Luca Benini; Yawei Li
+Abstract (2-4 sentences, plaintext Markdown):  
+This work explores whether **EEG‑pretrained foundation models** can transfer to other biosignals for **blood‑pressure estimation**.  The authors fine‑tune an EEG foundation model on photoplethysmography (PPG) and electrocardiography (ECG) signals from the MIMIC‑III and VitalDB datasets.  The approach achieves near state‑of‑the‑art diastolic blood‑pressure estimation (mean absolute error ≈ 1.57 mmHg) and surpasses prior methods for systolic BP with a mean absolute error of 2.72 mmHg, while dynamic INT8 quantization compresses the smallest model from 13.73 MB to 3.83 MB without loss of accuracyhttps://arxiv.org/abs/2502.17460.
+
+Keywords/Tags (comma-separated): blood pressure estimation, foundation models, transfer learning, ECG, PPG, quantization
+Projects (if this ties to an existing project page—e.g., biofoundation): biofoundation
+
+Links:
+- PDF (direct URL if available): https://arxiv.org/pdf/2502.17460
+- Code repo (if any): 
+- Dataset (if any): MIMIC‑III and VitalDB BP estimation datasets
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.48550/arXiv.2502.17460
+- ArXiv (if applicable): https://arxiv.org/abs/2502.17460
+
+Key Highlights (optional bullets, 2-4 lines):
+- Demonstrates transfer of EEG‑based foundation models to ECG/PPG for blood‑pressure estimation.  
+- Achieves 1.57 mmHg MAE on diastolic BP and 2.72 mmHg on systolic BP with INT8 quantization reducing model size by >3.5×https://arxiv.org/abs/2502.17460.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: FEMBA: Efficient and Scalable EEG Analysis with a Bidirectional Mamba Foundation Model
+Short Title (optional, for listings): FEMBA Foundation Model
+
+Year: 2025
+Venue: IEEE Engineering in Medicine & Biology Conference (EMBC) 2025
+Publication Type: 1
+
+Authors (in order, mark me as "admin”): Anna Tegon; Thorir Mar Ingolfsson (admin); Xiaying Wang; Luca Benini; Yawei Li
+Abstract (2-4 sentences, plaintext Markdown):  
+FEMBA proposes a **self‑supervised EEG foundation model** built on a bidirectional Mamba state‑space architecture, which scales **linearly** with sequence length and circumvents the quadratic complexity of transformers.  Trained on more than **21 000 hours** of unlabeled EEG and fine‑tuned on several downstream tasks, FEMBA reaches **81.82 % balanced accuracy** (AUROC 0.8921) on the TUAB dataset and 0.949 AUROC on the TUAR dataset, while a tiny 7.8 M‑parameter variant demonstrates suitability for resource‑constrained deviceshttps://arxiv.org/abs/2502.06438#:~:text=,pave%20the%20way%20for%20scalable.
+
+Keywords/Tags (comma-separated): EEG, foundation model, bidirectional Mamba, state‑space model, self‑supervised learning
+Projects (if this ties to an existing project page—e.g., biofoundation): biofoundation
+
+Links:
+- PDF (direct URL if available): https://arxiv.org/pdf/2502.06438
+- Code repo (if any): https://github.com/pulp-bio/biofoundation
+- Dataset (if any): TUAB, TUAR (downstream evaluation); pre‑training uses public EEG corpora
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.48550/arXiv.2502.06438
+- ArXiv (if applicable): https://arxiv.org/abs/2502.06438
+
+Key Highlights (optional bullets, 2-4 lines):
+- Introduces a bidirectional Mamba state‑space architecture that scales linearly with sequence length.  
+- Pre‑trained on >21 k hours of EEG; achieves 81.82 % balanced accuracy on TUAB and 0.949 AUROC on TUARhttps://arxiv.org/abs/2502.06438#:~:text=,pave%20the%20way%20for%20scalable.  
+- 7.8 M‑parameter variant shows viability for embedded devices.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: VowelNet: Enhancing Communication with Wearable EEG‑Based Vowel Imagery
+Short Title (optional, for listings): VowelNet
+
+Year: 2024
+Venue: IEEE Biomedical Circuits and Systems Conference (BioCAS) 2024
+Publication Type: 1
+
+Authors (in order, mark me as "admin”): Thorir Mar Ingolfsson (admin); Victor Javier Kartsch Morinigo; Andrea Cossettini; Xiaying Wang; Luca Benini
+Abstract (2-4 sentences, plaintext Markdown):  
+**VowelNet** is a lightweight neural network for decoding imagined speech on ultra‑low‑power wearables.  Using only eight scalp EEG channels, the system classifies vowel versus rest with **91.1 % accuracy** and distinguishes between multiple vowels with **61.8 % accuracy**research-collection.ethz.ch/server/api/core/bitstreams/57dcf67b-6194-4fe9-b9b3-60edf8631bb0/content#:~:text=Abstract%E2%80%94For%20decades%2C%20researchers%20have%20explored,efficient%20assistive%20communication%20devices.  Deployed on a GAP9 processor, it runs with **41 ms latency** and **17 mW** power consumption, enabling continuous operation for more than 24 hours while requiring eight times fewer channels than prior systemsresearch-collection.ethz.ch/server/api/core/bitstreams/57dcf67b-6194-4fe9-b9b3-60edf8631bb0/content#:~:text=Abstract%E2%80%94For%20decades%2C%20researchers%20have%20explored,efficient%20assistive%20communication%20devices.
+
+Keywords/Tags (comma-separated): speech imagery, vowel imagery, wearable EEG, VowelNet, brain–computer interface
+Projects (if this ties to an existing project page—e.g., biofoundation): BioGAP Speech Imagery
+
+Links:
+- PDF (direct URL if available): https://www.research-collection.ethz.ch/bitstreams/57dcf67b-6194-4fe9-b9b3-60edf8631bb0/download
+- Code repo (if any): 
+- Dataset (if any): 
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): 
+- ArXiv (if applicable): 
+
+Key Highlights (optional bullets, 2-4 lines):
+- Classifies imagined speech (vowel imagery) using only eight EEG channels with 91.1 % accuracy and 61.8 % inter‑vowel accuracyresearch-collection.ethz.ch/server/api/core/bitstreams/57dcf67b-6194-4fe9-b9b3-60edf8631bb0/content#:~:text=Abstract%E2%80%94For%20decades%2C%20researchers%20have%20explored,efficient%20assistive%20communication%20devices.  
+- Runs on a GAP9 microcontroller with 41 ms latency and 17 mW power, enabling day‑long operationresearch-collection.ethz.ch/server/api/core/bitstreams/57dcf67b-6194-4fe9-b9b3-60edf8631bb0/content#:~:text=Abstract%E2%80%94For%20decades%2C%20researchers%20have%20explored,efficient%20assistive%20communication%20devices.  
+- Requires eight times fewer channels than previous speech‑imagery BCIs.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: Train‑On‑Request: An On‑Device Continual Learning Workflow for Adaptive Real‑World Brain Machine Interfaces
+Short Title (optional, for listings): Train‑On‑Request (TOR)
+
+Year: 2024
+Venue: IEEE Biomedical Circuits and Systems Conference (BioCAS) 2024
+Publication Type: 1
+
+Authors (in order, mark me as "admin”): Lan Mei; Cristian Cioflan; Thorir Mar Ingolfsson (admin); Victor Kartsch; Andrea Cossettini; Xiaying Wang; Luca Benini
+Abstract (2-4 sentences, plaintext Markdown):  
+**Train‑On‑Request (TOR)** introduces an on‑device continual learning workflow that allows users to update BMI models on demand, addressing inter‑session variability and maintaining high accuracy in real‑world settings.  Evaluated on a motor‑movement dataset collected with a wearable BMI headband, TOR achieves up to **92 % accuracy** with calibration times as low as **1.6 minutes**, reducing calibration effort by 46 % compared to naive retraininghttps://www.arxiv.org/abs/2409.09161#:~:text=propose%20TOR%2C%20a%20train,time%20settings.  On a GAP9 RISC‑V SoC, on‑device training runs in **21.6 ms** per step and consumes about **1 mJ**, demonstrating feasibility for ultra‑low‑power edge deviceshttps://www.arxiv.org/abs/2409.09161#:~:text=propose%20TOR%2C%20a%20train,time%20settings.
+
+Keywords/Tags (comma-separated): continual learning, brain–machine interface, on‑device training, adaptive BCI, ultra‑low power
+Projects (if this ties to an existing project page—e.g., biofoundation): BioGAP TOR
+
+Links:
+- PDF (direct URL if available): https://arxiv.org/pdf/2409.09161
+- Code repo (if any): https://github.com/pulp-bio/bmi-odcl
+- Dataset (if any): 
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.48550/arXiv.2409.09161
+- ArXiv (if applicable): https://arxiv.org/abs/2409.09161
+
+Key Highlights (optional bullets, 2-4 lines):
+- Enables user‑initiated model adaptation via on‑device continual learning.  
+- Achieves up to 92 % accuracy with 1.6 min recalibration and reduces calibration time by 46 %https://www.arxiv.org/abs/2409.09161#:~:text=propose%20TOR%2C%20a%20train,time%20settings.  
+- On‑device training on GAP9 requires 21.6 ms per step and ~1 mJ energyhttps://www.arxiv.org/abs/2409.09161#:~:text=propose%20TOR%2C%20a%20train,time%20settings.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: BISeizuRe: BERT‑Inspired Seizure Data Representation to Improve Epilepsy Monitoring
+Short Title (optional, for listings): BISeizuRe
+
+Year: 2024
+Venue: IEEE Engineering in Medicine & Biology Conference (EMBC) 2024
+Publication Type: 1
+
+Authors (in order, mark me as "admin”): Luca Benfenati; Thorir Mar Ingolfsson (admin); Andrea Cossettini; Daniele Jahier Pagliari; Alessio Burrello; Luca Benini
+Abstract (2-4 sentences, plaintext Markdown):  
+BISeizuRe leverages a **BERT‑inspired encoder** (BENDR) for EEG‑based seizure detection.  The model undergoes a two‑phase training strategy—pre‑training on the large **Temple University Hospital EEG corpus** (over 10 000 subjects) to learn general EEG representations and fine‑tuning on the **CHB‑MIT** dataset.  The study systematically evaluates model architecture, pre‑processing and post‑processing techniques; subject‑specific fine‑tuning reduces false positives per hour to **0.23 FP/h**, 2.5× lower than the baseline, while preserving acceptable sensitivityhttps://arxiv.org/abs/2406.19189#:~:text=,based%20seizure%20detection.
+
+Keywords/Tags (comma-separated): seizure detection, EEG, BERT, foundation model, fine‑tuning
+Projects (if this ties to an existing project page—e.g., biofoundation): biofoundation
+
+Links:
+- PDF (direct URL if available): https://arxiv.org/pdf/2406.19189
+- Code repo (if any): 
+- Dataset (if any): Temple University Hospital EEG Corpus, CHB‑MIT Scalp EEG dataset
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.48550/arXiv.2406.19189
+- ArXiv (if applicable): https://arxiv.org/abs/2406.19189
+
+Key Highlights (optional bullets, 2-4 lines):
+- Uses a BERT‑inspired model (BENDR) to learn generalized EEG representations from large unlabelled data.  
+- Fine‑tuning on CHB‑MIT reduces false positives to 0.23 FP/h (2.5× lower than baseline) with acceptable sensitivityhttps://arxiv.org/abs/2406.19189#:~:text=,based%20seizure%20detection.  
+- Explores pre‑processing, post‑processing and subject‑specific tuning strategies for optimal seizure detection.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: GAPses: Versatile Smart Glasses for Comfortable and Fully‑Dry Acquisition and Parallel Ultra‑Low‑Power Processing of EEG and EOG
+Short Title (optional, for listings): GAPses Smart Glasses
+
+Year: 2024
+Venue: IEEE Transactions on Biomedical Circuits and Systems
+Publication Type: 2
+
+Authors (in order, mark me as "admin”): Sebastian Frey; Mattia Alberto Lucchini; Victor Kartsch; Thorir Mar Ingolfsson (admin); Andrea Helga Bernardi; Michael Segessenmann; Jakub Osieleniec; Simone Benatti; Luca Benini; Andrea Cossettini
+Abstract (2-4 sentences, plaintext Markdown):  
+GAPses is an unobtrusive **smart‑glasses platform** that captures EEG and EOG using fully dry soft electrodes and processes data on‑board using a parallel ultra‑low‑power **GAP9** RISC‑V processor.  The design eliminates continuous wireless streaming, enhancing privacy and reliability, and supports multiple interaction tasks including alpha‑wave measurement, steady‑state visual evoked potentials, motor‑movement classification and biometric recognition.  EEG‑based subject identification reaches **98.87 % sensitivity** and **99.86 % specificity** using just eight EEG channels, consuming **121 μJ per inference**, while an EOG eye‑movement classifier achieves **96.68 % accuracy** at **24 μJ per inference**; total system power of 16.28 mW enables continuous operation for more than **12 hours** on a 75 mAh batteryhttps://arxiv.org/abs/2406.07903.
+
+Keywords/Tags (comma-separated): smart glasses, EEG, EOG, wearable, ultra‑low‑power, GAP9
+Projects (if this ties to an existing project page—e.g., biofoundation): BioGAP Smart Glasses
+
+Links:
+- PDF (direct URL if available): https://arxiv.org/pdf/2406.07903
+- Code repo (if any): 
+- Dataset (if any): 
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.48550/arXiv.2406.07903
+- ArXiv (if applicable): https://arxiv.org/abs/2406.07903
+
+Key Highlights (optional bullets, 2-4 lines):
+- Introduces fully dry electrodes integrated into comfortable smart glasses with on‑board GAP9 processing.  
+- Achieves 98.87 % sensitivity/99.86 % specificity for EEG‑based biometric recognition and 96.68 % accuracy for EOG eye‑movement classificationhttps://arxiv.org/abs/2406.07903.  
+- Energy consumption as low as 121 μJ per inference and total system power of 16.28 mW allow >12 h operationhttps://arxiv.org/abs/2406.07903.
+BibTeX (optional, if you have it handy):
+
+---
+
+Title: An Ultra‑Low Power Wearable BMI System with Continual Learning Capabilities
+Short Title (optional, for listings): Ultra‑Low‑Power BMI with CL
+
+Year: 2024
+Venue: IEEE Transactions on Biomedical Circuits and Systems
+Publication Type: 2
+
+Authors (in order, mark me as "admin”): Lan Mei; Thorir Mar Ingolfsson (admin); Cristian Cioflan; Victor Kartsch; Andrea Cossettini; Xiaying Wang; Luca Benini
+Abstract (2-4 sentences, plaintext Markdown):  
+This paper presents a **wearable brain–machine interface** that couples a compact convolutional neural network with **continual learning** to handle inter‑session variability.  On two in‑house datasets, the continual‑learning workflow improves average accuracy by **30.36 %** and **10.17 %** relative to static modelshttps://arxiv.org/abs/2409.10654#:~:text=proposes%20a%20comprehensive%20BMI%20workflow,device%20CL.  Deployed on the **BioGAP** platform with a GAP9 microcontroller, the system performs inference at **0.45 mJ** per pass and adapts models in **21.5 ms**, enabling around **25 hours** of operation from a 100 mAh batteryhttps://arxiv.org/abs/2409.10654#:~:text=proposes%20a%20comprehensive%20BMI%20workflow,device%20CL.
+
+Keywords/Tags (comma-separated): brain–machine interface, continual learning, wearable, ultra‑low power, BioGAP
+Projects (if this ties to an existing project page—e.g., biofoundation): BioGAP Continual Learning
+
+Links:
+- PDF (direct URL if available): https://arxiv.org/pdf/2409.10654
+- Code repo (if any): 
+- Dataset (if any): In‑house BMI datasets A and B (imagined movement)
+- Slides (if any): 
+- Video (if any): 
+- DOI (full URL: https://doi.org/…): https://doi.org/10.48550/arXiv.2409.10654, https://doi.org/10.1109/TBCAS.2024.3457522
+- ArXiv (if applicable): https://arxiv.org/abs/2409.10654
+
+Key Highlights (optional bullets, 2-4 lines):
+- Implements on‑device continual learning to adapt BMI models across sessions.  
+- Improves accuracy by up to 30.36 % and 10.17 % and sustains real‑time performance with 0.45 mJ inference energy and 21.5 ms adaptation timehttps://arxiv.org/abs/2409.10654#:~:text=proposes%20a%20comprehensive%20BMI%20workflow,device%20CL.  
+- Provides ~25 h battery life on a 100 mAh power source when running on BioGAPhttps://arxiv.org/abs/2409.10654#:~:text=proposes%20a%20comprehensive%20BMI%20workflow,device%20CL.
+BibTeX (optional, if you have it handy):
+

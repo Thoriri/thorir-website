@@ -17,6 +17,9 @@
 
 ## Completed (Phase 3 - Interactive Elements)
 - [x] Animated Statistics Counters - Scroll-triggered counting animations for citations, h-index, publications, GitHub stars
+- [x] Citation Metrics Card - Refined layout per guide, accessible design, integrated links
+- [x] Foundation Model Highlights - Homepage section with LUNA & FEMBA logo cards
+- [x] Publication Library Expansion - Added 10 new entries (NeurIPS LUNA, EMBC FEMBA, SzCORE, etc.) with updated metadata
 
 ## Planned
 - [ ] Create actual visual abstract images (requires design work - deferred)
@@ -31,9 +34,9 @@
 **Status:** COMPLETED - New professional photo installed
 
 **Current State:**
-- New avatar: `content/authors/admin/avatar.jpg` (700×700px, square, 118KB - optimized)
+- New avatar: `content/authors/admin/avatar.jpg` (1200×1200px, square, 420KB - optimized)
 - Old avatar backed up as `avatar.jpg.backup`
-- Photo converted from PNG to JPEG and optimized
+- Photo converted and compressed for web
 - Meets all requirements (square, >400px, optimized file size)
 
 **Impact:** ✅ Single biggest visual upgrade for the website - DONE!

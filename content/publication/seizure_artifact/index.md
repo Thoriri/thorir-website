@@ -1,9 +1,6 @@
 ---
-abstract: Electroencephalography (EEG) is widely used to monitor epileptic seizures, and standard clinical practice consists of monitoring patients in dedicated epilepsy monitoring units via video surveillance and cumbersome EEG caps. Such a setting is not compatible with long-term tracking under typical living conditions, thereby motivating the development of unobtrusive wearable solutions. However, wearable EEG devices present the challenges of fewer channels, restricted computational capabilities, and lower signal-to-noise ratio. Moreover, artifacts presenting morphological similarities to seizures act as major noise sources and can be misinterpreted as seizures. This paper presents a combined seizure and artifacts detection framework targeting wearable EEG devices based on Gradient Boosted Trees. The seizure detector achieves nearly zero false alarms with average sensitivity values of 65.27% for 182 seizures from the CHB-MIT dataset and 57.26% for 25 seizures from the private dataset with no preliminary artifact detection or removal. The artifact detector achieves a state-of-the-art accuracy of 93.95% (on the TUH-EEG Artifact Corpus dataset). Integrating artifact and seizure detection significantly reduces false alarms—up to 96% compared to standalone seizure detection.  Optimized for a Parallel Ultra-Low Power platform, these algorithms enable extended monitoring with a battery lifespan reaching 300 hours. These findings highlight the benefits of integrating artifact detection in wearable epilepsy monitoring devices to limit the number of false positives.
-slides: ""
-url_pdf: "https://www.nature.com/articles/s41598-024-52551-0"
-publication_types:
-  - "1"
+title: "Minimizing Artifact-Induced False Alarms for Seizure Detection in Wearable EEG Devices with Gradient-Boosted Tree Classifiers"
+publication_short: In *Scientific Reports 14:2980 (2024)*
 authors:
   - admin
   - Simone Benatti
@@ -11,30 +8,51 @@ authors:
   - Adriano Bernini
   - Pauline Ducouret
   - Philippe Ryvlin
-  - Sandor Beniczky
+  - Sándor Beniczky
   - Luca Benini
   - Andrea Cossettini
-author_notes: []
-publication: Nature Scientific Reports
-summary: The paper presents a combined seizure and artifact detection framework based on Gradient Boosted Trees. The framework achieves high accuracy in detecting seizures and artifacts, reducing false alarms. The algorithms are optimized for a Parallel Ultra-Low Power platform, enabling extended monitoring with a long battery lifespan. The paper highlights the benefits of integrating artifact detection in wearable epilepsy monitoring devices.
-url_dataset: ""
-url_project: ""
-publication_short: In *Nature*
-url_source: ""
-url_video: ""
-title: "Minimizing artifact-induced false-alarms for seizure detection in wearable EEG devices with gradient-boosted tree classifiers"
-doi: 
-featured: true
-tags: []
+publication_types:
+  - "2"
+date: 2024-02-05T00:00:00Z
+publishDate: 2024-02-05T00:00:00Z
+venue: "Scientific Reports"
+abstract: |
+  Motion, muscle, and eye-blink artifacts cause false alarms in continuous seizure monitoring. This study proposes a combined seizure and artifact detection scheme using gradient-boosted decision trees tailored for wearable EEG devices with limited channels. On the CHB-MIT dataset, the subject-specific approach yields 65.27% sensitivity and 93.95% artifact-detection accuracy, reducing false alarms by up to 96% compared to standalone seizure detection. An energy-efficient implementation achieves 300-hour battery life on a wearable platform, demonstrating the feasibility of robust, long-term monitoring.
+summary: "Gradient-boosted seizure + artifact detection that cuts false alarms by 96% while enabling 300-hour wearable monitoring."
+featured: false
 projects: []
+tags:
+  - artifact detection
+  - seizure detection
+  - gradient boosted trees
+  - wearable EEG
+url_pdf: "https://www.nature.com/articles/s41598-024-52551-0"
+url_arxiv: ""
+url_code: ""
+url_dataset: "https://physionet.org/content/chbmit/1.0.0/"
+url_video: ""
+url_slides: ""
+url_project: ""
+url_doi: "https://doi.org/10.1038/s41598-024-52551-0"
+url_poster: ""
 image:
-  caption: ""
+  caption: "Seizure and artifact detection workflow"
   focal_point: Smart
   preview_only: false
   filename: featured-1.png
-date: 2024-02-05T00:00:00.000Z
-url_slides: ""
-publishDate: 2024-02-05T00:00:00.000Z
-url_poster: ""
-url_code: ""
+links:
+  - icon: external-link-alt
+    icon_pack: fas
+    name: Scientific Reports Article
+    url: "https://www.nature.com/articles/s41598-024-52551-0"
+  - icon: database
+    icon_pack: fas
+    name: CHB-MIT Dataset
+    url: "https://physionet.org/content/chbmit/1.0.0/"
 ---
+
+## Key Highlights
+
+- Combines seizure and artifact detection with gradient-boosted trees to reduce false alarms by up to 96%.
+- Achieves 65.27% sensitivity and 93.95% artifact classification accuracy on CHB-MIT and TUH EEG Artifact datasets.
+- Optimized embedded implementation enables 300-hour operation on wearable EEG hardware.

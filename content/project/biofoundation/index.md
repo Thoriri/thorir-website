@@ -1,6 +1,6 @@
 ---
 title: "BioFoundation: Foundation Models for Biosignals"
-summary: "Open-source framework for developing and deploying foundation models for EEG and biosignal analysis, featuring LUNA - an efficient, topology-agnostic EEG foundation model accepted at NeurIPS 2024."
+summary: "Open-source framework powering LUNA, FEMBA, CEReBrO, and other EEG foundation models — including LUNA, accepted at NeurIPS 2025."
 tags:
   - Foundation Models
   - TinyML
@@ -29,7 +29,7 @@ links:
 url_code: "https://github.com/pulp-bio/biofoundation"
 url_pdf: "https://arxiv.org/abs/2510.22257"
 url_slides: ""
-url_video: "https://www.youtube.com/watch?v=1KPFJlJaXTI"
+url_video: ""
 
 # Slides (optional).
 #   Associate this project with Markdown slides.
@@ -48,23 +48,13 @@ featured: true
 
 ## Overview
 
-BioFoundation is an open-source research framework for developing and deploying foundation models for biomedical signal analysis, with a particular focus on EEG (electroencephalography) data. The project hosts our latest work on efficient, topology-agnostic foundation models that can understand diverse biosignals with minimal fine-tuning.
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 30px 0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-  <iframe
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-    src="https://www.youtube.com/embed/1KPFJlJaXTI"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-</div>
+BioFoundation is an open-source research framework for developing and deploying foundation models for biomedical signal analysis, with a particular focus on EEG (electroencephalography) data. The project powers the latest generation of topology-agnostic biosignal models — including **LUNA (NeurIPS 2025)**, **FEMBA (EMBC 2025)**, and **CEReBrO (arXiv 2025)** — and provides the shared infrastructure that enables them to scale across datasets, montages, and downstream tasks.
 
 ---
 
 ## LUNA: Foundation Model for EEG Analysis
 
-**Accepted at NeurIPS 2024** 🏆
+**Accepted at NeurIPS 2025** 🏆
 
 Our flagship model, LUNA (Lightweight Unified Network for EEG Analysis), addresses a critical challenge in brain signal processing: different EEG datasets use varying electrode configurations, which has historically hindered the development of large-scale foundation models.
 
@@ -86,93 +76,67 @@ Our flagship model, LUNA (Lightweight Unified Network for EEG Analysis), address
 - Masked-patch reconstruction objectives
 
 **State-of-the-Art Performance**
-- **0.921 AUROC** on TUAR abnormality detection benchmark
-- Robust across four clinical tasks:
-  - Abnormality detection
-  - Artifact rejection
-  - Slowing classification
-  - Emotion recognition
+- **0.921 AUROC** on TUAR artifact-detection benchmark
+- Strong transfer across four clinical tasks:
+  - Abnormality detection (TUAB)
+  - Artifact rejection (TUAR)
+  - Slowing classification (TUSL)
+  - Emotion recognition (SEED-V)
 
 ---
 
-## Technical Details
+## Flagship Foundation Models
 
-### Architecture
+BioFoundation maintains a family of EEG foundation models, all sharing the same training stack, data tooling, and evaluation harness:
 
-The BioFoundation framework includes multiple model architectures optimized for different use cases:
+### LUNA · NeurIPS 2025
+- Topology-agnostic architecture with channel unification and cross-attention
+- Linear complexity with respect to electrode count
+- Pre-trained on 21k+ hours of EEG and released on Hugging Face: [thorir/LUNA](https://huggingface.co/thorir/LUNA)
 
-**LUNA (NeurIPS 2024)**
-- Topology-agnostic design with cross-attention
-- Linear-time complexity
-- Efficient fine-tuning workflows
-- Pre-trained weights available
+### FEMBA · EMBC 2025
+- Bidirectional Mamba state-space architecture with linear-time scaling
+- 81.82% balanced accuracy on TUAB and 0.949 AUROC on TUAR
+- Available on Hugging Face: [thorir/FEMBA](https://huggingface.co/thorir/FEMBA)
 
-**FEMBA** (Foundation EEG Model with Bidirectional Mamba)
-- Uses linear-time Mamba architecture instead of quadratic attention
-- Strong performance on benchmark datasets (TUAB/TUAR/TUSL)
-- Memory-efficient training and inference
+### CEReBrO · arXiv 2025
+- Alternating-attention encoder that jointly models temporal and spatial correlations
+- 2× speed improvement and 6× lower memory vs. dense self-attention
+- Released via the BioFoundation codebase (see repository)
 
-### Implementation
-
-- **Framework:** PyTorch Lightning for scalable, distributed training
-- **Configuration:** Hydra for flexible, reproducible experiments
-- **Optimization:** Supports GPU memory optimization through activation checkpointing
-- **License:** Apache 2.0 for code, CC BY-ND 4.0 for model weights
+All models share:
+- **Codebase:** [pulp-bio/biofoundation](https://github.com/pulp-bio/biofoundation)
+- **Licensing:** Apache 2.0 for code, CC BY-ND 4.0 for official weight releases
+- **Configuration system:** Hydra + PyTorch Lightning for reproducible experiments
+- **Evaluation:** Consistent TUAB/TUAR/TUSL benchmarks and downstream EEG tasks
 
 ---
 
 ## Applications
 
-The models in BioFoundation are designed for real-world clinical and research applications:
+The BioFoundation models target both clinical and research scenarios:
 
-### Clinical Tasks
-- **Abnormality Detection**: Identify pathological patterns in EEG
-- **Seizure Prediction**: Early warning for epileptic seizures
-- **Artifact Rejection**: Automatic cleaning of corrupted signals
-- **Sleep Staging**: Automated sleep phase classification
+### Clinical Workflows
+- **Abnormality detection** for diagnostic triage
+- **Seizure prediction and monitoring** on wearable EEG
+- **Artifact rejection** and signal cleaning
+- **Sleep staging** and long-term physiological monitoring
 
-### Research Applications
-- **Emotion Recognition**: Decode affective states from brain signals
-- **Brain-Computer Interfaces**: Enable direct neural control
-- **Cognitive Monitoring**: Track mental workload and attention
-- **Neurofeedback**: Real-time brain state feedback
-
----
-
-## Getting Started
-
-The repository is structured for easy use and contribution:
-
-```bash
-# Clone the repository
-git clone https://github.com/pulp-bio/biofoundation.git
-cd biofoundation
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Download pre-trained models
-# (Instructions in repository)
-
-# Run inference or fine-tuning
-python train.py --config configs/luna_finetune.yaml
-```
-
-### Key Features
-- Modular architecture (data loading, models, training tasks)
-- Pre-trained model weights ready to use
-- Example notebooks for common tasks
-- Distributed training support
-- Comprehensive documentation
+### Research & Interfaces
+- **Emotion recognition** and affective computing
+- **Brain-computer interfaces** with low-channel wearables
+- **Cognitive workload and attention tracking**
+- **Neurofeedback** with topology-agnostic electrodes
 
 ---
 
-## Impact & Recognition
+## Resources
 
-- ⭐ **27 stars** on GitHub (growing community)
-- 🏆 **Accepted at NeurIPS 2024** (top-tier ML conference)
-- 📊 **21,000+ hours** of training data
-- 🌍 **Open-source**: Available for research and development
+- ⭐ 29 GitHub stars • 🍴 2 forks (live metrics)
+- 📚 **Codebase:** [BioFoundation on GitHub](https://github.com/pulp-bio/biofoundation)
+- 🤗 **Model Weights:** [LUNA](https://huggingface.co/thorir/LUNA) · [FEMBA](https://huggingface.co/thorir/FEMBA)
+- 📄 **Paper:** [LUNA preprint (arXiv:2510.22257)](https://arxiv.org/abs/2510.22257)
+- 🔭 **Roadmap:** Upcoming releases include CEReBrO checkpoints and additional downstream adapters
 
 ---
 
@@ -181,11 +145,11 @@ python train.py --config configs/luna_finetune.yaml
 If you use BioFoundation in your research, please cite:
 
 ```bibtex
-@article{doner2024luna,
-  title={LUNA: Efficient and Topology-Agnostic Foundation Model for EEG Signal Analysis},
-  author={Döner, Berkay and Ingolfsson, Thorir Mar and Benini, Luca and Li, Yawei},
-  journal={arXiv preprint arXiv:2510.22257},
-  year={2024}
+@inproceedings{doner2025luna,
+  title={{LUNA}: Efficient and Topology-Agnostic Foundation Model for {EEG} Signal Analysis},
+  author={D{\"o}ner, Berkay and Ingolfsson, Thorir Mar and Benini, Luca and Li, Yawei},
+  booktitle={Neural Information Processing Systems},
+  year={2025}
 }
 ```
 
@@ -203,12 +167,6 @@ This project is actively developed and we welcome contributions! Whether you're 
 - 💻 [Contribute on GitHub](https://github.com/pulp-bio/biofoundation)
 - 📧 [Contact for collaboration](mailto:thoriri@iis.ee.ethz.ch)
 - 📄 [Read the paper](https://arxiv.org/abs/2510.22257)
-
----
-
-## Related Publications
-
-- Döner, B., **Ingolfsson, T. M.**, Benini, L., & Li, Y. (2024). LUNA: Efficient and Topology-Agnostic Foundation Model for EEG Signal Analysis. *NeurIPS 2024*.
 
 ---
 

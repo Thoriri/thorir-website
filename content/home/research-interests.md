@@ -22,9 +22,9 @@ As a researcher at the intersection of TinyML and biomedical AI, I'm currently e
 
 ### 🧠 Foundation Models for Biosignals
 
-I'm developing large-scale pre-trained models that can understand diverse biomedical signals with minimal fine-tuning. Our **LUNA** model (NeurIPS 2024) achieves topology-agnostic EEG analysis with 300× fewer FLOPs and 10× less memory than traditional approaches, enabling more robust and generalizable health monitoring systems.
+I'm developing large-scale pre-trained models that can understand diverse biomedical signals with minimal fine-tuning. Our **LUNA** model (NeurIPS 2025) achieves topology-agnostic EEG analysis with 300× fewer FLOPs and 10× less memory than traditional approaches, enabling more robust and generalizable health monitoring systems.
 
-**Recent work:** [LUNA at NeurIPS 2024](https://arxiv.org/abs/2510.22257) | [Code on GitHub](https://github.com/pulp-bio/biofoundation)
+**Recent work:** [LUNA at NeurIPS 2025](https://arxiv.org/abs/2510.22257) | [Code on GitHub](https://github.com/pulp-bio/biofoundation)
 
 </div>
 
