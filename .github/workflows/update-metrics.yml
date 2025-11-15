@@ -21,13 +21,14 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: "pip"
 
       - name: Run metrics updater
         env:
           # GITHUB_TOKEN is provided automatically in Actions
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Add any other secrets you need (e.g., METRICS_API_KEY)
+          # Optional: Override proxy prefix to fetch Google Scholar via another relay
+          # Example (default): https://r.jina.ai/http://
+          SCHOLAR_PROXY_BASE: ${{ vars.SCHOLAR_PROXY_BASE }}
         run: python scripts/update_metrics.py
 
       - name: Commit & push if changed
