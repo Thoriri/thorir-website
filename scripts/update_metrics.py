@@ -23,17 +23,18 @@ Reference:
 
 from __future__ import annotations
 
+import html as html_lib
 import json
 import os
+import random
 import re
 import sys
-import random
 import time
 from pathlib import Path
 from typing import Optional
-from urllib.error import URLError, HTTPError
-from urllib.request import Request, urlopen
+from urllib.error import HTTPError, URLError
 from urllib.parse import urlparse
+from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHOLAR_USER = "TyRxmUkAAAAJ"
@@ -154,12 +155,8 @@ def fetch_google_scholar_html(user_id: str) -> Optional[str]:
     return fetch_text(proxy_url, extra_headers=headers)
 
 
-def fetch_scholar_metrics(user_id: str) -> Optional[tuple[int, int]]:
-    """Fetch citation count and h-index from Google Scholar."""
-    html = fetch_google_scholar_html(user_id)
-    if not html:
-        return None
-
+def extract_metrics_from_html(html: str) -> Optional[tuple[int, int]]:
+    """Extract citation count and h-index from HTML or markdown-ish text."""
     patterns = [
         (
             r"Citations</a></td><td class=\"gsc_rsb_std\">(\d+)",
@@ -182,6 +179,35 @@ def fetch_scholar_metrics(user_id: str) -> Optional[tuple[int, int]]:
                 return int(citations_match.group(1)), int(hindex_match.group(1))
             except (ValueError, IndexError):
                 continue
+
+    # Fallback: strip tags / markdown artifacts and search plain text
+    text = html_lib.unescape(html)
+    text = re.sub(r"(?is)<script.*?>.*?</script>", " ", text)
+    text = re.sub(r"(?is)<style.*?>.*?</style>", " ", text)
+    text = re.sub(r"(?s)<[^>]+>", " ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+
+    cit_match = re.search(r"(?i)\bcitations\b[^\d]{0,20}(\d{1,6})", text)
+    h_match = re.search(r"(?i)\bh-?\s*index\b[^\d]{0,10}(\d{1,3})", text)
+
+    if cit_match and h_match:
+        try:
+            return int(cit_match.group(1)), int(h_match.group(1))
+        except ValueError:
+            return None
+
+    return None
+
+
+def fetch_scholar_metrics(user_id: str) -> Optional[tuple[int, int]]:
+    """Fetch citation count and h-index from Google Scholar."""
+    html = fetch_google_scholar_html(user_id)
+    if not html:
+        return None
+
+    metrics = extract_metrics_from_html(html)
+    if metrics:
+        return metrics
 
     print("[warn] Unable to parse Scholar metrics; page layout may have changed.")
     return None

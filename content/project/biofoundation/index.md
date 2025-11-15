@@ -132,7 +132,7 @@ The BioFoundation models target both clinical and research scenarios:
 
 ## Resources
 
-- ⭐ 29 GitHub stars • 🍴 2 forks (live metrics)
+- ⭐ 31 GitHub stars • 🍴 3 forks (live metrics)
 - 📚 **Codebase:** [BioFoundation on GitHub](https://github.com/pulp-bio/biofoundation)
 - 🤗 **Model Weights:** [LUNA](https://huggingface.co/thorir/LUNA) · [FEMBA](https://huggingface.co/thorir/FEMBA)
 - 📄 **Paper:** [LUNA preprint (arXiv:2510.22257)](https://arxiv.org/abs/2510.22257)
