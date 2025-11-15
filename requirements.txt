@@ -1,0 +1,5 @@
+# requirements.txt
+# No runtime dependencies required by scripts/update_metrics.py (uses stdlib).
+# This file exists so actions/setup-python cache:pip succeeds.
+# Add dependencies here if you later need external packages, e.g.:
+# requests==2.31.0
