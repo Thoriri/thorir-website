@@ -33,12 +33,13 @@ from pathlib import Path
 from typing import Optional
 from urllib.error import URLError, HTTPError
 from urllib.request import Request, urlopen
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHOLAR_USER = "TyRxmUkAAAAJ"
 GITHUB_REPO = "pulp-bio/biofoundation"
 GH_TOKEN = os.getenv("GITHUB_TOKEN") or os.getenv("GH_TOKEN")
-DEFAULT_PROXY_BASE = "https://r.jina.ai/http://"
+DEFAULT_PROXY_BASE = "https://r.jina.ai/http://{host}{path}"
 SCHOLAR_PROXY_BASE = os.getenv("SCHOLAR_PROXY_BASE", DEFAULT_PROXY_BASE)
 PROXY_ENABLED = SCHOLAR_PROXY_BASE.lower() not in {"", "none", "off"}
 BLOCK_INDICATORS = [
@@ -99,12 +100,34 @@ def build_proxy_url(url: str) -> str:
     """Return the proxied URL using the configured proxy base."""
     if not PROXY_ENABLED:
         return ""
-    base = SCHOLAR_PROXY_BASE.rstrip("/")
+
+    base = SCHOLAR_PROXY_BASE.strip()
+    if not base:
+        return ""
+
+    parsed = urlparse(url)
+    path = parsed.path or "/"
+    if parsed.params:
+        path += f";{parsed.params}"
+    if parsed.query:
+        path += f"?{parsed.query}"
+    if parsed.fragment:
+        path += f"#{parsed.fragment}"
+    stripped = f"{parsed.netloc}{path}"
+
     if "{url}" in base:
         return base.replace("{url}", url)
-    stripped = url.replace("https://", "").replace("http://", "")
+    if "{host}" in base or "{path}" in base:
+        return (
+            base.replace("{host}", parsed.netloc)
+            .replace("{path}", path)
+            .replace("{stripped}", stripped)
+        )
+
+    base = base.rstrip("/")
     if base.endswith("http://") or base.endswith("https://"):
-        return f"{base}{stripped}"
+        return f"{base}{stripped.lstrip('/')}"
+
     return f"{base}/{url.lstrip('/')}"
 
 
