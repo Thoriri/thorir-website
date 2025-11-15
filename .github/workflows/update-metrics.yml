@@ -22,6 +22,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Ensure pip cache dir exists
+        run: mkdir -p ~/.cache/pip
+
       - name: Run metrics updater
         env:
           # GITHUB_TOKEN is provided automatically in Actions
