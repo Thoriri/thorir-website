@@ -22,8 +22,8 @@ draft: false
 featured: true
 
 image:
-  caption: 'LUNA compresses variable-channel EEG into a fixed latent space'
-  focal_point: ""
+  caption: 'LUNA: Latent Unified Network Architecture'
+  focal_point: "Center"
   placement: 2
   preview_only: false
 
