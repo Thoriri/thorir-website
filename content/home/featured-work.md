@@ -20,7 +20,7 @@ design:
 
 <div>
 
-**Accepted at NeurIPS 2025** | [📄 Read Paper](https://arxiv.org/abs/2510.22257)
+**NeurIPS 2025** | [📄 Read Paper](https://arxiv.org/abs/2510.22257)
 
 LUNA is an efficient, topology-agnostic foundation model for EEG signal analysis that reconciles disparate electrode configurations while achieving unprecedented computational efficiency.
 
@@ -42,7 +42,7 @@ The model uses learned queries and cross-attention mechanisms to compress multi-
 <div class="resource-box">
 <strong>GitHub Repository</strong><br>
 <a href="https://github.com/pulp-bio/biofoundation" style="font-size: 14px;">github.com/pulp-bio/biofoundation</a><br>
-⭐ 31 stars • 🍴 3 forks • Apache 2.0 License
+⭐ 86 stars • 🍴 8 forks • Apache 2.0 License
 </div>
 
 <div class="resource-box">
