@@ -29,6 +29,7 @@ image:
 
 authors:
 - admin
+- Danaé Broustail
 
 tags:
 - Academic
@@ -62,9 +63,11 @@ The second is **LeJEPA**, the Latent-Euclidean Joint-Embedding Predictive Archit
 
 The original JEPA loss was built for images: take crops of a picture, embed them, and make the small crops predict the embedding of the larger ones. We port this idea to the time axis. From each recording we draw $N_{global} = 2$ wide temporal windows of length $T_{global}$ and $N_{local} = 4$ narrow windows of length $T_{local}$, with $T_{global} > T_{local}$. All six views go through the LuMamba encoder. We mean-pool each into an embedding, average the two global embeddings into a target $\boldsymbol{\mu}_{global}$, and then pull every local embedding toward that target:
 
+<div>
 $$
 \mathcal{L}_{\text{JEPA}} = \frac{1}{N_{local}} \sum_{i=1}^{N_{local}} \big\lVert \boldsymbol{\mu}_{global} - v_{local,i} \big\rVert_2^2 , \qquad \boldsymbol{\mu}_{global} = \frac{1}{N_{global}} \sum_{j=1}^{N_{global}} v_{global,j}.
 $$
+</div>
 
 In words: a short snippet of EEG should land, in latent space, where the larger window lands. The model's only job is to agree with itself about *what the signal is* across timescales, a far more abstract target than reproducing a waveform. That abstraction is the source of LeJEPA's appetite for generalisation.
 
