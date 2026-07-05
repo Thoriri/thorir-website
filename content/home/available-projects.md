@@ -35,7 +35,7 @@ design:
 <div class="project-card-grid">
 
 <div class="project-card-snippet">
-  <img src="/uploads/trm_time_series.png" alt="Tiny Recursive Models for Time-Series" class="project-card-image">
+  <img src="/uploads/trm_time_series.jpg" alt="Tiny Recursive Models for Time-Series" class="project-card-image">
   <div>
     <h4>Tiny Recursive Models for Time-Series</h4>
     <p class="project-card-summary">Adapt TRMs to non-visual domains (e.g., UCR, EEG) and analyse how deep supervision and adaptive halting impact accuracy and compute.</p>
@@ -47,7 +47,7 @@ design:
 </div>
 
 <div class="project-card-snippet">
-  <img src="/uploads/trm_quantized.png" alt="Quantized TRMs for Edge Deployment" class="project-card-image">
+  <img src="/uploads/trm_quantized.jpg" alt="Quantized TRMs for Edge Deployment" class="project-card-image">
   <div>
     <h4>Quantized TRMs for Edge Deployment</h4>
     <p class="project-card-summary">Quantise TRMs to INT8/INT4, deploy them on GAP9 or Cortex-M, and study accuracy–energy trade-offs and on-device adaptive halting.</p>

@@ -37,10 +37,6 @@ url_project: ""
 url_doi: "https://doi.org/10.48550/arXiv.2502.17460"
 url_poster: ""
 links:
-  - icon: file-pdf
-    icon_pack: fas
-    name: Preprint (arXiv)
-    url: "https://arxiv.org/pdf/2502.17460"
   - icon: external-link-alt
     icon_pack: fas
     name: DOI

@@ -1,6 +1,6 @@
 ---
 title: High-Precision Control and Localisation for Robotic Billiard Shots
-summary: Taking successful shots on a snooker table is an hard task and requires high-precision control and localisation of the cue. We implemented a vision-based strategy that combines the fields of vision of two cameras, an overhead camera pointing down on the table and a cue mounted camera, allowing a robot arm to obtain the excellent cueing accuracy observed in human players. The robot arm holds a linear motor that plays the role of the cue and the cue camera is mounted on top of the linear motor. Cue pose estimation incorporates orthogonal uncertainty Procrustes analysis. From pose estimation and image information we make feedback corrections that optimally line up the cue so it strikes the cue ball in the desired shot angle. The feedback is then fed to a robot arm that makes the corrections. This method is then implemented and tested on a snooker table with shots of varying difficulty.
+summary: A vision-based robot arm that lines up and takes snooker shots with human-level cueing accuracy, using dual-camera pose estimation and feedback control.
 date: "2019-05-30T00:00:00Z"
 tags:
 - Other
@@ -12,11 +12,7 @@ image:
   caption: 
   focal_point: Smart
 
-links:
-- icon: twitter
-  icon_pack: fab
-  name: Follow on X
-  url: https://x.com/thorirmar
+links: []
 url_code: ""
 url_pdf: ""
 url_slides: ""
@@ -331,6 +327,3 @@ In practice there is also lag implemented to allow the pose estimate to settle a
 Putting all this math together (with a lot of programming) we can see the following performance:
 
 {{< vimeo 335260829 >}}
-
-
-

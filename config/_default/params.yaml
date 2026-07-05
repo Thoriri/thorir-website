@@ -50,7 +50,7 @@ main_menu:
 # Localization
 
 date_format: '2, Jan, 2006'
-time_format: '13:04'
+time_format: '15:04'
 address_format: en-us
 
 # Site features

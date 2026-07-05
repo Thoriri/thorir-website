@@ -38,14 +38,6 @@ image:
   preview_only: false
 
 links:
-  - icon: file-pdf
-    icon_pack: fas
-    name: Poster PDF
-    url: "uploads/amld2026_fm_edge_poster.pdf"
-  - icon: github
-    icon_pack: fab
-    name: BioFoundation codebase
-    url: "https://github.com/pulp-bio/biofoundation"
   - icon: external-link-alt
     icon_pack: fas
     name: AMLD 2026 event page

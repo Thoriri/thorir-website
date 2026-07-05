@@ -15,11 +15,7 @@ image:
   focal_point: Smart
   filename: Drone.jpeg
 
-links:
-- icon: twitter
-  icon_pack: fab
-  name: Follow on X
-  url: https://x.com/thorirmar
+links: []
 url_code: ""
 url_pdf: "uploads/BCIAward2023.pdf"
 url_slides: ""

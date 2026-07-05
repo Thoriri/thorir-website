@@ -18,7 +18,7 @@ image:
 featured: false
 ---
 
-![Quantized TRMs for Edge Deployment](/uploads/trm_quantized.png)
+![Quantized TRMs for Edge Deployment](/uploads/trm_quantized.jpg)
 
 ## Overview
 

@@ -30,7 +30,7 @@ url_code: "https://github.com/pulp-bio/biofoundation"
 url_dataset: ""
 url_video: ""
 url_slides: ""
-url_project: "https://github.com/pulp-bio/biofoundation"
+url_project: ""
 url_doi: "https://doi.org/10.48550/arXiv.2502.06438"
 url_poster: ""
 image:
@@ -39,14 +39,6 @@ image:
   preview_only: false
   filename: featured.png
 links:
-  - icon: file-pdf
-    icon_pack: fas
-    name: Preprint (arXiv)
-    url: "https://arxiv.org/pdf/2502.06438"
-  - icon: code
-    icon_pack: fas
-    name: GitHub Repository
-    url: "https://github.com/pulp-bio/biofoundation"
   - icon: external-link-alt
     icon_pack: fas
     name: DOI

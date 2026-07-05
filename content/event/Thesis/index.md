@@ -36,10 +36,6 @@ image:
   preview_only: false
 
 links:
-  - icon: file-pdf
-    icon_pack: fas
-    name: Defense slide deck
-    url: "uploads/thesis_defense_slides.pdf"
   - icon: file-alt
     icon_pack: fas
     name: Thesis manuscript

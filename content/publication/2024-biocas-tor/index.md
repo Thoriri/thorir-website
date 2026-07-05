@@ -35,14 +35,6 @@ url_project: ""
 url_doi: "https://doi.org/10.48550/arXiv.2409.09161"
 url_poster: ""
 links:
-  - icon: file-pdf
-    icon_pack: fas
-    name: Preprint (arXiv)
-    url: "https://arxiv.org/pdf/2409.09161"
-  - icon: code
-    icon_pack: fas
-    name: GitHub Repository
-    url: "https://github.com/pulp-bio/bmi-odcl"
   - icon: external-link-alt
     icon_pack: fas
     name: DOI

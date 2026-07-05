@@ -18,7 +18,7 @@ image:
 featured: false
 ---
 
-![Tiny Recursive Models for Time-Series](/uploads/trm_time_series.png)
+![Tiny Recursive Models for Time-Series](/uploads/trm_time_series.jpg)
 
 ## Overview
 

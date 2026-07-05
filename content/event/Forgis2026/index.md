@@ -38,14 +38,6 @@ image:
   preview_only: false
 
 links:
-  - icon: file-pdf
-    icon_pack: fas
-    name: Slides (LuMamba / LeJEPA)
-    url: "uploads/forgis2026_slides.pdf"
-  - icon: github
-    icon_pack: fab
-    name: BioFoundation codebase
-    url: "https://github.com/pulp-bio/biofoundation"
   - icon: external-link-alt
     icon_pack: fas
     name: LUNA paper (arXiv)

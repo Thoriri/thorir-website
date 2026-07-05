@@ -52,13 +52,9 @@ links:
     icon_pack: fas
     name: FEMBA paper
     url: "https://arxiv.org/abs/2502.06438"
-  - icon: github
-    icon_pack: fab
-    name: BioFoundation codebase
-    url: "https://github.com/pulp-bio/biofoundation"
 url_code: "https://github.com/pulp-bio/biofoundation"
 url_pdf: ""
-url_slides: "uploads/embc2025_bp_slides.pdf"
+url_slides: ""
 url_video: ""
 
 slides: ""

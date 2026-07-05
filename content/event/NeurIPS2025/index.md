@@ -37,18 +37,10 @@ image:
   preview_only: false
 
 links:
-  - icon: file-pdf
-    icon_pack: fas
-    name: LUNA poster PDF
-    url: "uploads/neurips2025_luna_poster.pdf"
   - icon: external-link-alt
     icon_pack: fas
     name: LUNA paper (arXiv)
     url: "https://arxiv.org/abs/2510.22257"
-  - icon: github
-    icon_pack: fab
-    name: BioFoundation codebase
-    url: "https://github.com/pulp-bio/biofoundation"
 url_code: "https://github.com/pulp-bio/biofoundation"
 url_pdf: "uploads/neurips2025_luna_poster.pdf"
 url_slides: ""

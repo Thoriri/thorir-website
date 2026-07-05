@@ -34,25 +34,17 @@ tags:
 url_pdf: "https://arxiv.org/pdf/2402.13005"
 url_arxiv: "https://arxiv.org/abs/2402.13005"
 url_code: "https://github.com/esl-epfl/sz-validation-framework"
-url_dataset: "https://github.com/esl-epfl/sz-validation-framework"
+url_dataset: ""
 url_video: ""
 url_slides: ""
 url_project: ""
 url_doi: "https://doi.org/10.1111/epi.18113"
 url_poster: ""
 links:
-  - icon: file-pdf
-    icon_pack: fas
-    name: Open Access PDF
-    url: "https://arxiv.org/pdf/2402.13005"
   - icon: external-link-alt
     icon_pack: fas
     name: DOI (Epilepsia)
     url: "https://doi.org/10.1111/epi.18113"
-  - icon: code
-    icon_pack: fas
-    name: SzCORE GitHub
-    url: "https://github.com/esl-epfl/sz-validation-framework"
 ---
 
 ## Key Highlights
