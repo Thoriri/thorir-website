@@ -42,7 +42,7 @@ The model uses learned queries and cross-attention mechanisms to compress multi-
 <div class="resource-box">
 <strong>GitHub Repository</strong><br>
 <a href="https://github.com/pulp-bio/biofoundation" style="font-size: 14px;">github.com/pulp-bio/biofoundation</a><br>
-⭐ 86 stars • 🍴 8 forks • Apache 2.0 License
+⭐ 121 stars • 🍴 15 forks • Apache 2.0 License
 </div>
 
 <div class="resource-box">

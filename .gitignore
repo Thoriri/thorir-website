@@ -12,3 +12,7 @@ node_modules/
 
 # Backups
 *.backup
+
+# Working files
+redesign-mockup.html
+.claude/
