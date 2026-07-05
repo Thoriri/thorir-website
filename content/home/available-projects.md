@@ -30,7 +30,7 @@ design:
 
 ---
 
-### 📋 Open MSc Thesis Topics (Snippet View)
+### 📋 Open MSc Thesis Topics
 
 <div class="project-card-grid">
 

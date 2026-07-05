@@ -1,4 +1,5 @@
 ---
+active: false
 widget: blank
 headless: true
 weight: 35
