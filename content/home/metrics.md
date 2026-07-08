@@ -14,7 +14,7 @@ design:
 
 <div class="metrics-card" id="stats-section" role="region" aria-label="Research impact metrics">
   <div class="metric">
-    <span class="metric-value" data-target="1080" aria-live="polite" aria-label="Total citations">1080</span>
+    <span class="metric-value" data-target="1080" aria-label="Total citations">1080</span>
     <span class="metric-label">Citations</span>
     <a class="metric-link" href="https://scholar.google.com/citations?user=TyRxmUkAAAAJ&hl=en" target="_blank" rel="noopener">
       <i class="ai ai-google-scholar" aria-hidden="true"></i>
@@ -23,13 +23,13 @@ design:
   </div>
 
   <div class="metric">
-    <span class="metric-value" data-target="14" aria-live="polite" aria-label="H-index">14</span>
+    <span class="metric-value" data-target="14" aria-label="H-index">14</span>
     <span class="metric-label">h-index</span>
     <span class="metric-caption">Core research impact</span>
   </div>
 
   <div class="metric">
-    <span class="metric-value" data-target="30" aria-live="polite" aria-label="Publications">30</span>
+    <span class="metric-value" data-target="22" aria-label="Publications">22</span>
     <span class="metric-label">Publications</span>
     <a class="metric-link" href="/publication/">
       View publications →
@@ -61,6 +61,8 @@ design:
     rootMargin: '0px'
   };
 
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
@@ -68,7 +70,11 @@ design:
         const metrics = entry.target.querySelectorAll('.metric-value');
         metrics.forEach(metric => {
           const target = parseInt(metric.getAttribute('data-target'), 10);
-          animateCounter(metric, target);
+          if (prefersReducedMotion) {
+            metric.textContent = target.toLocaleString();
+          } else {
+            animateCounter(metric, target);
+          }
         });
       }
     });

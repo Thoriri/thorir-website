@@ -244,7 +244,25 @@ def write_if_changed(path: Path, new_text: str) -> bool:
     return False
 
 
-def update_metrics_card(citations: int, h_index: int) -> bool:
+def count_publications() -> Optional[int]:
+    """Count publication entries in content/publication/ (one folder per pub)."""
+    pub_dir = ROOT / "content/publication"
+    if not pub_dir.is_dir():
+        print(f"[warn] Missing publications dir: {pub_dir}")
+        return None
+    count = sum(
+        1
+        for child in pub_dir.iterdir()
+        if child.is_dir() and (child / "index.md").exists()
+    )
+    return count or None
+
+
+def update_metrics_card(
+    citations: Optional[int],
+    h_index: Optional[int],
+    publications: Optional[int],
+) -> bool:
     path = ROOT / "content/home/metrics.md"
     if not path.exists():
         print(f"[warn] Missing metrics card, skipping: {path}")
@@ -253,30 +271,43 @@ def update_metrics_card(citations: int, h_index: int) -> bool:
     original = path.read_text(encoding="utf-8")
     text = original
 
-    text = re.sub(
-        r'(data-target=")\d+(" aria-live="polite" aria-label="Total citations")',
-        rf'\g<1>{citations}\g<2>',
-        text,
-    )
-    text = re.sub(
-        r'(aria-label="Total citations">)\d+',
-        rf'\g<1>{citations}',
-        text,
-    )
-    text = re.sub(
-        r'(data-target=")\d+(" aria-live="polite" aria-label="H-index")',
-        rf'\g<1>{h_index}\g<2>',
-        text,
-    )
-    text = re.sub(
-        r'(aria-label="H-index">)\d+',
-        rf'\g<1>{h_index}',
-        text,
-    )
+    if citations is not None:
+        text = re.sub(
+            r'(data-target=")\d+(" aria-label="Total citations")',
+            rf'\g<1>{citations}\g<2>',
+            text,
+        )
+        text = re.sub(
+            r'(aria-label="Total citations">)\d+',
+            rf'\g<1>{citations}',
+            text,
+        )
+    if h_index is not None:
+        text = re.sub(
+            r'(data-target=")\d+(" aria-label="H-index")',
+            rf'\g<1>{h_index}\g<2>',
+            text,
+        )
+        text = re.sub(
+            r'(aria-label="H-index">)\d+',
+            rf'\g<1>{h_index}',
+            text,
+        )
+    if publications is not None:
+        text = re.sub(
+            r'(data-target=")\d+(" aria-label="Publications")',
+            rf'\g<1>{publications}\g<2>',
+            text,
+        )
+        text = re.sub(
+            r'(aria-label="Publications">)\d+',
+            rf'\g<1>{publications}',
+            text,
+        )
 
     changed = write_if_changed(path, text)
     print(f"[info] metrics.md {'updated' if changed else 'no change'} "
-          f"(citations={citations}, h-index={h_index})")
+          f"(citations={citations}, h-index={h_index}, publications={publications})")
     return changed
 
 
@@ -323,16 +354,20 @@ def main() -> int:
     print(f"[info] Fetching metrics from Google Scholar (user ID: {SCHOLAR_USER})...")
     scholar_metrics = fetch_scholar_metrics(SCHOLAR_USER)
     
+    publications = count_publications()
+
     if scholar_metrics:
         citations, h_index = scholar_metrics
         print(f"[info] Successfully fetched metrics: citations={citations}, h-index={h_index}")
-        changed = update_metrics_card(citations, h_index) or changed
+        changed = update_metrics_card(citations, h_index, publications) or changed
     else:
         print("[warn] Skipped updating citation metrics.")
         if PROXY_ENABLED:
             print("[info] Tip: Double-check proxy prefix or run locally to refresh metrics.")
         else:
             print("[info] Tip: Set SCHOLAR_PROXY_BASE (default r.jina.ai) to enable proxy fallback.")
+        if publications is not None:
+            changed = update_metrics_card(None, None, publications) or changed
 
     gh_metrics = fetch_github_stats(GITHUB_REPO)
     if gh_metrics:

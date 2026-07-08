@@ -115,7 +115,10 @@ a {
 .home-section {
   padding: 60px 0;
 
-  .section-heading h1 {
+  // Section titles are h2 for correct document outline (see layouts/partials/widget_page.html),
+  // but keep the visual weight of an h1.
+  .section-heading h1,
+  .section-heading h2.section-title {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -349,7 +352,8 @@ a[href*="twitter.com"] i.fa-twitter {
 .dark {
   --nordic-muted: rgba(226, 232, 240, 0.78);
 
-  .home-section .section-heading h1 {
+  .home-section .section-heading h1,
+  .home-section .section-heading h2.section-title {
     color: #f3f4f6;
   }
 
