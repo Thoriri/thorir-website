@@ -19,6 +19,7 @@ design:
       <div class="tm-btns">
         <a class="tm-btn tm-btn-primary" href="/research/">Explore my research</a>
         <a class="tm-btn tm-btn-ghost" href="/join/">Work with me →</a>
+        <a class="tm-btn tm-btn-ghost" href="/uploads/cv.pdf">Download CV</a>
       </div>
     </div>
   </div>
