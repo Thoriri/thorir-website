@@ -873,7 +873,55 @@ html {
   box-shadow: 0 16px 40px rgba(14,23,38,.12); }
 .tm-avatar { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; border: 4px solid #fff; }
 .tm-h1 { font-size: 2.6rem; letter-spacing: -.035em; line-height: 1.1; font-weight: 800; margin: 0 0 4px; }
-.tm-h1 span { background: linear-gradient(90deg, #215caf, #0d9488); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.tm-h1 span { background: linear-gradient(90deg, #215caf, #0d9488); -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: tmPulse 3.2s ease-in-out infinite; }
+
+/* heartbeat pulse on the gradient word */
+@keyframes tmPulse {
+  0%, 78%, 100% { filter: drop-shadow(0 0 0 rgba(13, 148, 136, 0)); }
+  84% { filter: drop-shadow(0 0 12px rgba(13, 148, 136, 0.5)); }
+  89% { filter: drop-shadow(0 0 2px rgba(13, 148, 136, 0.1)); }
+  94% { filter: drop-shadow(0 0 8px rgba(33, 92, 175, 0.4)); }
+}
+
+/* hero biosignal trace */
+.tm-hero-trace {
+  display: block;
+  width: 100%;
+  height: 56px;
+  margin-top: 30px;
+  overflow: visible;
+
+  path {
+    fill: none;
+    stroke: url(#tmTraceGrad);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+.tm-trace-base { opacity: 0.16; }
+.tm-trace-sweep {
+  stroke-dasharray: 220 780;
+  stroke-dashoffset: 1000;
+  animation: tmTrace 8s linear infinite;
+  opacity: 0.85;
+}
+@keyframes tmTrace {
+  to { stroke-dashoffset: 0; }
+}
+.dark .tm-trace-base { opacity: 0.22; }
+@media (prefers-reduced-motion: reduce) {
+  .tm-trace-sweep { display: none; }
+  .tm-trace-base { opacity: 0.35; }
+  .tm-h1 span { animation: none; }
+}
+
+/* energy flow along gradient bars */
+@keyframes tmFlow {
+  from { background-position: 0% 0; }
+  to { background-position: -200% 0; }
+}
 .tm-role { font-size: 1.05rem; margin: 6px 0 14px; font-weight: 500; opacity: .85; }
 .tm-bio { max-width: 620px; margin-bottom: 22px; opacity: .85; }
 
@@ -888,7 +936,9 @@ html {
 .tm-btn-dark-ghost:hover { border-color: #7fb2ff; color: #7fb2ff !important; }
 
 .tm-kicker { display: flex; align-items: center; gap: 10px; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #7fb2ff; margin-bottom: 12px; }
-.tm-kicker::before { content: ""; width: 28px; height: 3px; border-radius: 2px; background: linear-gradient(90deg, #7fb2ff, #4fd1c5); }
+.tm-kicker::before { content: ""; width: 28px; height: 3px; border-radius: 2px;
+  background: linear-gradient(90deg, #7fb2ff, #4fd1c5, #7fb2ff); background-size: 200% 100%;
+  animation: tmFlow 3.5s linear infinite; }
 
 /* pillars */
 .tm-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
@@ -896,9 +946,11 @@ html {
   position: relative; overflow: hidden; box-shadow: 0 8px 24px rgba(14,23,38,.07); display: flex; flex-direction: column;
   color: inherit !important; text-decoration: none !important; }
 .tm-pillar::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
-.tm-p1::before { background: linear-gradient(90deg, #215caf, #5a9ae8); }
-.tm-p2::before { background: linear-gradient(90deg, #7c3aed, #b18cf5); }
-.tm-p3::before { background: linear-gradient(90deg, #0d9488, #4fd1c5); }
+.tm-pillar::before { background-size: 200% 100%; }
+.tm-p1::before { background-image: linear-gradient(90deg, #215caf, #5a9ae8, #215caf); }
+.tm-p2::before { background-image: linear-gradient(90deg, #7c3aed, #b18cf5, #7c3aed); }
+.tm-p3::before { background-image: linear-gradient(90deg, #0d9488, #4fd1c5, #0d9488); }
+.tm-pillar:hover::before { animation: tmFlow 1.4s linear infinite; }
 .tm-pillar:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(14,23,38,.12); }
 .tm-pillar h3 { font-size: 1.08rem; margin: 0 0 8px; font-weight: 700; }
 .tm-pillar p { font-size: .9rem; opacity: .8; margin-bottom: 16px; flex: 1; }
