@@ -15,7 +15,7 @@ font_size: L
 site_type: Person
 local_business_type: ''
 org_name: ''
-description: 'Postdoctoral researcher at ETH Zürich bridging large-scale pre-training and ultra-low-power hardware, so wearable biomedical devices can analyze EEG, ECG, and other biosignals in real time — on the device, not in the cloud.'
+description: 'Postdoctoral researcher at ETH Zürich. The human brain runs on twenty watts; frontier AI needs a power plant. I close that gap from the bottom up: foundation models for EEG, ECG, and other biosignals, compressed until they run in real time on wearable devices, not in the cloud.'
 twitter: ''
 
 # Contact (edit or remove options as required)

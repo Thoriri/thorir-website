@@ -15,7 +15,7 @@ design:
     <div>
       <h1 class="tm-h1">Making AI run on <span>microwatts</span></h1>
       <div class="tm-role">Thorir Mar Ingolfsson · Postdoctoral Researcher · <a href="https://ethz.ch/en.html">ETH Zürich</a></div>
-      <p class="tm-bio">I bridge large-scale pre-training and ultra-low-power hardware so that wearable biomedical devices can analyze EEG, ECG, and other biosignals in real time: on the device, not in the cloud.</p>
+      <p class="tm-bio">A kilogram and a half of matter, twenty watts of power: the human brain is still the most efficient intelligence in existence. Frontier AI needs a power plant. I work on closing that gap from the bottom up, for the signals the brain itself produces: foundation models for EEG, ECG, and other biosignals, compressed until they run in real time on wearable devices, not in the cloud.</p>
       <div class="tm-btns">
         <a class="tm-btn tm-btn-primary" href="/research/">Explore my research</a>
         <a class="tm-btn tm-btn-ghost" href="/join/">Work with me →</a>
