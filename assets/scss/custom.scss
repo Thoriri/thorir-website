@@ -1043,6 +1043,32 @@ html {
   color: #e9eef7;
 }
 
+/* publication list filters (search box + selects) */
+.filter-search,
+select.pub-filters {
+  border: 1px solid #e3e8f0;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  background: #fff;
+  color: inherit;
+  box-shadow: 0 4px 14px rgba(14, 23, 38, 0.04);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:focus {
+    outline: none;
+    border-color: #215caf;
+    box-shadow: 0 0 0 3px rgba(33, 92, 175, 0.15);
+  }
+}
+
+.dark .filter-search,
+.dark select.pub-filters {
+  background: #13223a;
+  border-color: #283c5c;
+  color: #dbe4f0;
+}
+
 /* news strip (homepage) */
 .tm-news {
   max-width: 860px;

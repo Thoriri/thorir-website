@@ -19,3 +19,9 @@
   package = "netlify-plugin-hugo-cache-resources"
   [plugins.inputs]
     debug = true
+
+# /talk/ has individual talk pages but no list page (the list lives at /event/)
+[[redirects]]
+  from = "/talk/"
+  to = "/event/"
+  status = 301

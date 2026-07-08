@@ -7,7 +7,7 @@
 
 theme: tm_redesign
 day_night: true
-font: 'Inter'  # Modern, geometric sans-serif for headings
+font: 'tm_inter'  # Custom Inter font pack (see data/fonts/tm_inter.toml)
 font_size: L
 
 # SEO

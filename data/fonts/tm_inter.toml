@@ -1,0 +1,16 @@
+# TM Inter font pack
+# NOTE: the previous config referenced font: 'Inter', but no such font pack
+# existed in this Wowchemy version, so the site silently fell back to the
+# default (Montserrat headings) — causing mixed typography on list pages.
+
+# Font style metadata
+name = "TM Inter"
+
+# Optional Google font URL
+google_fonts = "family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600"
+
+# Font families
+heading_font = "Inter"
+body_font = "Inter"
+nav_font = "Inter"
+mono_font = "JetBrains Mono"

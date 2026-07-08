@@ -1,5 +1,8 @@
 ---
-title: Recent & Upcoming Talks
+title: Talks
+summary: Invited talks, conference presentations, and outreach.
+aliases:
+  - /talk/
 cms_exclude: true
 
 # View.
