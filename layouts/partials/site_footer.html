@@ -7,4 +7,42 @@
     Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> &amp;
     <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">Wowchemy</a>
   </p>
+
+  <script>
+    // Scroll-reveal for tm-* components. Skips entirely for reduced motion or no-JS.
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      if (!('IntersectionObserver' in window)) return;
+      var sel = '.tm-pillar, .tm-join-band, .tm-topic, .tm-benefit, .tm-step, .tm-rsec, .metrics-card, .tm-bf, .tm-news';
+      var els = Array.prototype.slice.call(document.querySelectorAll(sel));
+      if (!els.length) return;
+      els.forEach(function (el) {
+        var idx = 0;
+        if (el.parentElement) {
+          var sibs = Array.prototype.filter.call(el.parentElement.children, function (c) {
+            return c.matches && c.matches(sel);
+          });
+          idx = sibs.indexOf(el);
+        }
+        el.style.transitionDelay = (idx > 0 ? Math.min(idx, 5) * 70 : 0) + 'ms';
+        el.classList.add('tm-reveal-init');
+      });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          var el = en.target;
+          el.classList.add('tm-revealed');
+          io.unobserve(el);
+          // Clean up so reveal transition-delay never interferes with hover effects
+          el.addEventListener('transitionend', function h(ev) {
+            if (ev.propertyName !== 'opacity') return;
+            el.classList.remove('tm-reveal-init', 'tm-revealed');
+            el.style.transitionDelay = '';
+            el.removeEventListener('transitionend', h);
+          });
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 </footer>

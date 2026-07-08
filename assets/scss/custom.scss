@@ -922,6 +922,28 @@ html {
   from { background-position: 0% 0; }
   to { background-position: -200% 0; }
 }
+
+/* scroll reveal (class added by JS in site_footer.html; no-JS users see everything) */
+.tm-reveal-init {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s cubic-bezier(0.2, 0.6, 0.2, 1), transform 0.6s cubic-bezier(0.2, 0.6, 0.2, 1);
+  will-change: opacity, transform;
+}
+.tm-reveal-init.tm-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* metric counter settle spark */
+@keyframes tmSpark {
+  0% { text-shadow: 0 4px 12px rgba(52, 152, 219, 0.25); }
+  40% { text-shadow: 0 0 24px rgba(33, 92, 175, 0.6); }
+  100% { text-shadow: 0 4px 12px rgba(52, 152, 219, 0.25); }
+}
+.metric-value.tm-spark {
+  animation: tmSpark 0.7s ease-out 1;
+}
 .tm-role { font-size: 1.05rem; margin: 6px 0 14px; font-weight: 500; opacity: .85; }
 .tm-bio { max-width: 620px; margin-bottom: 22px; opacity: .85; }
 
@@ -966,7 +988,39 @@ html {
     radial-gradient(500px 300px at 0% 110%, rgba(13,148,136,.25), transparent 60%),
     linear-gradient(160deg, #0b1526, #13223a);
   color: #dbe4f0; border-radius: 24px; padding: 56px; display: grid; grid-template-columns: 1.05fr 1fr; gap: 52px;
-  box-shadow: 0 16px 40px rgba(14,23,38,.12); }
+  box-shadow: 0 16px 40px rgba(14,23,38,.12);
+  position: relative; overflow: hidden; }
+.tm-bf > div { position: relative; z-index: 1; }
+
+/* faint drifting trace behind the biofoundation band */
+.tm-bf-trace {
+  position: absolute;
+  left: -2%;
+  width: 104%;
+  top: 42%;
+  height: 90px;
+  z-index: 0;
+  pointer-events: none;
+
+  path {
+    fill: none;
+    stroke: url(#tmBfGrad);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+.tm-bf-trace-base { opacity: 0.08; }
+.tm-bf-trace-sweep {
+  stroke-dasharray: 180 820;
+  stroke-dashoffset: 1000;
+  animation: tmTrace 14s linear infinite;
+  opacity: 0.28;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tm-bf-trace-sweep { display: none; }
+  .tm-bf-trace-base { opacity: 0.14; }
+}
 .tm-bf h2 { color: #fff; margin-top: 0; }
 .tm-bf p { color: #9db1cc; font-size: .95rem; }
 .tm-bf-stats { display: flex; gap: 26px; margin-bottom: 20px; font-size: .86rem; color: #b9c8dd; }

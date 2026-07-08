@@ -49,6 +49,9 @@ design:
       if (current >= target) {
         element.textContent = target.toLocaleString();
         clearInterval(timer);
+        // settle spark
+        element.classList.add('tm-spark');
+        element.addEventListener('animationend', () => element.classList.remove('tm-spark'), { once: true });
       } else {
         element.textContent = Math.floor(current).toLocaleString();
       }
