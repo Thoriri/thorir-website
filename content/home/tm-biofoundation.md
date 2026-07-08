@@ -23,7 +23,8 @@ design:
   <div class="tm-models">
     <div class="tm-model"><img src="/uploads/model-logos/luna.png" alt="LUNA logo" loading="lazy"><span><span class="tm-mname">LUNA</span><br><span class="tm-mdesc">Topology-agnostic transformer · 300× fewer FLOPs</span></span><span class="tm-venue">NeurIPS 2025</span></div>
     <div class="tm-model"><img src="/uploads/model-logos/femba.png" alt="FEMBA logo" loading="lazy"><span><span class="tm-mname">FEMBA</span><br><span class="tm-mdesc">Bidirectional Mamba · linear-time, 0.949 AUROC</span></span><span class="tm-venue">EMBC 2025</span></div>
-    <div class="tm-model"><img src="/uploads/model-logos/lumamba.png" alt="LuMamba logo" loading="lazy"><span><span class="tm-mname">LuMamba</span><br><span class="tm-mdesc">LUNA + FEMBA + LeJEPA · 377× cheaper than LaBraM</span></span><span class="tm-venue">arXiv 2026</span></div>
+    <div class="tm-model"><img src="/uploads/model-logos/lumamba.png" alt="LuMamba logo" loading="lazy"><span><span class="tm-mname">LuMamba</span><br><span class="tm-mdesc">LUNA + FEMBA + LeJEPA · 377× cheaper than LaBraM</span></span><span class="tm-venue">EUSIPCO 2026</span></div>
+    <div class="tm-model"><img src="/uploads/model-logos/panluna.png" alt="PanLUNA logo" loading="lazy"><span><span class="tm-mname">PanLUNA</span><br><span class="tm-mdesc">Multimodal EEG + ECG + PPG · 5.4M params</span></span><span class="tm-venue">AICAS 2026</span></div>
     <div class="tm-model"><img src="/uploads/model-logos/tinymyo.png" alt="TinyMyo logo" loading="lazy"><span><span class="tm-mname">TinyMyo</span><br><span class="tm-mdesc">3.6M-param EMG model for microcontrollers</span></span><span class="tm-venue">arXiv 2025</span></div>
     <div class="tm-model"><span class="tm-mono">CB</span><span><span class="tm-mname">CEReBrO</span><br><span class="tm-mdesc">Compact encoder · alternating attention</span></span><span class="tm-venue">arXiv 2025</span></div>
   </div>

@@ -66,9 +66,17 @@ show_related: false
     <ul>
       <li><span class="tm-v">µW-scale</span> inference on GAP9</li>
       <li><span class="tm-v">SOTA</span> wearable seizure detection benchmarks</li>
-      <li><span class="tm-v">BCI Award</span> nomination for drone-control headband</li>
+      <li><span class="tm-v">BCI Award</span> submission: <a href="/project/droneflight/">drone-control headband</a> · <a href="https://www.youtube.com/watch?v=1KPFJlJaXTI" target="_blank" rel="noopener">video</a></li>
     </ul>
   </div>
+</div>
+
+<div class="tm-page-cta">
+  <div>
+    <h2>Want to work on any of this?</h2>
+    <p>I supervise MSc theses and semester projects at ETH Zürich, and collaborate widely with clinical and industry partners.</p>
+  </div>
+  <a class="tm-btn tm-btn-primary" href="/join/">Work with me →</a>
 </div>
 
 </div>

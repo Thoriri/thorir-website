@@ -971,6 +971,85 @@ html {
 .tm-plus { width: 46px; height: 46px; border-radius: 99px; background: #e8f0fb; color: #215caf; font-size: 1.6rem;
   font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
 
+/* tm-page layout (research + join): wide, airy, professional */
+article.article:has(.tm-page) .article-container {
+  max-width: 1160px;
+}
+article.article:has(.tm-page) > .article-container:first-of-type h1,
+article.article:has(.tm-page) .article-container h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+article.article:has(.tm-page) .article-container h1::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin-top: 16px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #215caf, #0d9488);
+}
+.tm-page .tm-lede {
+  font-size: 1.18rem;
+  line-height: 1.65;
+  max-width: 720px;
+}
+.tm-page h2 {
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+}
+.tm-rsec {
+  padding: 52px 0;
+  gap: 56px;
+}
+.tm-rsec p {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  max-width: 640px;
+}
+.tm-sidecard {
+  position: sticky;
+  top: 96px;
+}
+.tm-benefit,
+.tm-step {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.tm-benefit:hover,
+.tm-step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(14, 23, 38, 0.1);
+}
+
+/* bottom CTA band (research page) */
+.tm-page-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin: 48px 0 8px;
+  padding: 34px 38px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #f2f7ff 0%, #eefbf8 100%);
+  border: 1px solid #e3e8f0;
+  box-shadow: 0 12px 32px rgba(14, 23, 38, 0.07);
+}
+.tm-page-cta h2 {
+  margin: 0 0 6px;
+  font-size: 1.5rem;
+}
+.tm-page-cta p {
+  margin: 0;
+  opacity: 0.8;
+  max-width: 560px;
+}
+.dark .tm-page-cta {
+  background: linear-gradient(135deg, #13223a 0%, #0f2430 100%);
+  border-color: #283c5c;
+}
+
 /* dark mode */
 .dark .tm-avatar { border-color: #13223a; }
 .dark .tm-pillar, .dark .tm-chip, .dark .tm-sidecard, .dark .tm-benefit, .dark .tm-step, .dark .tm-topic {
@@ -1069,53 +1148,72 @@ select.pub-filters {
   color: #dbe4f0;
 }
 
-/* news strip (homepage) */
+/* news strip (homepage): single card, divided rows */
 .tm-news {
-  max-width: 860px;
+  max-width: 880px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  background: #fff;
+  border: 1px solid #e3e8f0;
+  border-radius: 18px;
+  padding: 24px 28px 12px;
+  box-shadow: 0 10px 30px rgba(14, 23, 38, 0.06);
+}
+.tm-news .tm-kicker {
+  color: #215caf;
+  margin-bottom: 8px;
 }
 .tm-news-item {
   display: grid;
-  grid-template-columns: 84px 1fr;
-  gap: 16px;
+  grid-template-columns: 92px 1fr;
+  gap: 18px;
   align-items: baseline;
-  font-size: 0.95rem;
-  padding: 10px 14px;
-  border-radius: 12px;
-  background: #fff;
-  border: 1px solid #e3e8f0;
-  box-shadow: 0 4px 14px rgba(14, 23, 38, 0.04);
+  font-size: 0.96rem;
+  padding: 13px 10px;
+  margin: 0 -10px;
+  border-top: 1px solid #eef2f8;
+  border-radius: 10px;
+  transition: background 0.15s ease;
+}
+.tm-news .tm-kicker + .tm-news-item {
+  border-top: none;
+}
+.tm-news-item:hover {
+  background: #f6faff;
 }
 .tm-news-date {
   font-size: 0.72rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #215caf;
-  background: #e8f0fb;
-  border-radius: 99px;
-  padding: 3px 0;
-  text-align: center;
+  white-space: nowrap;
 }
-.dark .tm-news-item {
+.dark .tm-news {
   background: #13223a;
   border-color: #283c5c;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+.dark .tm-news .tm-kicker {
+  color: #7fb2ff;
+}
+.dark .tm-news-item {
+  border-top-color: #1d3050;
+}
+.dark .tm-news-item:hover {
+  background: rgba(127, 178, 255, 0.06);
 }
 .dark .tm-news-date {
-  background: rgba(127, 178, 255, 0.14);
   color: #7fb2ff;
 }
 @media (max-width: 600px) {
+  .tm-news {
+    padding: 18px 18px 8px;
+  }
   .tm-news-item {
     grid-template-columns: 1fr;
     gap: 4px;
-  }
-  .tm-news-date {
-    justify-self: start;
-    padding: 3px 12px;
+    margin: 0;
+    padding: 12px 2px;
   }
 }
 

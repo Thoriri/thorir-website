@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-labelledby="title desc">
+  <title id="title">PanLUNA orbit logo</title>
+  <desc id="desc">A refined PanLUNA orbit mark with EEG, ECG, and PPG traces around a LUNA-inspired crescent core.</desc>
+
+  <defs>
+    <linearGradient id="lunaSphere" x1="390" y1="500" x2="610" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5D5487"/>
+      <stop offset="44%" stop-color="#8C88B9"/>
+      <stop offset="76%" stop-color="#C9C2CF"/>
+      <stop offset="100%" stop-color="#F1ECE9"/>
+    </linearGradient>
+
+    <radialGradient id="halo" cx="50%" cy="50%" r="56%">
+      <stop offset="0%" stop-color="#4B4585" stop-opacity="0.12"/>
+      <stop offset="74%" stop-color="#4B4585" stop-opacity="0.035"/>
+      <stop offset="100%" stop-color="#4B4585" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#312C5F" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <circle cx="500" cy="500" r="376" fill="url(#halo)"/>
+  <circle cx="500" cy="500" r="322" fill="none" stroke="#4B4585" stroke-opacity="0.08" stroke-width="3"/>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="29" filter="url(#softShadow)">
+    <path
+      d="M 223 660
+         C 201 626 205 594 230 562
+         C 260 524 272 496 246 472
+         C 221 449 220 421 244 398
+         C 268 375 311 368 336 338
+         C 361 308 356 287 344 276
+         C 382 220 440 187 500 180"
+      stroke="#22B29D"/>
+
+    <path
+      d="M 500 180
+         C 530 178 560 191 585 214
+         C 597 225 605 206 617 218
+         C 630 231 636 214 650 231
+         C 665 249 673 232 690 255
+         C 707 278 716 258 731 287
+         C 746 315 758 294 771 326
+         C 784 358 798 343 804 379
+         C 810 416 827 408 819 447
+         C 812 485 830 493 815 528
+         C 835 557 818 619 777 660"
+      stroke="#E2A63C"
+      stroke-width="24"/>
+
+    <path
+      d="M 777 660
+         C 723 748 641 801 552 814
+         C 527 818 511 818 501 816
+         L 487 784
+         L 464 846
+         L 445 810
+         C 356 799 284 738 223 660"
+      stroke="#E85C4A"/>
+  </g>
+
+  <g>
+    <circle cx="500" cy="180" r="17" fill="#FBF7EF"/>
+    <circle cx="500" cy="180" r="17" fill="none" stroke="#5A5591" stroke-opacity="0.42" stroke-width="6"/>
+    <circle cx="777" cy="660" r="17" fill="#FBF7EF"/>
+    <circle cx="777" cy="660" r="17" fill="none" stroke="#5A5591" stroke-opacity="0.42" stroke-width="6"/>
+    <circle cx="223" cy="660" r="17" fill="#FBF7EF"/>
+    <circle cx="223" cy="660" r="17" fill="none" stroke="#5A5591" stroke-opacity="0.42" stroke-width="6"/>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <circle cx="500" cy="500" r="112" fill="url(#lunaSphere)"/>
+    <path
+      fill="#FECA4F"
+      d="M 459 402
+         A 112 112 0 1 0 587 596
+         A 124 124 0 0 1 459 402
+         Z"/>
+    <circle cx="432" cy="512" r="15" fill="#FDC850" opacity="0.82"/>
+    <circle cx="466" cy="592" r="9" fill="#FDC850" opacity="0.72"/>
+    <path
+      d="M 459 402
+         A 124 124 0 0 0 587 596"
+      fill="none"
+      stroke="#F5B30A"
+      stroke-width="5"
+      stroke-linecap="round"/>
+    <circle cx="500" cy="500" r="112" fill="none" stroke="#FBF7EF" stroke-opacity="0.24" stroke-width="4"/>
+  </g>
+</svg>
