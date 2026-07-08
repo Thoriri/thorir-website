@@ -4,13 +4,13 @@
 
 // Nordic Minimalist Color Variables
 :root {
-  --nordic-primary: #2C3E50;        // Slate gray
-  --nordic-link: #3498DB;            // Bright blue
-  --nordic-link-hover: #2980B9;      // Darker blue
-  --nordic-accent: #E8F4F8;          // Ice blue
-  --nordic-bg-even: #FAFAFA;         // Subtle off-white
-  --nordic-text: #2C3E50;            // Slate for text
-  --nordic-muted: #4b5563;           // Muted gray for secondary text
+  --nordic-primary: #14243c;        // Deep navy (redesign palette)
+  --nordic-link: #215caf;           // Redesign blue
+  --nordic-link-hover: #173f7a;     // Darker blue
+  --nordic-accent: #e8f0fb;         // Light blue accent
+  --nordic-bg-even: #f7f9fc;        // Subtle off-white
+  --nordic-text: #1f2d40;           // Navy-slate for text
+  --nordic-muted: #4b5563;          // Muted gray for secondary text
 }
 
 // Typography - Inter for headings, system fonts for body
@@ -975,6 +975,92 @@ html {
 .dark .tm-btn-ghost { border-color: #283c5c; }
 .dark .tm-tag, .dark .tm-plus { background: rgba(127,178,255,.14); color: #7fb2ff; }
 
+/* navbar (light bar, gradient active underline) */
+#navbar-main {
+  box-shadow: 0 1px 0 rgba(14, 23, 38, 0.06), 0 6px 24px rgba(14, 23, 38, 0.05);
+
+  .navbar-brand {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .nav-link {
+    font-weight: 600;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0.75rem;
+      right: 0.75rem;
+      bottom: 4px;
+      height: 3px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, #215caf, #0d9488);
+      opacity: 0;
+      transform: scaleX(0.6);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    &:hover::after {
+      opacity: 0.45;
+      transform: scaleX(1);
+    }
+  }
+
+  .nav-item.active .nav-link::after,
+  .nav-link.active::after {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+.dark #navbar-main {
+  background: #0b1526;
+  box-shadow: 0 1px 0 rgba(127, 178, 255, 0.15), 0 6px 24px rgba(0, 0, 0, 0.35);
+
+  .navbar-collapse {
+    background-color: #0b1526;
+  }
+
+  // Black logo → white in dark mode
+  .navbar-brand img {
+    filter: invert(1);
+  }
+}
+
+/* dark mode: headings must not inherit the light-mode navy */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #e9eef7;
+}
+
+/* join teaser band (homepage) */
+.tm-join-band {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 36px;
+  align-items: center;
+  background: linear-gradient(135deg, #f2f7ff 0%, #eefbf8 100%);
+  border: 1px solid #e3e8f0;
+  border-radius: 20px;
+  padding: 40px 44px;
+  box-shadow: 0 12px 32px rgba(14, 23, 38, 0.07);
+}
+.tm-join-band h2 { margin: 0 0 10px; font-size: 1.6rem; }
+.tm-join-band p { margin: 0; max-width: 640px; opacity: 0.85; font-size: 0.97rem; }
+.tm-join-cta { display: flex; flex-direction: column; gap: 10px; text-align: center; }
+.tm-join-note { font-size: 0.78rem; opacity: 0.6; }
+
+.dark .tm-join-band {
+  background: linear-gradient(135deg, #13223a 0%, #0f2430 100%);
+  border-color: #283c5c;
+}
+
 @media (max-width: 840px) {
   .tm-hero-grid { grid-template-columns: 1fr; text-align: center; gap: 28px; }
   .tm-avatar-ring { margin: 0 auto; }
@@ -982,4 +1068,5 @@ html {
   .tm-pillars, .tm-topics, .tm-benefits, .tm-steps { grid-template-columns: 1fr; }
   .tm-bf { grid-template-columns: 1fr; padding: 34px; }
   .tm-rsec { grid-template-columns: 1fr; }
+  .tm-join-band { grid-template-columns: 1fr; padding: 30px 26px; }
 }

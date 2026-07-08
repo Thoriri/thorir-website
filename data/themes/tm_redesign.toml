@@ -1,0 +1,24 @@
+# TM Redesign 2026 theme
+# Light navbar, palette matching the tm-* custom components
+# (#215caf blue, #0d9488 teal, #0b1526 navy)
+# NOTE: this Wowchemy version uses a flat schema (see module data/themes/ocean.toml).
+# Dark-mode colors come from Wowchemy's built-in dark palette + custom.scss overrides.
+
+# Theme metadata
+name = "TM Redesign"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary = "#215caf"
+
+# Menu: light navbar with dark text
+menu_primary = "#ffffff"
+menu_text = "#0b1526"
+menu_text_active = "#215caf"
+menu_title = "#0b1526"
+
+# Home sections
+home_section_odd = "rgb(255, 255, 255)"
+home_section_even = "rgb(247, 249, 252)"

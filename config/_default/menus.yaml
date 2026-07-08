@@ -6,9 +6,6 @@ main:
   - name: Publications
     url: '/publication/'
     weight: 20
-  - name: Projects
-    url: '/project/'
-    weight: 30
   - name: Blog
     url: '/post/'
     weight: 40
