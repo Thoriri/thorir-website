@@ -11,10 +11,18 @@ This repository includes `scripts/update_metrics.py`, which pulls:
 It then rewrites:
 
 - `content/home/metrics.md` (animated counters on the homepage)
+- `content/home/tm-biofoundation.md` (active homepage BioFoundation stats)
 - `content/home/featured-work.md` (BioFoundation card)
 - `content/project/biofoundation/index.md` (resource summary)
 
 The script relies only on the Python standard library (`urllib`, `json`). It exits gracefully if a fetch fails, leaving existing numbers untouched.
+
+## Workflow routing
+
+GitHub schedules workflows from the repository default branch. The scheduled
+workflow therefore lives there but checks out and commits to `redesign`, the
+deployed content branch. Keep the workflow definition on the default branch in
+sync with the copy on `redesign` whenever its routing changes.
 
 ## Optional Proxy Configuration
 

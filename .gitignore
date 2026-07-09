@@ -6,6 +6,7 @@
 public/
 jsconfig.json
 node_modules/
+__pycache__/
 
 # macOS
 .DS_Store

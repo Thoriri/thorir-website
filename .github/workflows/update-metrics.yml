@@ -15,7 +15,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          ref: new-main
+          # Scheduled workflows are defined on the repository default branch,
+          # but metrics belong with the deployed redesign site.
+          ref: redesign
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -39,8 +41,9 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore(metrics): automated update"
-          branch: new-main
+          branch: redesign
           file_pattern: |
             content/home/metrics.md
+            content/home/tm-biofoundation.md
             content/home/featured-work.md
             content/project/biofoundation/index.md

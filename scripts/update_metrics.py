@@ -4,6 +4,7 @@
 Fetches metrics directly from Google Scholar (with a proxy fallback to avoid
 anti-bot blocks) and GitHub, then patches:
 - content/home/metrics.md (citations + h-index counters)
+- content/home/tm-biofoundation.md (active homepage stars/forks)
 - content/home/featured-work.md (BioFoundation stars/forks)
 - content/project/biofoundation/index.md (BioFoundation stars/forks bullet)
 
@@ -41,7 +42,10 @@ SCHOLAR_USER = "TyRxmUkAAAAJ"
 GITHUB_REPO = "pulp-bio/biofoundation"
 GH_TOKEN = os.getenv("GITHUB_TOKEN") or os.getenv("GH_TOKEN")
 DEFAULT_PROXY_BASE = "https://r.jina.ai/http://{host}{path}"
-SCHOLAR_PROXY_BASE = os.getenv("SCHOLAR_PROXY_BASE", DEFAULT_PROXY_BASE)
+# GitHub Actions exports an empty string when the optional repository variable
+# is unset. Treat that the same as an unset environment variable so the
+# documented default relay remains available.
+SCHOLAR_PROXY_BASE = (os.getenv("SCHOLAR_PROXY_BASE") or "").strip() or DEFAULT_PROXY_BASE
 PROXY_ENABLED = SCHOLAR_PROXY_BASE.lower() not in {"", "none", "off"}
 BLOCK_INDICATORS = [
     "our systems have detected unusual traffic",
@@ -73,7 +77,7 @@ def fetch_text(url: str, retries: int = 2, delay: float = 1.0, extra_headers: Op
         headers["Accept"] = "application/vnd.github+json"
     if extra_headers:
         headers.update(extra_headers)
-    
+
     for attempt in range(retries + 1):
         req = Request(url, headers=headers)
         try:
@@ -314,6 +318,29 @@ def update_metrics_card(
 def update_biofoundation_stats(stars: int, forks: int) -> bool:
     changed_any = False
 
+    homepage = ROOT / "content/home/tm-biofoundation.md"
+    if homepage.exists():
+        original = homepage.read_text(encoding="utf-8")
+        text, stars_replaced = re.subn(
+            r'(<b\s+data-gh="stars">)\d+(</b>)',
+            rf'\g<1>{stars}\g<2>',
+            original,
+        )
+        text, forks_replaced = re.subn(
+            r'(<b\s+data-gh="forks">)\d+(</b>)',
+            rf'\g<1>{forks}\g<2>',
+            text,
+        )
+        if stars_replaced != 1 or forks_replaced != 1:
+            print(f"[warn] Could not find homepage BioFoundation stat markers: {homepage}")
+        else:
+            changed = write_if_changed(homepage, text)
+            print(f"[info] tm-biofoundation.md {'updated' if changed else 'no change'} "
+                  f"(stars={stars}, forks={forks})")
+            changed_any = changed_any or changed
+    else:
+        print(f"[warn] Missing: {homepage}")
+
     featured = ROOT / "content/home/featured-work.md"
     if featured.exists():
         original = featured.read_text(encoding="utf-8")
@@ -353,7 +380,7 @@ def main() -> int:
     # Fetch metrics from Google Scholar (with proxy fallback)
     print(f"[info] Fetching metrics from Google Scholar (user ID: {SCHOLAR_USER})...")
     scholar_metrics = fetch_scholar_metrics(SCHOLAR_USER)
-    
+
     publications = count_publications()
 
     if scholar_metrics:

@@ -1,0 +1,40 @@
+name: Site check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - redesign
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Set up Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.111.3'
+          extended: true
+
+      - name: Build site
+        env:
+          HUGO_ENABLEGITINFO: "true"
+        run: hugo --gc --minify --buildFuture --baseURL https://thorirmar.com/
+
+      - name: Check patch hygiene
+        run: git diff --check HEAD^ HEAD
