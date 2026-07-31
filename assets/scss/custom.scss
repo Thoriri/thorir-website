@@ -1437,3 +1437,19 @@ select.pub-filters {
     font-size: 12px !important;
   }
 }
+
+/* ── partner / collaborator credit on project pages ───────────────────────────
+   The logo sits on a white plate so a coloured or dark mark reads on both the
+   light and dark themes without needing an invert filter. */
+.tm-collab { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px;
+  margin: 18px 0 28px; padding: 12px 16px;
+  border: 1px solid #e3e8f0; border-radius: 12px; background: #fbfcfe; }
+.tm-collab-label { font-size: .72rem; font-weight: 800; letter-spacing: .1em;
+  text-transform: uppercase; color: #6b7a90; }
+.tm-collab a { display: inline-flex; align-items: center; }
+.tm-collab img { height: 34px; width: auto; max-width: 200px; object-fit: contain;
+  margin: 0; background: #fff; border-radius: 8px; padding: 4px 8px; }
+.tm-collab-note { font-size: .87rem; opacity: .78; }
+.dark .tm-collab { background: rgba(255,255,255,.04); border-color: rgba(255,255,255,.14); }
+.dark .tm-collab-label { color: #9db1cc; }
+@media (max-width: 480px) { .tm-collab { gap: 10px; } .tm-collab img { height: 28px; } }

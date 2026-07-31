@@ -2,7 +2,7 @@
 title: "Quantized Tiny Recursive Models for Edge Deployment"
 summary: "Quantize TRMs to low precision and deploy them on GAP9 or Cortex-M, exploring accuracy–energy trade-offs and adaptive compute."
 type: student-project
-status: "Open MSc Thesis"
+status: "Completed"
 date: 2025-01-01
 categories: ["MSc Thesis"]
 tags:
@@ -19,6 +19,8 @@ featured: false
 ---
 
 ![Quantized TRMs for Edge Deployment](/uploads/trm_quantized.jpg)
+
+> **Completed.** This project ran as a Master thesis with **Wajeeha Tahir** and finished successfully. It produced the preprint [*Quantizing Recursive Reasoning Models*](https://arxiv.org/abs/2607.16237) (arXiv:2607.16237). The central finding: because a recursive model reuses one weight-tied block across many refinement steps, quantization error compounds at every step. Per-tensor 4-bit activation quantization accumulates a systematic bias that collapses exact-solution accuracy on Sudoku from 84.1% to 0.0%. The culprit is activation-scaling *granularity* rather than bit-width or number format, and blockwise scaling (MXInt4) fully restores accuracy.
 
 ## Overview
 
@@ -54,10 +56,6 @@ Tiny Recursive Models (TRMs) are naturally compact and recur over their latent s
 - Mapping compact neural networks onto MCUs or PULP SoCs while respecting memory and timing constraints
 - Measuring and interpreting energy/latency/accuracy trade-offs for edge deployment
 - Integrating ML algorithms with embedded software stacks to deliver a full-stack thesis
-
-## Application
-
-Please email `thoriri@iis.ee.ethz.ch` with the subject **"[MSc Thesis] Quantized Tiny Recursive Models for Edge Deployment"**. Attach a short motivation, CV, transcripts, and note any experience with PyTorch, quantisation, or embedded platforms.
 
 ---
 

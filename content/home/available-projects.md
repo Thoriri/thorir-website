@@ -16,7 +16,7 @@ design:
   <div>
     <div class="tm-kicker">Work with me</div>
     <h2>Open MSc &amp; semester projects at ETH Zürich</h2>
-    <p>I supervise students on <a href="/project/trm-timeseries/">tiny recursive models for time series</a> and <a href="/project/trm-quantized/">quantized TRMs on edge hardware</a> — real hardware, weekly supervision, and a paper-shaped goal from day one. Recent student work landed at NeurIPS, EMBC, and IEEE journals.</p>
+    <p>I am currently looking for a student to work on <a href="/project/world-models/">world models for physiological time series</a>, a joint project with TimeTraceLabs on where today's self-supervised training objectives stop respecting the fact that biosignals have an order. Real hardware, weekly supervision, and a paper-shaped goal from day one. Recent student work landed at NeurIPS, EMBC, and IEEE journals.</p>
   </div>
   <div class="tm-join-cta">
     <a class="tm-btn tm-btn-primary" href="/join/">Work with me →</a>

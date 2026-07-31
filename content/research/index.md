@@ -34,11 +34,11 @@ show_related: false
   <div>
     <h2><span class="tm-dot" style="background:#7c3aed"></span>Tiny recursion models</h2>
     <p>Reasoning-style computation does not have to mean billions of parameters. I study how deep supervision and adaptive-depth recursion let very small networks refine their answers iteratively, spending compute only where the signal demands it.</p>
-    <p>Recent work reframed TRM recursion as annealed sampling on an energy-based model, running the loop on a thermodynamic-computing simulator. Two open MSc topics extend TRMs to time series and quantized edge deployment.</p>
+    <p>Recent work reframed TRM recursion as annealed sampling on an energy-based model, running the loop on a thermodynamic-computing simulator. Two student theses took TRMs to time series and to quantized edge deployment; the second showed that quantization error compounds across recursion steps unless the activation scaling is blockwise.</p>
     <div class="tm-chipset">
       <a class="tm-chip" href="/post/thermo-trm-thermodynamic-reasoning/">Blog: Thermo-TRM</a>
-      <a class="tm-chip" href="/project/trm-timeseries/">MSc topic: TRMs for time series</a>
-      <a class="tm-chip" href="/project/trm-quantized/">MSc topic: Quantized TRMs</a>
+      <a class="tm-chip" href="/project/trm-timeseries/">Thesis: TRMs for time series</a>
+      <a class="tm-chip" href="/project/trm-quantized/">Thesis: Quantized TRMs</a>
     </div>
   </div>
   <div class="tm-sidecard">

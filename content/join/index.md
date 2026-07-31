@@ -20,20 +20,12 @@ show_related: false
 
 <h2>Open topics</h2>
 <div class="tm-topics">
-  <a class="tm-topic" href="/project/trm-timeseries/">
-    <img src="/uploads/trm_time_series.jpg" alt="Tiny Recursive Models for Time-Series" loading="lazy">
+  <a class="tm-topic" href="/project/world-models/">
+    <img src="/uploads/world_models_card.jpg" alt="Learning World Models from Physiological Time Series" loading="lazy">
     <div class="tm-topic-pad">
       <span class="tm-tag">MSc Thesis</span>
-      <h3>Tiny Recursive Models for Time-Series</h3>
-      <p>Adapt TRMs to EEG and UCR benchmarks; study how deep supervision and adaptive halting trade accuracy against compute.</p>
-    </div>
-  </a>
-  <a class="tm-topic" href="/project/trm-quantized/">
-    <img src="/uploads/trm_quantized.jpg" alt="Quantized TRMs for Edge Deployment" loading="lazy">
-    <div class="tm-topic-pad">
-      <span class="tm-tag">MSc Thesis</span>
-      <h3>Quantized TRMs for Edge Deployment</h3>
-      <p>INT8/INT4 TRMs on GAP9 and Cortex-M: accuracy and energy trade-offs, on-device adaptive halting.</p>
+      <h3>World Models from Physiological Time Series</h3>
+      <p>Self-supervised world models train with an anti-collapse term that is blind to time, while physiology is defined by its order. Measure what that costs and design something better. With TimeTraceLabs.</p>
     </div>
   </a>
   <a class="tm-topic tm-propose" href="mailto:thoriri@iis.ee.ethz.ch?subject=Research%20Proposal">

@@ -2,7 +2,7 @@
 title: "Tiny Recursive Models for Time-Series"
 summary: "Adapt Tiny Recursive Models (TRMs) to non-visual time-series domains and analyse recursion, deep supervision, and adaptive compute."
 type: student-project
-status: "Open MSc Thesis"
+status: "Completed"
 date: 2025-01-01
 categories: ["MSc Thesis"]
 tags:
@@ -19,6 +19,8 @@ featured: false
 ---
 
 ![Tiny Recursive Models for Time-Series](/uploads/trm_time_series.jpg)
+
+> **Completed.** This project ran as a Bachelor thesis with **Georg Tenzing** and finished successfully. It established Tiny Recursive Models as a viable backbone for biosignal time series and produced the reference implementation the follow-on quantization thesis built on. The work is being written into a paper, currently in preparation.
 
 ## Overview
 
@@ -53,10 +55,6 @@ Tiny Recursive Models (TRMs) are small, deeply supervised recurrent-like archite
 - Designing fair baselines and ablation studies for capacity-constrained models
 - Analysing adaptive compute and visualising prediction evolution across recursion steps
 - Writing research-quality code and producing an MSc thesis (potentially a joint publication)
-
-## Application
-
-Please email `thoriri@iis.ee.ethz.ch` with the subject **"[MSc Thesis] Tiny Recursive Models for Time-Series"**. Include a short motivation paragraph, CV, transcripts, and mention any prior experience with time-series, PyTorch, or efficient deep learning.
 
 ---
 
