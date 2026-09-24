@@ -77,8 +77,8 @@ projects: []
 
 ## Slides & resources
 
-- [Download the blood-pressure slide deck →](uploads/embc2025_bp_slides.pdf)
-- [Download the FEMBA slide deck →](uploads/embc2025_femba_slides.pdf)
+- [Download the blood-pressure slide deck →](/uploads/embc2025_bp_slides.pdf)
+- [Download the FEMBA slide deck →](/uploads/embc2025_femba_slides.pdf)
 - Paper links are already live; code and checkpoints will land in the BioFoundation repository.
 
 ## Related work

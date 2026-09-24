@@ -76,12 +76,12 @@ projects: []
 
 ## Slides & poster
 
-- [Download the EpiDeNet oral deck →](uploads/bioCAS2023_epidenet_slides.pdf)
-- [Download the SkiLog poster PDF →](uploads/bioCAS2023_skilog_poster.pdf)
+- [Download the EpiDeNet oral deck →](/uploads/bioCAS2023_epidenet_slides.pdf)
+- [Download the SkiLog poster PDF →](/uploads/bioCAS2023_skilog_poster.pdf)
 
 ## Related work
 
 - [EpiDeNet publication →](/publication/epidenet/)
 - [SkiLog publication →](/publication/2023-ieee-biocas/)
-- [Wearable EEG research at IIS →](/project/biocas2023/)
+- [Wearable EEG research at IIS →](/research/)
 

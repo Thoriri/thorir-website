@@ -76,8 +76,8 @@ projects: []
 
 ## Slide & poster downloads
 
-- [Download the VowelNet slide deck →](uploads/bioCAS2024_voweln_slides.pdf)
-- [Download the Train-on-Request poster PDF →](uploads/bioCAS2024_tor_poster.pdf)
+- [Download the VowelNet slide deck →](/uploads/bioCAS2024_voweln_slides.pdf)
+- [Download the Train-on-Request poster PDF →](/uploads/bioCAS2024_tor_poster.pdf)
 
 ## Related publications
 

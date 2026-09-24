@@ -63,7 +63,7 @@ projects: []
 
 ## Poster & resources
 
-- [Download the LUNA poster PDF →](uploads/neurips2025_luna_poster.pdf)
+- [Download the LUNA poster PDF →](/uploads/neurips2025_luna_poster.pdf)
 - [LUNA paper on arXiv →](https://arxiv.org/abs/2510.22257)
 - [BioFoundation GitHub repository →](https://github.com/pulp-bio/biofoundation)
 

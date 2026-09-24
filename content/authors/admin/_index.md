@@ -2,7 +2,7 @@
 title: Thorir Mar Ingolfsson
 role: "Postdoctoral Researcher"
 avatar_filename: avatar.jpg
-bio: I develop efficient machine learning systems for biomedical wearables that operate under extreme resource constraints. My work bridges foundation models, neural architecture design, and edge deployment to enable real-time biosignal analysis on microwatt-scale devices.
+bio: "Making AI run on microwatts: I build foundation models for EEG, ECG, and other biosignals, and compress them until they run in real time on wearable devices, not in the cloud."
 interests:
   - Foundation Models for Biosignals
   - Tiny Recursion Models & Deep Supervision

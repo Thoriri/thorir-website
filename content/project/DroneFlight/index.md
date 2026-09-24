@@ -17,7 +17,7 @@ image:
 
 links: []
 url_code: ""
-url_pdf: "uploads/BCIAward2023.pdf"
+url_pdf: "/project/droneflight/uploads/BCIAward2023.pdf"
 url_slides: ""
 url_video: "https://www.youtube.com/watch?v=1KPFJlJaXTI"
 
