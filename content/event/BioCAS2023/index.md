@@ -41,6 +41,10 @@ links:
     icon_pack: fas
     name: EpiDeNet oral slides
     url: "uploads/bioCAS2023_epidenet_slides.pdf"
+  - icon: file-pdf
+    icon_pack: fas
+    name: SkiLog poster handout
+    url: "uploads/bioCAS2023_skilog_poster.pdf"
   - icon: file-alt
     icon_pack: fas
     name: EpiDeNet publication
@@ -70,9 +74,10 @@ projects: []
 
 {{< figure src="2023_BioCas_poster.jpeg" caption="With Christoph Leitner at the SkiLog poster session." >}}
 
-## Slides
+## Slides & poster
 
 - [Download the EpiDeNet oral deck →](/uploads/bioCAS2023_epidenet_slides.pdf)
+- [Download the SkiLog poster PDF →](/uploads/bioCAS2023_skilog_poster.pdf)
 
 ## Related work
 
