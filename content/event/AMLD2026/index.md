@@ -65,7 +65,7 @@ projects: []
 
 ## Poster & resources
 
-- [Download the poster PDF →](uploads/amld2026_fm_edge_poster.pdf)
+- [Download the poster PDF →](/uploads/amld2026_fm_edge_poster.pdf)
 - [BioFoundation GitHub repository →](https://github.com/pulp-bio/biofoundation)
 
 ## Related work

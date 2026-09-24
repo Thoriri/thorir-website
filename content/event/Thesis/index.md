@@ -64,7 +64,7 @@ projects: []
 
 ## Slides & resources
 
-- [Download the defense slide deck →](uploads/thesis_defense_slides.pdf)
+- [Download the defense slide deck →](/uploads/thesis_defense_slides.pdf)
 - [Read the thesis on the ETH Research Collection →](https://www.research-collection.ethz.ch/entities/publication/ea396e83-0c23-4eae-b5b9-106dfdfc05d9)
 
 ## A note of gratitude
