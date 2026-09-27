@@ -14,7 +14,7 @@ design:
 
 <div class="metrics-card" id="stats-section" role="region" aria-label="Research impact metrics">
   <div class="metric">
-    <span class="metric-value" data-target="1219" aria-label="Total citations">1219</span>
+    <span class="metric-value" data-target="1240" aria-label="Total citations">1240</span>
     <span class="metric-label">Citations</span>
     <a class="metric-link" href="https://scholar.google.com/citations?user=TyRxmUkAAAAJ&hl=en" target="_blank" rel="noopener">
       <i class="ai ai-google-scholar" aria-hidden="true"></i>
@@ -23,7 +23,7 @@ design:
   </div>
 
   <div class="metric">
-    <span class="metric-value" data-target="15" aria-label="H-index">15</span>
+    <span class="metric-value" data-target="16" aria-label="H-index">16</span>
     <span class="metric-label">h-index</span>
     <span class="metric-caption">Core research impact</span>
   </div>
